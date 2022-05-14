@@ -1,0 +1,173 @@
+.allFileIndex{
+    margin: auto;
+    margin-bottom: 3rem;
+    .allFileTitle{
+        position: relative;
+        h3{
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: $text2;
+            margin-bottom: .5rem;
+        }
+        a{
+            font-size: .8rem;
+            font-weight: 300;
+            color: #909090;
+        }
+        &:before{
+            width: 40px;
+            height: 2px;
+            content: "";
+            background: $text2;
+            border-radius: 5rem;
+            position: absolute;
+            top: 100%;
+            margin-top: .5rem;
+            right: 0;
+        }
+    }
+    .hooper{
+        display: grid;
+        height: auto;
+        margin-top: 1rem;
+        .hooper-list{
+            padding: 1rem 0;
+            .hooper-navigation{
+                button{
+                    top: auto;
+                    bottom: 100%;
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+                .hooper-prev{
+                    right: auto;
+                    left: 2rem;
+                    padding: 0;
+                    overflow: hidden;
+                    border-left: 2px dashed #000;
+                }
+                .hooper-next{
+                    padding: 0;
+                    overflow: hidden;
+                }
+            }
+            .hooper-track{
+                .hooper-slide{
+                    padding-left: 1rem;
+                    .fileItem{
+                        background: $headerPanel;
+                        border-radius: 10px;
+                        box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.07);
+                        padding: 1rem;
+                        display: grid;
+                        .pic{
+                            img{
+                                width: 100%;
+                                height: 10rem;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+                        .titleTop{
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            align-items: center;
+                            margin: 1rem 0;
+                            grid-gap: .5rem;
+                            i{
+                                width: 2.5rem;
+                                height: 2.5rem;
+                                border-radius: 100%;
+                                background: rgba(255,0,0,.1);
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    fill: $redFront;
+                                }
+                            }
+                            .title{
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                h3{
+                                    font-size: .85rem;
+                                    font-weight: 500;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    color: $text2;
+                                    margin-bottom: .3rem;
+                                }
+                                h4{
+                                    font-size: .8rem;
+                                    font-weight: 300;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    color: $text2;
+                                    opacity: .8;
+                                }
+                            }
+                        }
+                        p{
+                            text-align: center;
+                            font-size: .8rem;
+                            font-weight: 300;
+                            line-height: 1.8rem;
+                            color: $text2;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            text-overflow: ellipsis;
+                            opacity: .7;
+                        }
+                        .options{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            align-items: end;
+                            margin-top: 1rem;
+                            .option{
+                                span{
+                                    text-align: right;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    color: black;
+                                    &:last-child{
+                                        font-size: .8rem;
+                                        letter-spacing: .1px;
+                                    }
+                                }
+                                i{
+                                    svg{
+                                        width: .65rem;
+                                        height: .65rem;
+                                        fill: #777;
+                                    }
+                                }
+                                h4{
+                                    font-size: .75rem;
+                                    font-weight: 300;
+                                    color: #777;
+                                }
+                                &:last-child{
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: left;
+                                    grid-gap: .5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

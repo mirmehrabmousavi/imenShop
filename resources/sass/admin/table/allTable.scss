@@ -1,0 +1,168 @@
+table{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: white;
+    margin-top: 1rem;
+    box-shadow: 0 0 5px rgba(0,0,0,.05);
+    border-radius: 10px;
+    tr{
+        div{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(1px , 1fr));
+            grid-gap: .5rem;
+            align-items: center;
+            border-bottom: 1px solid $border1;
+            min-height: 3.5rem;
+            padding: .5rem 0;
+            &:nth-child(2){
+                visibility: hidden;
+                position: absolute;
+                bottom: 100rem;
+            }
+        }
+        .active{
+            background: $back2;
+        }
+        th{
+            font-weight: 700;
+            color: $text2;
+            font-size: .8rem;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            svg{
+                fill: $text2;
+                width: 1.1rem;
+                height: 1.1rem;
+                cursor: pointer;
+            }
+        }
+        td{
+            font-weight: 300;
+            font-size: .8rem;
+            text-align: center;
+            color: $text2;
+            svg{
+                fill: $text2;
+                width: 1rem;
+                height: 1rem;
+                cursor: pointer;
+            }
+            img{
+                width: 2.5rem;
+                height: 2.5rem;
+                object-fit: cover;
+                border-radius: 5rem;
+            }
+            .activeStatus{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: right;
+                align-items: center;
+                &:before{
+                    border-radius: 10px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #00C58D;
+                    content: "";
+                    display: inline-block;
+                    margin-left: 5px;
+                }
+            }
+            .ul{
+                grid-template-columns: 1fr;
+                grid-gap: .5rem;
+            }
+            span{
+                display: grid;
+                grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+                justify-content: center;
+                align-items: center;
+                i{
+                    &:nth-child(2){
+                        margin:0 .7rem;
+                    }
+                }
+            }
+            a{
+                display: grid;
+                align-items: center;
+                svg{
+                    margin-left: .5rem;
+                }
+            }
+            .unActive{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: right;
+                align-items: center;
+                &:before{
+                    border-radius: 10px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #FC5C63;
+                    content: "";
+                    display: inline-block;
+                    margin-left: 5px;
+                }
+            }
+            &:first-child{
+                i{
+                    svg{
+                        fill: $text2;
+                        width: 1.1rem;
+                        height: 1.1rem;
+                        cursor: pointer;
+                    }
+                    &:nth-child(2){
+                        position: absolute;
+                        top: 0;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width:1000px) {
+            th,td{
+                font-size: .5rem;
+                svg{
+                    width: .6rem;
+                    height: .6rem;
+                }
+                &:first-child{
+                    i{
+                        svg{
+                            width: .6rem;
+                            height: .6rem;
+                        }
+                    }
+                }
+                .unActive,.activeStatus{
+                    &:before{
+                        width: 5px;
+                        height: 5px;
+                    }
+                }
+                img{
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+        }
+        &:first-child{
+            div{
+                border-bottom: 2px solid $border1;
+            }
+        }
+        &:last-child{
+            div{
+                border-bottom: 0;
+            }
+        }
+    }
+}

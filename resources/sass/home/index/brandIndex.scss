@@ -1,0 +1,113 @@
+.containerBrands{
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    background: $headerPanel;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 3rem;
+    .containerBrandsTitle{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        label{
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 31px;
+            white-space: nowrap;
+            border-bottom: 2px solid $redFront;
+            padding: 1rem;
+            padding-right: 0;
+            margin-right: 1rem;
+            color: $text2;
+        }
+        .moreProduct{
+            border-bottom: 2px solid $backPage2;
+        }
+    }
+    .hooper{
+        overflow: hidden;
+        height: auto;
+        .hooper-list{
+            padding: 1rem 0;
+            .hooper-navigation.is-rtl{
+                .hooper-next{
+                    left: -.75rem;
+                }
+                .is-disabled{
+                    visibility: hidden;
+                }
+                .hooper-prev{
+                    right: 0;
+                }
+                button{
+                    svg{
+                        background: $backPage2;
+                        width: 2rem;
+                        height: 4rem;
+                        padding: .1rem;
+                        border-radius: 10px;
+                        box-shadow: 0 0 5px rgba(0,0,0,.05);
+                        fill: $text2;
+                    }
+                }
+            }
+            .hooper-track{
+                .hooper-slide{
+                    padding-left: 1rem;
+                    border-radius: 10px;
+                    position: relative;
+                    a{
+                        position: relative;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        border: 1px solid $backPage2;
+                        display: grid;
+                        height: 100%;
+                        .pic{
+                            overflow: hidden;
+                            height: 14rem;
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: contain;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-color: transparent;
+                                background-position: center;
+                            }
+                        }
+                        span{
+                            position: absolute;
+                            left: 1rem;
+                            top: 1rem;
+                            $headerPanel: white;
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: left;
+                            align-items: center;
+                            grid-gap: .3rem;
+                            font-size: .8rem;
+                            font-weight: 500;
+                            color: $text2;
+                            padding: .2rem 1rem;
+                            border-radius: 5px;
+                            box-shadow: 0 0 5px rgba(255,0,0,.1);
+                            svg{
+                                width: .9rem;
+                                height: .9rem;
+                                fill: $redFront;
+                            }
+                        }
+                        &:hover{
+                            box-shadow: 0 0 5px rgba(0,0,0,.05);
+                        }
+                    }
+                }
+                .hooper-slide.is-active.is-current{
+                    a{
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

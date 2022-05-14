@@ -1,0 +1,45 @@
+.siteProperties{
+    margin: auto;
+    margin-bottom: 3rem;
+    .sitePropertiesItems{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(7rem , 1fr));
+        justify-content: space-around;
+        grid-gap: 1rem;
+        background: $headerPanel;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        .sitePropertiesItem{
+            display: grid;
+            justify-content: center;
+            .sitePropertiesItemPic{
+                width: 100%;
+                display: grid;
+                margin-bottom: .5rem;
+                justify-content: center;
+                svg{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            span{
+                color: $text2;
+                font-size: .9rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
+@media screen and (max-width: 920px) {
+    .siteProperties{
+        .sitePropertiesItems{
+            padding: 1rem;
+            .sitePropertiesItem{
+                span{
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+}

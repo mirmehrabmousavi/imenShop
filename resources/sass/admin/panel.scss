@@ -1,0 +1,199 @@
+.content{
+    padding: 2.5rem 17rem 0 0;
+    .allDashboard{
+        .allDashboardTitle{
+            margin: 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            h1{
+                color: $text2;
+            }
+            .title{
+                display: grid;
+                grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+                justify-content: left;
+                align-items: center;
+                grid-gap: .5rem;
+                span{
+                    color: $text2;
+                    font-weight: 400;
+                    font-size:.95rem;
+                }
+                a{
+                    color: $text2;
+                    font-weight: 400;
+                    font-size:.95rem;
+                    &:last-child{
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .topPanelVidgets{
+            display: grid;
+            grid-template-columns: repeat(auto-fit ,minmax(1rem,1fr));
+            justify-content: right;
+            align-items: center;
+            margin: 0 1rem;
+            position: relative;
+            border-radius: 7px;
+            overflow: hidden;
+            height: 8rem;
+            margin-top: 1rem;
+            .topPanelVidgetsPic{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 8rem;
+                width: 100%;
+                z-index: 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    object-fit: cover;
+                }
+            }
+            .topPanelVidget{
+                height: 100%;
+                z-index: 1;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                border-right: 3px solid rgba(255, 255, 255, 0.1);
+                background: rgba(0, 0, 0, 0.6);
+                h4{
+                    color: white;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    text-align: center;
+                }
+                h2{
+                    color: white;
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                    text-align: center;
+                }
+                span{
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+        }
+        .allDashboardLastPost{
+            background: white;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 1rem;
+            border-radius: .5rem;
+            overflow: hidden;
+            label{
+                color: #858585;
+                font-size: 1rem;
+                font-weight: 500;
+                padding: 1rem;
+                border-right: 3px solid $blue;
+                border-top-right-radius: .5rem;
+            }
+            table{
+                border-radius: 0;
+            }
+        }
+        .allDashboardComments{
+            display: grid;
+            grid-template-columns: 1fr .8fr;
+            grid-gap: 1rem;
+            margin: 1rem;
+            .allDashboardCommentsItems{
+                background: white;
+                border-radius: .5rem;
+                overflow: hidden;
+                label{
+                    display: grid;
+                    grid-template-columns: repeat(2,auto);
+                    justify-content: right;
+                    color: #858585;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding: 1rem;
+                    border-right: 3px solid $blue;
+                    border-top-right-radius: .5rem;
+                }
+                table{
+                    border-radius: 0;
+                    tr{
+                        div{
+                            padding: 0 .5rem;
+                            td{
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+            .allDashboardCommentsChart{
+                background: white;
+                border-radius: .5rem;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .allDashboardPay{
+            background: white;
+            border-radius: .5rem;
+            margin-top: 0;
+            margin: 1rem;
+            label{
+                display: grid;
+                grid-template-columns: repeat(2,auto);
+                justify-content: right;
+                color: #858585;
+                font-size: 1rem;
+                font-weight: 500;
+                padding: 1rem;
+                border-right: 3px solid $blue;
+                border-top-right-radius: .5rem;
+            }
+        }
+        .allDashboardUsers{
+            display: grid;
+            grid-template-columns: .8fr 1fr;
+            grid-gap: 1rem;
+            margin: 1rem;
+            margin-bottom: 2rem;
+            .allDashboardUsersChart{
+                background: white;
+                border-radius: .5rem;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+            .allDashboardUsersItem{
+                background: white;
+                border-radius: .5rem;
+                overflow: hidden;
+                label{
+                    display: grid;
+                    grid-template-columns: repeat(2,auto);
+                    justify-content: right;
+                    color: #858585;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding: 1rem;
+                    border-right: 3px solid $blue;
+                    border-top-right-radius: .5rem;
+                }
+                table{
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

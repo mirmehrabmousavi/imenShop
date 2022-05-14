@@ -1,0 +1,555 @@
+.allTemplateSetting{
+    margin: 1rem;
+    .allTemplateSettingTabs{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: right;
+        .allCreatePostItemTab{
+            button{
+                color: $text2;
+                font-weight: 500;
+                font-size: .85rem;
+                padding: .8rem 1.5rem;
+                background: transparent;
+            }
+            .active{
+                border-bottom: 0;
+                background: #fff;
+                margin-bottom: -2px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+        }
+    }
+    .allTemplateSettingContainers{
+        background: white;
+        padding: 1rem;
+        border-radius: 5px;
+        border-top-right-radius: 0;
+        .allTemplateSettingContainer{
+            display: grid;
+            grid-template-columns: 22rem 1fr;
+            grid-gap: 1rem;
+            .allTemplateSettingContainerLists{
+                .allTemplateSettingList{
+                    overflow: hidden;
+                }
+            }
+            .allTemplateSettingList{
+                background: white;
+                position: sticky;
+                top: 5rem;
+                border-radius: 10px;
+                overflow: visible;
+                border: 1px solid #f5f5f5;
+                box-shadow: 0 0 5px rgba(0,0,0,.03);
+                .allTemplateSettingListTitle{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: $text2;
+                    padding: 1rem;
+                    border-bottom: 2px solid $border1;
+                }
+                .scroll-area {
+                    position: relative;
+                    margin: auto;
+                    width: 100%;
+                    direction: ltr;
+                    height: 28.9rem;
+                }
+                .drags{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1rem;
+                    background: white;
+                    padding: 1rem;
+                    direction: rtl;
+                    height: 28.9rem;
+                }
+                .allCategorySettingContainerListItem{
+                    cursor: grab;
+                    border: 1px solid #f5f5f5;
+                    border-radius: 5px;
+                    padding: .5rem;
+                    img{
+                        width: 100%;
+                        height: 5rem;
+                        object-fit: contain;
+                    }
+                    h3{
+                        font-weight: 300;
+                        font-size: .85rem;
+                        color: $text2;
+                        text-align: center;
+                        opacity: .85;
+                    }
+                }
+                .allTemplateSettingListDrag{
+                    min-height: 10rem;
+                }
+                .allCategorySettingContainerListItemChoice{
+                    padding: 2rem;
+                    border-bottom: 2px solid $border1;
+                    cursor: grab;
+                    display: grid;
+                    grid-template-columns: 20rem 1fr;
+                    grid-gap: 1rem;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                    .allCategorySettingContainerListItemChoiceData{
+                        display: grid;
+                        align-items: center;
+                        label{
+                            font-size: .9rem;
+                            font-weight: 500;
+                            color: $text3;
+                            width: 12rem;
+                        }
+                        .allCategoryTitle{
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            grid-gap: 1rem;
+                            margin-top: 1rem;
+                            input,textarea{
+                                border: 1.4px solid $border1;
+                                padding: 0.4rem .5rem;
+                                color: $text2;
+                                border-radius: .3rem;
+                                font-size: .7rem;
+                                transition: all .3s ease-in-out;
+                                resize: vertical;
+                                &:focus{
+                                    border:1.4px solid $blue;
+                                    box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                                }
+                            }
+                        }
+                        .allCategorySettingSelect{
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            grid-gap: .5rem;
+                            align-items: center;
+                            margin-top: 1rem;
+                            .allTaxes{
+                                position: relative;
+                                .taxShow{
+                                    display: grid;
+                                    grid-template-columns: 1fr auto;
+                                    align-items: center;
+                                    width: 100%;
+                                    padding: .5rem;
+                                    border: 1.4px solid $border1;
+                                    border-radius: .3rem;
+                                    cursor: pointer;
+                                    h4{
+                                        color: $text3;
+                                        font-size: .7rem;
+                                        font-weight: 300;
+                                    }
+                                    ul{
+                                        display: grid;
+                                        grid-template-columns: repeat(auto-fit ,minmax(6rem,auto));
+                                        justify-content: right;
+                                        align-items: center;
+                                        grid-gap: 1rem;
+                                        li{
+                                            position: relative;
+                                            padding: .4rem;
+                                            background: $lowBlue;
+                                            border-radius: .2rem;
+                                            color: $text2;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-align: center;
+                                            i{
+                                                position: absolute;
+                                                top: 0;
+                                                right: 0;
+                                                display: grid;
+                                                justify-content: center;
+                                                align-items: center;
+                                                svg{
+                                                    fill:$text2;
+                                                    width: .7rem;
+                                                    height: .7rem;
+                                                }
+                                            }
+                                            span{
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                font-size: .65rem;
+                                                font-weight: 300;
+                                            }
+                                        }
+                                    }
+                                    svg{
+                                        width: .65rem;
+                                        height: .65rem;
+                                        fill: $text2;
+                                    }
+                                }
+                                .showAllTaxes{
+                                    position: absolute;
+                                    top: 94%;
+                                    right: 0;
+                                    width: 100%;
+                                    display: grid;
+                                    background: white;
+                                    grid-template-columns: 1fr;
+                                    border-bottom-left-radius: .3rem;
+                                    border-bottom-right-radius: .3rem;
+                                    height: 15rem;
+                                    direction: ltr;
+                                    overflow: hidden;
+                                    border: 1.4px solid $border1;
+                                    border-top: 0;
+                                    z-index: 80;
+                                    .scroll-area {
+                                        position: relative;
+                                        margin: auto;
+                                        width: 100%;
+                                        height: 15rem;
+                                    }
+                                    li{
+                                        direction: rtl;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        padding: .4rem;
+                                        color: $text3;
+                                        font-size: .75rem;
+                                        font-weight: 300;
+                                        cursor: pointer;
+                                        transition: all .3s ease-in-out;
+                                        padding-right: 1rem;
+                                        height: 2rem;
+                                        &:hover{
+                                            background: $blue;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                            .allCategoryPanel{
+                                position: relative;
+                                .categoryShow{
+                                    border: 1.4px solid $border1;
+                                    display: grid;
+                                    grid-template-columns: 1fr auto;
+                                    padding: .4rem .5rem;
+                                    border-radius: .3rem;
+                                    cursor: pointer;
+                                    h4{
+                                        color: $text3;
+                                        font-size: .7rem;
+                                        font-weight: 400;
+                                    }
+                                    i{
+                                        display: grid;
+                                        justify-content: center;
+                                        align-items: center;
+                                        svg{
+                                            width: 0.65rem;
+                                            height: 0.65rem;
+                                            fill: $text2;
+                                        }
+                                    }
+                                }
+                                ul{
+                                    position: absolute;
+                                    top: 94%;
+                                    right: 0;
+                                    width: 100%;
+                                    background: white;
+                                    border-bottom-left-radius: .3rem;
+                                    border-bottom-right-radius: .3rem;
+                                    direction: ltr;
+                                    overflow: hidden;
+                                    border: 1.4px solid $border1;
+                                    border-top: 0;
+                                    z-index: 80;
+                                    .scroll-area {
+                                        position: relative;
+                                        margin: auto;
+                                        width: 100%;
+                                        height: 15rem;
+                                    }
+                                    li{
+                                        direction: rtl;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        padding: .4rem;
+                                        padding-right: 1rem;
+                                        color: $text3;
+                                        font-size: .65rem;
+                                        font-weight: 300;
+                                        cursor: pointer;
+                                        transition: all .3s ease-in-out;
+                                        height: 2rem;
+                                        &:hover{
+                                            background: $blue;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .allCategoryOptions{
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            grid-gap: 1rem;
+                            justify-content: left;
+                            .allCategoryOption{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                align-items: center;
+                                justify-content: right;
+                                border-radius: .4rem;
+                                height: 3rem;
+                                color: $text3;
+                                font-size: .65rem;
+                                font-weight: 500;
+                                grid-gap: .5rem;
+                                margin-top: 1rem;
+                                cursor: pointer;
+                                width: auto;
+                                @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+                                    input[type='checkbox'],
+                                    input[type='radio'] {
+                                        --active: #275EFE;
+                                        --active-inner: #fff;
+                                        --focus: 2px rgba(39, 94, 254, .3);
+                                        --border: #BBC1E1;
+                                        --border-hover: #275EFE;
+                                        --background: #fff;
+                                        --disabled: #F6F8FF;
+                                        --disabled-inner: #E1E6F9;
+                                        -webkit-appearance: none;
+                                        -moz-appearance: none;
+                                        height: 21px;
+                                        outline: none;
+                                        display: inline-block;
+                                        vertical-align: top;
+                                        position: relative;
+                                        margin: 0;
+                                        cursor: pointer;
+                                        border: 1px solid var(--bc, var(--border));
+                                        background: var(--b, var(--background));
+                                        transition: background .3s, border-color .3s, box-shadow .2s;
+                                        &:after {
+                                            content: '';
+                                            display: block;
+                                            left: 0;
+                                            top: 0;
+                                            position: absolute;
+                                            transition: transform var(--d-t)  var(--d-t-e, ease), opacity var(--d-o, .2s);
+                                        }
+                                        &:checked {
+                                            --b: var(--active);
+                                            --bc: var(--active);
+                                            --d-o: .3s;
+                                            --d-t: .6s;
+                                            --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+                                        }
+                                        &:disabled {
+                                            --b: var(--disabled);
+                                            cursor: not-allowed;
+                                            opacity: .9;
+                                            &:checked {
+                                                --b: var(--disabled-inner);
+                                                --bc: var(--border);
+                                            }
+                                            & + label {
+                                                cursor: not-allowed;
+                                            }
+                                        }
+                                        &:hover {
+                                            &:not(:checked) {
+                                                &:not(:disabled) {
+                                                    --bc: var(--border-hover);
+                                                }
+                                            }
+                                        }
+                                        &:focus {
+                                            box-shadow: 0 0 0 var(--focus);
+                                        }
+                                        &:not(.switch) {
+                                            width: 21px;
+                                            &:after {
+                                                opacity: var(--o, 0);
+                                            }
+                                            &:checked {
+                                                --o: 1;
+                                            }
+                                        }
+                                        & + label {
+                                            font-size: 14px;
+                                            line-height: 21px;
+                                            display: inline-block;
+                                            vertical-align: top;
+                                            cursor: pointer;
+                                            margin-left: 4px;
+                                        }
+                                    }
+                                    input[type='checkbox'] {
+                                        &:not(.switch) {
+                                            border-radius: 7px;
+                                            &:after {
+                                                width: 5px;
+                                                height: 9px;
+                                                border: 2px solid var(--active-inner);
+                                                border-top: 0;
+                                                border-left: 0;
+                                                left: 7px;
+                                                top: 4px;
+                                                transform: rotate(var(--r, 20deg));
+                                            }
+                                            &:checked {
+                                                --r: 43deg;
+                                            }
+                                        }
+                                        &.switch {
+                                            width: 38px;
+                                            border-radius: 11px;
+                                            &:after {
+                                                left: 2px;
+                                                top: 2px;
+                                                border-radius: 50%;
+                                                width: 15px;
+                                                height: 15px;
+                                                background: var(--ab, var(--border));
+                                                transform: translateX(var(--x, 0));
+                                            }
+                                            &:checked {
+                                                --ab: var(--active-inner);
+                                                --x: 17px;
+                                            }
+                                            &:disabled {
+                                                &:not(:checked) {
+                                                    &:after {
+                                                        opacity: .6;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    input[type='radio'] {
+                                        border-radius: 50%;
+                                        &:after {
+                                            width: 19px;
+                                            height: 19px;
+                                            border-radius: 50%;
+                                            background: var(--active-inner);
+                                            opacity: 0;
+                                            transform: scale(var(--s, .7));
+                                        }
+                                        &:checked {
+                                            --s: .5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        h3{
+                            font-size: .9rem;
+                            color: $text2;
+                            font-weight: 700;
+                            letter-spacing: .5px;
+                            text-align: center;
+                        }
+                    }
+                    .abilityPost{
+                        border-radius: .2rem;
+                        .abilityTable{
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            margin: 1rem 0;
+                            box-shadow: 0 0 0 0;
+                            border-radius: .3rem;
+                            overflow: hidden;
+                            background: #f5f5f5;
+                            tr{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr auto;
+                                text-align: right;
+                                align-items: center;
+                                grid-gap: 1rem;
+                                padding: 0 1rem;
+                                min-height: 3.5rem;
+                                border-bottom: 0;
+                                th{
+                                    font-weight: 300;
+                                    color: $text2;
+                                    font-size: .75rem;
+                                    text-align: right;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    padding-right: 1rem;
+                                    i{
+                                        svg{
+                                            width: 1rem;
+                                            height: 1rem;
+                                            fill: $text2;
+                                        }
+                                    }
+                                }
+                                td{
+                                    display: grid;
+                                    grid-template-columns: 1fr;
+                                    color: $text3;
+                                    font-size: .7rem;
+                                    font-weight: 200;
+                                    overflow: hidden;
+                                    i{
+                                        cursor: pointer;
+                                        svg{
+                                            width: 1rem;
+                                            height: 1rem;
+                                            fill: $text3;
+                                        }
+                                    }
+                                    input{
+                                        padding: 0.3rem .5rem;
+                                        color: $text2;
+                                        border-radius: .3rem;
+                                        font-size: .8rem;
+                                        width: 100%;
+                                        height: 2rem;
+                                        transition: all .3s ease-in-out;
+                                        &:focus{
+                                            box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                @media screen and (max-width:1600px) {
+                    .allCategorySettingContainerListItemChoice{
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+    }
+    .sendBtn{
+        padding: .5rem 1rem;
+        border-radius: .3rem;
+        background-color: $blue;
+        color: #FFFFFF;
+        box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+        transition: all .3s ease-in-out;
+        margin-top: 1rem;
+        &:hover{
+            background-color: $blue2;
+        }
+    }
+}

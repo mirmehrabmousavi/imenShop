@@ -1,0 +1,41 @@
+.allPaginatePanel{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+    grid-gap: .5rem;
+    justify-content: left;
+    .pageItem{
+        .pageItemLabel{
+            a{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                font-size: .8rem;
+                height: 34px;
+                min-width: 34px;
+                text-decoration: none;
+                transition: .3s cubic-bezier(0,0,.2,1);
+                width: auto;
+                cursor: pointer;
+                background: white;
+                color: rgba(0,0,0,.87);
+                box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+                svg{
+                    width: .5rem;
+                    height: .5rem;
+                }
+                &:hover{
+                    background: $cyan;
+                    color: $text1;
+                }
+            }
+            .active{
+                background: $blue;
+                color: $text1;
+                &:hover{
+                    background: $blue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,428 @@
+.allSingleDetail2{
+    margin-top: 2rem;
+    .tabs{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(2px, auto));
+        justify-content: right;
+        align-items: center;
+        .tab{
+            cursor: pointer;
+            .tabItem{
+                div{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: center;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    height: 55px;
+                    line-height: 55px;
+                    padding: 0 28px;
+                    font-size: 1rem;
+                    color: $text2;
+                    i {
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        width: 1.4rem;
+                        svg {
+                            fill: $text2;
+                            width: 1.4rem;
+                            height: 1.3rem;
+                        }
+                    }
+                }
+                @media screen and (max-width: 800px) {
+                    div{
+                        font-size: .75rem;
+                        padding: 0 10px;
+                        display: block;
+                        i{
+                            position: absolute;
+                            top: 0;
+                            visibility: hidden;
+                            width: .7rem;
+                            svg{
+                                width: .7rem;
+                                height: .7rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .active{
+                background: $headerPanel !important;
+                border-radius: 10px 10px 0 0;
+                position: relative;
+                div{
+                    color: $green;
+                    i{
+                        svg{
+                            fill: $green;
+                        }
+                    }
+                    &:before{
+                        left: auto;
+                        right: 100%;
+                        border-radius: 0 0 15px 0;
+                        position: absolute;
+                        bottom: 0;
+                        width: 20px;
+                        height: 20px;
+                        content: "";
+                        background: $backPage2;
+                        z-index: 1;
+                        transition: border-radius .2s;
+                    }
+                    &:after{
+                        background: $headerPanel !important;
+                        left: auto;
+                        border-radius: 0;
+                        z-index: 0;
+                        right: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        width: 20px;
+                        height: 20px;
+                        content: "";
+                        transition: border-radius .2s;
+                    }
+                }
+                &:after{
+                    background: $headerPanel !important;
+                    border-radius: 0;
+                    z-index: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 100%;
+                    width: 20px;
+                    height: 20px;
+                    content: "";
+                    transition: border-radius .2s;
+                }
+                &:before{
+                    position: absolute;
+                    bottom: 0;
+                    left: 100%;
+                    width: 20px;
+                    height: 20px;
+                    content: "";
+                    background: $backPage2;
+                    border-radius: 0 0 0 15px;
+                    z-index: 1;
+                    transition: border-radius .2s;
+                }
+            }
+            &:first-child{
+                .active{
+                    &:before{
+                        content: unset;
+                    }
+                    &:after{
+                        content: unset;
+                    }
+                }
+            }
+        }
+    }
+    .body {
+        background: $headerPanel;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        .bodyItem {
+            padding: 1rem;
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                color: $text2;
+                line-height: 2.25;
+                border-radius: 10px;
+                padding: 1rem;
+                margin-top: 1rem;
+                .image{
+                    display: grid;
+                    justify-content: center;
+                }
+                p{
+                    margin-top: 0;
+                    padding: 0;
+                }
+            }
+            label {
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: $text2;
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: right;
+                align-items: center;
+                grid-gap: .5rem;
+                i{
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        fill: $green;
+                    }
+                }
+            }
+            &:last-child {
+                margin-top: 2rem;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .bodyItem {
+                p {
+                    font-size: .7rem;
+                }
+                label {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: $text2;
+                }
+            }
+        }
+    }
+    .property {
+        background: $headerPanel;
+        border-radius: 10px;
+        padding: 1rem;
+        label {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: $text2;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: .5rem;
+            i{
+                display: grid;
+                align-items: center;
+                svg{
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    fill: $green;
+                }
+            }
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+            margin-top: 1rem;
+
+            li {
+                display: grid;
+                grid-template-columns: 20rem 1fr;
+                grid-gap: .5rem;
+
+                h3 {
+                    background: $backPage2;
+                    padding: .5rem;
+                    font-size: .8rem;
+                    line-height: 1.692;
+                    color: $text2;
+                    letter-spacing: -.3px;
+                    font-weight: 300;
+                    border-radius: .3rem;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                p {
+                    background: $backPage2;
+                    padding: .5rem;
+                    font-size: .8rem;
+                    line-height: 1.692;
+                    color: $text2;
+                    letter-spacing: -.3px;
+                    font-weight: 300;
+                    border-radius: .3rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .property {
+            label {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+            ul {
+                li {
+                    grid-template-columns: auto 1fr;
+
+                    h3 {
+                        font-size: .7rem;
+                    }
+
+                    p {
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+    }
+    .comment {
+        background: $headerPanel;
+        border-radius: 10px;
+    }
+    .allSingleQuestion{
+        display: grid;
+        grid-template-columns: 15rem 1fr;
+        grid-gap: 1rem;
+        padding: 1rem;
+        background: $headerPanel;
+        border-radius: 10px;
+        .allSingleQuestionSends{
+            .allSingleQuestionSend{
+                border: 1px solid $border2;
+                border-radius: 10px;
+                padding: 1rem;
+                position: sticky;
+                top: 1rem;
+                i{
+                    display: grid;
+                    justify-content: center;
+                    svg{
+                        width: 4rem;
+                        height: 4rem;
+                        fill: $text2;
+                    }
+                }
+                p{
+                    font-size: .8rem;
+                    font-weight: 500;
+                    color: $text2;
+                    text-align: center;
+                    margin-top: 1rem;
+                }
+                h3{
+                    margin-top: 1rem;
+                    border: 1px solid $redFront;
+                    padding: .5rem;
+                    color: $redFront;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    text-align: center;
+                    transition: all .3s ease-in-out;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    &:hover{
+                        background: $redFront;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .allSingleQuestionBody{
+            .allSingleQuestionItems{
+                .allSingleQuestionItem{
+                    padding: 1rem 0;
+                    border-bottom: 1px solid $border2;
+                    .allSingleQuestionTitle{
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        grid-gap: .5rem;
+                        i{
+                            display: grid;
+                            align-items: center;
+                            svg{
+                                width: 1.3rem;
+                                height: 1.3rem;
+                                fill: $redFront;
+                            }
+                        }
+                        p{
+                            font-size: .95rem;
+                            font-weight: 500;
+                            color: $text2;
+                            letter-spacing: .1px;
+                        }
+                    }
+                    .allSingleQuestionAnswers{
+                        .allSingleQuestionAnswer{
+                            padding: 1rem;
+                            border-radius: 10px;
+                            background: $backPage2;
+                            margin-top: 1rem;
+                            h4{
+                                font-size: .8rem;
+                                margin-bottom: .5rem;
+                                font-weight: 300;
+                                color: $text2;
+                                opacity: .7;
+                            }
+                            p{
+                                font-size: .9rem;
+                                font-weight: 300;
+                                color: $text2;
+                                opacity: .9;
+                            }
+                        }
+                    }
+                    .allSingleQuestionItemSend{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: left;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        margin: .5rem;
+                        margin-bottom: 0;
+                        cursor: pointer;
+                        span{
+                            font-size: .9rem;
+                            font-weight: 500;
+                            color: $redFront;
+                        }
+                        i{
+                            display: grid;
+                            align-items: center;
+                            svg{
+                                width: .6rem;
+                                height: .6rem;
+                                fill: $redFront;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+            .allSingleQuestionEmpty{
+                display: grid;
+                align-items: center;
+                i{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        width: 5rem;
+                        height: 5rem;
+                        fill: $text2;
+                        opacity: .8;
+                    }
+                }
+                p{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    opacity: .8;
+                    color: $text2;
+                    text-align: center;
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .allSingleQuestion{
+            grid-template-columns: 1fr;
+        }
+    }
+}

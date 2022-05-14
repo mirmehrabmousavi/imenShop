@@ -1,0 +1,299 @@
+.allTicketPanel{
+    .allTicketPanelTitle{
+        background: white;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        .allTicketPanelAddress{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: right;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:first-child{
+                    color: $text3;
+                }
+            }
+        }
+        .allTicketPanelTitleOption{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: 1rem;
+            .filterItems{
+                position: relative;
+                .filterTitle{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    align-items: center;
+                    justify-content: right;
+                    grid-gap: 1rem;
+                    color: white;
+                    padding: .5rem 2rem;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    background: #394C62;
+                    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+                    i{
+                        svg{
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            fill: white;
+                        }
+                    }
+                }
+                .bounce-enter-active {
+                    animation: bounce-in .3s;
+                }
+                .bounce-leave-active {
+                    animation: bounce-in .3s reverse;
+                }
+                @keyframes bounce-in {
+                    0% {
+                        transform: scale(0);
+                    }
+                    50% {
+                        transform: scale(1.1);
+                    }
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+                .filterContent{
+                    position: absolute;
+                    top: 145%;
+                    left: -.5rem;
+                    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+                    background: white;
+                    border-radius: .2rem;
+                    padding: .5rem;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 1rem;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: -10px;
+                        left: 8px;
+                        border-style: solid;
+                        border-width: 0 10px 10px 10px;
+                        border-color: transparent transparent #fff transparent;
+                    }
+                    .filterContentItem{
+                        display: grid;
+                        grid-gap: .5rem;
+                        label{
+                            color: $text2;
+                            font-weight: 300;
+                            font-size:.7rem;
+                        }
+                        .allCategoryPanel{
+                            position: relative;
+                            .categoryShow{
+                                background: #EEEEEE;
+                                display: grid;
+                                grid-template-columns: 1fr auto;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 0 .7rem;
+                                border-radius: .2rem;
+                                cursor: pointer;
+                                height: 2rem;
+                                h4{
+                                    font-weight: 450;
+                                    font-size: .7rem;
+                                }
+                                i{
+                                    position: relative;
+                                    svg{
+                                        width: .8rem;
+                                        height: .8rem;
+                                    }
+                                }
+                            }
+                            ul{
+                                position: absolute;
+                                top: 110%;
+                                right: 0;
+                                box-shadow: rgba(0, 0, 0, 0.16) 0 1px 3px;
+                                background: white;
+                                border-radius: .2rem;
+                                width: 100%;
+                                z-index: 9000;
+                                direction: ltr;
+                                .scroll-area {
+                                    position: relative;
+                                    margin: auto;
+                                    width: 100%;
+                                    height: 10rem;
+                                }
+                                li{
+                                    padding: .5rem;
+                                    padding-right: 1rem;
+                                    transition: all .3s ease-in-out;
+                                    cursor: pointer;
+                                    direction: rtl;
+                                    &:hover{
+                                        background: #F6F6F6;
+                                    }
+                                }
+                            }
+                        }
+                        .allTicketPanelTitleDate{
+                            border: 1px solid rgba(0, 0, 0, 0.125);
+                            border-radius: .2rem;
+                            overflow: hidden;
+                            width: 15rem;
+                            position: relative;
+                            input{
+                                width: auto;
+                                padding: .3rem;
+                                height: 1.9rem;
+                                font-size: .7rem;
+                                border: 0;
+                                box-shadow: 0 0 0 0;
+                                background: transparent;
+                                border-radius: 0;
+                            }
+                            i{
+                                position: absolute;
+                                left: .3rem;
+                                top: .5rem;
+                                cursor: pointer;
+                                svg{
+                                    width: .5rem;
+                                    height: .5rem;
+                                }
+                            }
+                        }
+                        input{
+                            padding: .3rem;
+                            width: 15rem;
+                            border: 1px solid rgba(0, 0, 0, 0.125);
+                            box-shadow: 0 0 4px rgba(0, 0, 0, 0.125);
+                            font-size: .7rem;
+                            border-radius: .2rem;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+            .button{
+                padding: .5rem 1rem;
+                border-radius: .3rem;
+                background-color: #FF5B5C;
+                color: #FFFFFF;
+                box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: #FF2829;
+                }
+            }
+        }
+        .createTicketPanel{
+            z-index: 5000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            .createTicketPanelItems{
+                background: white;
+                padding: 1rem;
+                width: 35rem;
+                border-radius: .3rem;
+                .errorsCreate{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    align-items: center;
+                    grid-gap: 1rem;
+                    background: #F5D2D2;
+                    border-top: 5px solid #e75f55;
+                    color: #6b1110;
+                    border-radius: .2rem;
+                    padding: .5rem 1rem;
+                    margin-bottom: 1rem;
+                    i{
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                    span{
+                        font-size: .75rem;
+                        font-weight: 400;
+                    }
+                }
+                .createTicketPanelItem{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: .5rem;
+                    margin-bottom: 1rem;
+                    label{
+                        font-size: .9rem;
+                        font-weight: 700;
+                        color: $text2;
+                    }
+                    textarea{
+                        padding: .5rem;
+                        background: #EEEEEE;
+                        border: 2px solid #EEEEEE;
+                        border-radius: .2rem;
+                        width: 100%;
+                        outline-style: unset;
+                        transition: all .3s ease-in-out;
+                        font-size: .75rem;
+                        font-weight: 300;
+                        resize: vertical;
+                        &:focus{
+                            border: 2px solid $blue;
+                            background: #F6F6F6;
+                        }
+                    }
+                }
+                .button{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    grid-gap: 1rem;
+                    align-items: center;
+                    button{
+                        display: block;
+                        background: $blue;
+                        color: white;
+                        border-radius: .2rem;
+                        padding: .4rem 1rem;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    .allTable{
+        margin: 1rem;
+        .paginate{
+            &:first-child{
+                margin-bottom: 1rem;
+            }
+            &:last-child{
+                margin-top: 1rem;
+            }
+        }
+    }
+}

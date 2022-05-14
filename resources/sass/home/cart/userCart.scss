@@ -1,0 +1,727 @@
+.allPersonalUser{
+    margin: 8rem auto auto auto;
+    .allCartIndexTitle{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        h4{
+            color: $redFront;
+            padding: 1rem;
+            border-bottom: 2px solid $redFront;
+            font-size: .9rem;
+            font-weight: 500;
+            height: 3.8rem;
+        }
+        .allCartIndexAddress{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            border-bottom: 2px solid $headerPanel;
+            height: 3.8rem;
+            padding: 1rem;
+            span{
+                color: $text2;
+                font-size: .8rem;
+                font-weight: 300;
+                opacity: .7;
+            }
+            a{
+                color: $text2;
+                font-size: .8rem;
+                opacity: .7;
+                font-weight: 300;
+            }
+        }
+    }
+    .allPersonalUserBot{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 1rem;
+        margin-top: 1rem;
+        .userCart{
+            .allAddress{
+                background: $headerPanel;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                overflow: hidden;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                .title{
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    justify-content: right;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    margin-bottom: 2rem;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: $text2;
+                    i{
+                        svg{
+                            width: 1.3rem;
+                            height: 1.3rem;
+                            fill: $redFront;
+                        }
+                    }
+                }
+                .addresses{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill , minmax(15rem , 1fr));
+                    grid-gap: 1rem;
+                    margin-top: 1rem;
+                    .addressItem{
+                        .detail{
+                            border: 2px solid $border2;
+                            padding: 1rem;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            .titleAddress{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                grid-gap: .5rem;
+                                padding-bottom: 1rem;
+                                border-bottom: 1px solid $border2;
+                                font-size: .9rem;
+                                font-weight: 300;
+                                color: $text2;
+                                i{
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        width: 1rem;
+                                        height: 1rem;
+                                        fill: $text2;
+                                    }
+                                }
+                            }
+                            .addressData{
+                                padding-top: 1rem;
+                                p{
+                                    font-size: .95rem;
+                                    font-weight: 300;
+                                    color: $text2;
+                                    line-height: 1.7rem;
+                                    word-spacing: .5px;
+                                    letter-spacing: .2px;
+                                    margin-bottom: 1.5rem;
+                                }
+                                .dataItem{
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: right;
+                                    align-items: center;
+                                    grid-gap: .5rem;
+                                    margin-top: .5rem;
+                                    i{
+                                        display: grid;
+                                        align-items: center;
+                                        justify-content: center;
+                                        svg{
+                                            width: 1rem;
+                                            height: 1rem;
+                                            fill: $text2;
+                                        }
+                                    }
+                                    span{
+                                        color: $text2;
+                                        font-size: .8rem;
+                                        font-weight: 300;
+                                    }
+                                }
+                                .options{
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: left;
+                                    align-items: center;
+                                    margin-top: 1rem;
+                                    grid-gap: .5rem;
+                                    button{
+                                        background: $blue;
+                                        padding: .3rem .8rem;
+                                        font-size: .8rem;
+                                        font-weight: 300;
+                                        color: white;
+                                        border-radius: 5px;
+                                        &:last-child{
+                                            background: $redFront;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .active{
+                            border: 2px solid $redFront;
+                            .titleAddress{
+                                color: $redFront;
+                                i{
+                                    svg{
+                                        fill: $redFront;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .addAddress{
+                        border: 2px dashed $border2;
+                        padding: 1rem;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        display: grid;
+                        min-height: 15rem;
+                        align-items: center;
+                        .add{
+                            i{
+                                display: grid;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: .5rem;
+                                svg{
+                                    width: 2rem;
+                                    height: 2rem;
+                                    fill: $text2;
+                                }
+                            }
+                            h4{
+                                font-size: 1.3rem;
+                                font-weight: 500;
+                                color: $text2;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .cartDays{
+                background: $headerPanel;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                overflow: hidden;
+                padding: 1rem;
+                margin-top: 1rem;
+                .cartDaysTitle{
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    justify-content: right;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    margin-bottom: 2rem;
+                    .icon{
+                        svg{
+                            width: 1.3rem;
+                            height: 1.3rem;
+                            fill: $redFront;
+                        }
+                    }
+                    h5{
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        color: $text2;
+                    }
+                    .allCategoryPanel{
+                        position: relative;
+                        .categoryShow{
+                            background: rgba(60, 217, 1, 0.1);
+                            display: grid;
+                            grid-template-columns: 1fr auto;
+                            grid-gap: 1rem;
+                            padding: .3rem .8rem;
+                            border-radius: .3rem;
+                            cursor: pointer;
+                            h4{
+                                color: $green;
+                                font-size: .8rem;
+                                font-weight: 300;
+                                letter-spacing: .1px;
+                            }
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    width: 0.6rem;
+                                    height: 0.6rem;
+                                    fill: $green;
+                                }
+                            }
+                        }
+                        ul{
+                            position: absolute;
+                            top: 94%;
+                            right: 0;
+                            width: 100%;
+                            background: $headerPanel;
+                            border-bottom-left-radius: .3rem;
+                            border-bottom-right-radius: .3rem;
+                            max-height: 15rem;
+                            direction: ltr;
+                            overflow: hidden;
+                            border: 1px solid rgba(60, 217, 1, 0.1);
+                            border-top: 0;
+                            z-index: 80;
+                            .scroll-area {
+                                position: relative;
+                                margin: auto;
+                                width: 100%;
+                                max-height: 15rem;
+                            }
+                            li{
+                                direction: rtl;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                padding: .4rem;
+                                padding-right: 1rem;
+                                color: $text2;
+                                font-size: .75rem;
+                                font-weight: 300;
+                                cursor: pointer;
+                                transition: all .3s ease-in-out;
+                                min-height: 2rem;
+                            }
+                        }
+                    }
+                }
+                ul{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill , minmax(6rem , 1fr));
+                    grid-gap: 1rem;
+                    align-items: center;
+                    li{
+                        h3{
+                            font-size: 1rem;
+                            font-weight: 300;
+                            color: $text2;
+                        }
+                        p{
+                            font-size: .7rem;
+                            font-weight: 300;
+                            color: $text2;
+                            opacity: .7;
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: .3rem;
+                        }
+                        .dayItem{
+                            h4{
+                                font-size: .9rem;
+                                text-align: center;
+                                font-weight: 500;
+                                color: $text2;
+                            }
+                            h5{
+                                margin-top: .5rem;
+                                font-size: .7rem;
+                                text-align: center;
+                                font-weight: 300;
+                                letter-spacing: .1px;
+                                color: $text2;
+                            }
+                            div{
+                                cursor: pointer;
+                                border: 2px solid $border2;
+                                padding: .5rem 1rem;
+                                border-radius: 10px;
+                                margin-top: .5rem;
+                            }
+                            .active{
+                                border: 2px solid $redFront;
+                                background: rgba(255,0,0,.03);
+                                h4{
+                                    color: $redFront;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .allCartIndexItemNext{
+            position: sticky;
+            top: 9rem;
+            background: $headerPanel;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 1rem;
+            width: 17rem;
+            height: 25rem;
+            .WithoutOff , .postCount{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin-bottom: .5rem;
+                label{
+                    color: $text2;
+                    font-size: .85rem;
+                    font-weight: 300;
+                }
+                span{
+                    color: $text2;
+                    font-weight: 300;
+                    font-size: .9rem;
+                    letter-spacing: .1px;
+                }
+            }
+            .allOff{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                padding-bottom: .5rem;
+                border-bottom: 1px solid $border2;
+                label{
+                    color: $redFront;
+                    font-size: .8rem;
+                    font-weight: 300;
+                }
+                span{
+                    color: $redFront;
+                    font-weight: 300;
+                    font-size: .85rem;
+                    letter-spacing: .1px;
+                }
+            }
+            .allMoney{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin: .5rem 0;
+                label{
+                    color:$text2;
+                    font-size: .8rem;
+                    font-weight: 500;
+                }
+                span{
+                    color:$text2;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    letter-spacing: .1px;
+                }
+            }
+            .allSum{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin: .5rem 0;
+                label{
+                    color:$text2;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+                span{
+                    color:$text2;
+                    font-size: .8rem;
+                    font-weight: 400;
+                    letter-spacing: .1px;
+                }
+            }
+            .discount{
+                display: grid;
+                grid-template-columns: 1fr;
+                margin-top: .5rem;
+                h4{
+                    color:$text2;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+                label{
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    margin-top: .5rem;
+                    padding: .5rem;
+                    border: 1px solid $border2;
+                    border-radius: 5px;
+                    height: 2.9rem;
+                    input{
+                        background: transparent;
+                        color:$text2;
+                        font-size: .8rem;
+                        font-weight: 400;
+                    }
+                    i{
+                        display: grid;
+                        align-items: center;
+                        .loading{
+                            animation: arrow-anim2 .5s ease infinite;
+                            @keyframes arrow-anim2 {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+                                15% {
+                                    transform: rotate(45deg);
+                                }
+                                25% {
+                                    transform: rotate(90deg);
+                                }
+                                50% {
+                                    transform: rotate(180deg);
+                                }
+                                75% {
+                                    transform: rotate(270deg);
+                                }
+                                85% {
+                                    transform: rotate(300deg);
+                                }
+                                100% {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        }
+                        svg {
+                            width: 1.3rem;
+                            height: 1.3rem;
+                            fill: $redFront;
+                        }
+                    }
+                    button{
+                        border-radius: 5px;
+                        background: $blue;
+                        padding: .3rem .5rem;
+                        font-size: .75rem;
+                        font-weight: 300;
+                        color: white;
+                    }
+                    .accept{
+                        background: $green;
+                    }
+                    .fail{
+                        background: $red;
+                    }
+                }
+            }
+            .sendMoney{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin: .5rem 0;
+                label{
+                    color: $text2;
+                    font-size: .75rem;
+                    font-weight: 300;
+                }
+                span{
+                    color: $text2;
+                    font-size: .75rem;
+                    font-weight: 300;
+                    letter-spacing: .1px;
+                }
+            }
+            .allProfit{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin: .5rem 0;
+                label{
+                    color: $redFront;
+                    font-size: .75rem;
+                    font-weight: 300;
+                }
+                span{
+                    color: $redFront;
+                    font-size: .75rem;
+                    font-weight: 300;
+                    letter-spacing: .1px;
+                }
+            }
+            .nextItem{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                width: 15rem;
+                a{
+                    cursor: pointer;
+                    text-align: center;
+                    color: $redFront;
+                    padding: .5rem 1rem;
+                    border: 1px solid $redFront;
+                    background: transparent;
+                    margin-top: 1rem;
+                    border-radius: .4rem;
+                }
+            }
+            .scoreCart{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 1rem;
+                .rightScore{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    grid-gap: .3rem;
+                    align-items: center;
+                    svg{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+                span{
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text2;
+                }
+            }
+        }
+    }
+    .buyWays{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: hsla(0,0%,52.9%,.5);
+        z-index: 999;
+        .buyWaysItems {
+            background: $headerPanel;
+            padding: 1rem;
+            width: 35%;
+            margin: auto;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            .title{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                grid-gap: .5rem;
+                align-items: center;
+                .right{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    grid-gap: 1rem;
+                    align-items: center;
+                    span{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: $text2;
+                    }
+                    i{
+                        cursor: pointer;
+                        svg{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            fill: $redFront;
+                        }
+                    }
+                }
+                .close{
+                    cursor: pointer;
+                    svg{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        fill: $text2;
+                    }
+                }
+            }
+            .wayItems{
+                display: grid;
+                grid-template-columns: auto auto;
+                align-items: center;
+                justify-content: center;
+                grid-gap: 1rem;
+                margin-top: 1rem;
+                .wayItem{
+                    padding: 1rem;
+                    border: 1px solid $border2;
+                    border-radius: 10px;
+                    i{
+                        display: grid;
+                        justify-content: center;
+                        svg{
+                            width: 4rem;
+                            height: 4rem;
+                        }
+                    }
+                    h4{
+                        text-align: center;
+                        font-size: .9rem;
+                        font-weight: 500;
+                        color: $text2;
+                        margin-top: 1rem;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: .75rem;
+                        font-weight: 300;
+                        color: $text2;
+                        margin-top: .5rem;
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .buyWays{
+            .buyWaysItems {
+                width: 95%;
+                .title{
+                    .right{
+                        span{
+                            font-size: .8rem;
+                            font-weight: 500;
+                            color: $text2;
+                        }
+                        i{
+                            svg{
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                    }
+                    .close{
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                }
+                .wayItems{
+                    .wayItem{
+                        padding: .5rem;
+                        i{
+                            svg{
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                        }
+                        h4{
+                            font-size: .8rem;
+                        }
+                        p{
+                            font-size: .65rem;
+                        }
+                    }
+                }
+            }
+        }
+        .allCartIndexTitle{
+            .allCartIndexAddress{
+                opacity: 0;
+            }
+        }
+        .allPersonalUserBot{
+            grid-template-columns: 1fr;
+            .allCartIndexItemNext{
+                position: relative;
+                top: auto;
+                width: auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .allPersonalUser{
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,608 @@
+.allAddVariety{
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+    .allAddVarietyTop{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 1rem;
+        .allAddVarietyPic{
+            img{
+                width: 10rem;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .allAddVarietySubject{
+            h1{
+                font-size: 1rem;
+                font-weight: 300;
+                color: $text2;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+                justify-content: right;
+                grid-gap: 2rem;
+                align-items: center;
+                margin-top: 2rem;
+                background: #f5f5f5;
+                padding: 1rem;
+                border-radius: 10px;
+                overflow: hidden;
+                li{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    span{
+                        font-size: .85rem;
+                        font-weight: 300;
+                        letter-spacing: .1px;
+                        color: $text2;
+                    }
+                }
+            }
+        }
+    }
+    .allCreateVariety{
+        padding: 1rem;
+        margin-top: 1rem;
+        border: 1px solid #F5F5F5;
+        border-radius: 10px;
+        .allVarietiesTitle{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            margin-bottom: 1rem;
+            span{
+                font-size: 1.3rem;
+                font-weight: 500;
+                letter-spacing: .1px;
+                color: $text2;
+            }
+        }
+        .allCreateVarietyItems{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr));
+            grid-gap: 1rem;
+            margin-bottom: 1rem;
+            .allCreateVarietyItem{
+                h3{
+                    color: $text2;
+                    font-weight: 500;
+                    font-size: .9rem;
+                    margin-bottom: .5rem;
+                }
+                .allCategoryPanel{
+                    position: relative;
+                    .categoryShow{
+                        border: 1.4px solid $border1;
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        padding: .7rem .5rem;
+                        border-radius: .3rem;
+                        cursor: pointer;
+                        h4{
+                            color: $text2;
+                            font-size: .75rem;
+                            font-weight: 400;
+                        }
+                        i{
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            svg{
+                                width: 0.8rem;
+                                height: 0.8rem;
+                                fill: $text2;
+                            }
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        top: 94%;
+                        right: 0;
+                        width: 100%;
+                        background: white;
+                        border-bottom-left-radius: .3rem;
+                        border-bottom-right-radius: .3rem;
+                        max-height: 15rem;
+                        direction: ltr;
+                        overflow: hidden;
+                        border: 1.4px solid $border1;
+                        border-top: 0;
+                        z-index: 80;
+                        .scroll-area {
+                            position: relative;
+                            margin: auto;
+                            width: 100%;
+                            max-height: 15rem;
+                        }
+                        li{
+                            direction: rtl;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            padding: .4rem;
+                            padding-right: 1rem;
+                            color: $text3;
+                            font-size: .75rem;
+                            font-weight: 300;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            height: 2rem;
+                            &:hover{
+                                background: $text4;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .allTaxes{
+                    position: relative;
+                    .taxShow{
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        align-items: center;
+                        width: 100%;
+                        padding: .4rem .5rem;
+                        border: 1.4px solid #f5f5f5;
+                        border-radius: .3rem;
+                        cursor: pointer;
+                        h4{
+                            color: $text2;
+                            font-size: .75rem;
+                            font-weight: 300;
+                            height: 2rem;
+                            display: grid;
+                            align-items: center;
+                        }
+                        ul{
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit ,minmax(6rem,auto));
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: 1rem;
+                            li{
+                                position: relative;
+                                padding: .4rem;
+                                background: #E2EBFA;
+                                border-radius: .2rem;
+                                color: $text2;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-align: center;
+                                i{
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        fill:$text2;
+                                        width: .7rem;
+                                        height: .7rem;
+                                    }
+                                }
+                                span{
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    font-size: .75rem;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                        svg{
+                            width: .65rem;
+                            height: .65rem;
+                            fill: $text2;
+                        }
+                    }
+                    .showAllTaxes{
+                        position: absolute;
+                        top: 94%;
+                        right: 0;
+                        width: 100%;
+                        display: grid;
+                        background: white;
+                        grid-template-columns: 1fr;
+                        border-bottom-left-radius: .3rem;
+                        border-bottom-right-radius: .3rem;
+                        direction: ltr;
+                        overflow: hidden;
+                        border: 1.4px solid #f5f5f5;
+                        border-top: 0;
+                        z-index: 80;
+                        .searchTax{
+                            display: grid;
+                            grid-template-columns: 1fr auto;
+                            align-items: center;
+                            cursor: auto;
+                            height: 3rem;
+                            border-bottom: 2px solid #F6F6F6;
+                            input{
+                                border-left: 0;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                                transition: all .3s ease-in-out;
+                                &:focus{
+                                    border: 1px solid $blue;
+                                    box-shadow: 0 0 0 0;
+                                }
+                            }
+                            button{
+                                width: 2.3rem;
+                                border: 1px solid #f5f5f5;
+                                border-right: 0;
+                                font-size: 1.1rem;
+                                background: transparent;
+                                border-radius: .3rem;
+                                font-weight: 300;
+                                transition: all .3s ease-in-out;
+                                border-top-right-radius: 0;
+                                border-bottom-right-radius: 0;
+                                height: 100%;
+                                color: $text3;
+                                &:hover{
+                                    background: $blue;
+                                    color: white;
+                                }
+                            }
+                            &:hover{
+                                background: white;
+                            }
+                        }
+                        .scroll-area {
+                            position: relative;
+                            margin: auto;
+                            width: 100%;
+                            max-height: 15rem;
+                        }
+                        li{
+                            direction: rtl;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            padding: .4rem;
+                            color: $text3;
+                            font-size: .75rem;
+                            font-weight: 300;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            height: 2rem;
+                            &:hover{
+                                background: $blue;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        input{
+            border: 1px solid #DFE3E7;
+            padding: 0.3rem .5rem;
+            color: $text2;
+            border-radius: .3rem;
+            font-size: .8rem;
+            width: 100%;
+            height: 2.8rem;
+            transition: all .3s ease-in-out;
+            &:focus{
+                box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                border: 1px solid $blue;
+            }
+        }
+        .abilityPost{
+            background: #F5F6F8;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            .abilityTitle{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                grid-gap: .5rem;
+                align-items: center;
+                i{
+                    cursor: pointer;
+                    svg{
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        fill: $text3;
+                        transition: all .3s ease-in-out;
+                    }
+                    &:hover{
+                        svg{
+                            fill: black;
+                        }
+                    }
+                }
+            }
+            .abilityTable{
+                display: grid;
+                grid-template-columns: 1fr;
+                margin: 1rem 0;
+                box-shadow: 0 0 0 0;
+                border-radius: .3rem;
+                overflow: hidden;
+                tr{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+                    text-align: right;
+                    align-items: center;
+                    grid-gap: 1rem;
+                    background: white;
+                    padding: 0 1rem;
+                    min-height: 3.5rem;
+                    border-bottom: 0;
+                    th{
+                        font-weight: 300;
+                        color: $text2;
+                        font-size: .75rem;
+                        text-align: right;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        padding-right: 1rem;
+                    }
+                    td{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        color: $text3;
+                        font-size: .7rem;
+                        font-weight: 200;
+                        overflow: hidden;
+                        i{
+                            cursor: pointer;
+                            svg{
+                                width: 1rem;
+                                height: 1rem;
+                                fill: $text3;
+                            }
+                        }
+                        textarea{
+                            border: 1px solid #DFE3E7;
+                            padding: 0.3rem .5rem;
+                            color: $text2;
+                            border-radius: .3rem;
+                            font-size: .8rem;
+                            width: 100%;
+                            height: 2rem;
+                            transition: all .3s ease-in-out;
+                            resize: vertical;
+                            height: 2rem;
+                            &:focus{
+                                box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                                border: 1px solid $blue;
+                            }
+                        }
+                        $shade-10: #2c3e50 !default;
+                        $shade-1: #d7dcdf !default;
+                        $shade-0: #fff !default;
+                        $teal: #1abc9c !default;
+
+
+                        // Reset
+                        * {
+                            &,
+                            &:before,
+                            &:after {
+                                box-sizing: border-box;
+                            }
+                        }
+
+                        body {
+                            font-family: sans-serif;
+                            padding: 60px 20px;
+
+                            @media (min-width: 600px) {
+                                padding: 60px;
+                            }
+                        }
+
+                        .range-slider {
+                            margin: 60px 0 0 0%;
+                        }
+
+
+                        // Range Slider
+                        $range-width: 100% !default;
+
+                        $range-handle-color: $shade-10 !default;
+                        $range-handle-color-hover: $teal !default;
+                        $range-handle-size: 20px !default;
+
+                        $range-track-color: $shade-1 !default;
+                        $range-track-height: 10px !default;
+
+                        $range-label-color: $shade-10 !default;
+                        $range-label-width: 60px !default;
+
+                        .range-slider {
+                            width: $range-width;
+                        }
+
+                        .range-slider__range {
+                            -webkit-appearance: none;
+                            width: calc(100% - (#{$range-label-width + 13px}));
+                            height: $range-track-height;
+                            border-radius: 5px;
+                            background: $range-track-color;
+                            outline: none;
+                            padding: 0;
+                            margin: 0;
+
+                            // Range Handle
+                            &::-webkit-slider-thumb {
+                                appearance: none;
+                                width: $range-handle-size;
+                                height: $range-handle-size;
+                                border-radius: 50%;
+                                background: $range-handle-color;
+                                cursor: pointer;
+                                transition: background .15s ease-in-out;
+
+                                &:hover {
+                                    background: $range-handle-color-hover;
+                                }
+                            }
+
+                            &:active::-webkit-slider-thumb {
+                                background: $range-handle-color-hover;
+                            }
+
+                            &::-moz-range-thumb {
+                                width: $range-handle-size;
+                                height: $range-handle-size;
+                                border: 0;
+                                border-radius: 50%;
+                                background: $range-handle-color;
+                                cursor: pointer;
+                                transition: background .15s ease-in-out;
+
+                                &:hover {
+                                    background: $range-handle-color-hover;
+                                }
+                            }
+
+                            &:active::-moz-range-thumb {
+                                background: $range-handle-color-hover;
+                            }
+
+                            // Focus state
+                            &:focus {
+
+                                &::-webkit-slider-thumb {
+                                    box-shadow: 0 0 0 3px $shade-0,
+                                    0 0 0 6px $teal;
+                                }
+                            }
+                        }
+
+
+                        // Range Label
+                        .range-slider__value {
+                            display: inline-block;
+                            position: relative;
+                            width: $range-label-width;
+                            color: $shade-0;
+                            line-height: 20px;
+                            text-align: center;
+                            border-radius: 3px;
+                            background: $range-label-color;
+                            padding: 5px 10px;
+                            margin-left: 8px;
+
+                            &:after {
+                                position: absolute;
+                                top: 8px;
+                                left: -7px;
+                                width: 0;
+                                height: 0;
+                                border-top: 7px solid transparent;
+                                border-right: 7px solid $range-label-color;
+                                border-bottom: 7px solid transparent;
+                                content: '';
+                            }
+                        }
+
+
+                        // Firefox Overrides
+                        ::-moz-range-track {
+                            background: $range-track-color;
+                            border: 0;
+                        }
+
+                        input::-moz-focus-inner,
+                        input::-moz-focus-outer {
+                            border: 0;
+                        }
+                    }
+                    &:nth-child(2){
+                        border-top: 2px solid #DFE3E7;
+                    }
+                }
+            }
+            .abilityPostToolTip{
+                background: rgba(255,0,0,.1);
+                padding: 0 .5rem;
+                border-radius: 5px;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                grid-gap: .5rem;
+                height: 3rem;
+                i{
+                    svg{
+                        fill: $red;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        animation: arrow-anim 1.5s ease infinite;
+                        margin-bottom: 0;
+                        @keyframes arrow-anim {
+                            0% {
+                                margin-bottom: 0;
+                            }
+                            10% {
+                                margin-bottom: .5rem;
+                            }
+                            30% {
+                                transform: rotate(-40deg);
+                            }
+                            50% {
+                                transform: rotate(40deg);
+                            }
+                            60% {
+                                transform: rotate(-40deg);
+                            }
+                            70% {
+                                transform: rotate(-20deg);
+                            }
+                            80% {
+                                transform: rotate(0);
+                                margin-bottom: 1rem;
+                            }
+                            100% {
+                                margin-bottom: .5rem;
+                            }
+                        }
+                    }
+                }
+                p{
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text2;
+                    height: 3rem;
+                    display: grid;
+                    align-items: center;
+                }
+            }
+            &:nth-last-child(3){
+                .abilityTable{
+                    tr{
+                        grid-template-columns: 1fr 1fr 1fr 1fr 1fr auto;
+                    }
+                }
+            }
+        }
+    }
+    .buttons{
+        display: grid;
+        justify-content: left;
+        margin-top: 1rem;
+        button{
+            background: $blue;
+            border-radius: 5px;
+            padding: .5rem 1rem;
+            font-size: .85rem;
+            font-weight: 300;
+            color: white;
+        }
+    }
+}

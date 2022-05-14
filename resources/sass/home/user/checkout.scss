@@ -1,0 +1,88 @@
+.allCheckoutIndex{
+    .allCheckoutTop{
+        ul{
+            li{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: right;
+                align-items: center;
+                grid-gap: .5rem;
+                font-size: .85rem;
+                font-weight: 300;
+                color: $text2;
+                h4{
+                    font-size: .85rem;
+                    font-weight: 300;
+                    color: $text2;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    justify-content: right;
+                    grid-gap: .5rem;
+                    a{
+                        color: $blue2;
+                    }
+                }
+                &:before{
+                    content: "";
+                    width: .5rem;
+                    height: .5rem;
+                    border-radius: 5rem;
+                    background: $redFront;
+                }
+                &:last-child{
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+    .allCheckoutData{
+        padding: 1rem;
+        background: $headerPanel;
+        border-radius: 10px;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        ul{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: 2rem;
+            li{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: right;
+                align-items: center;
+                grid-gap: .5rem;
+                h4,span{
+                    font-size: .85rem;
+                    font-weight: 300;
+                    color: $text2;
+                }
+                span{
+                    font-size: 1rem;
+                    letter-spacing: .1px;
+                    font-weight: 500;
+                }
+            }
+        }
+        button{
+            padding: .3rem 1rem;
+            font-size: .9rem;
+            font-weight: 300;
+            color: white;
+            background: $green;
+            box-shadow: 0 5px 5px rgba(0,0,0,.05);
+            border-radius: 5px;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .allCheckoutData{
+            grid-template-columns: 1fr;
+            ul{
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+            }
+        }
+    }
+}

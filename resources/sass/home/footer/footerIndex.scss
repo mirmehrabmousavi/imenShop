@@ -1,0 +1,168 @@
+.allFooterIndex{
+    background: $headerPanel;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    border-top: 1px solid $border2;
+    .blockFooter{
+        margin: auto;
+        .topFooterIndex{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(8rem , 1fr));
+            align-items: center;
+            grid-gap: 1rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $backPage2;
+            .topFooterIndexItem{
+                display: grid;
+                grid-template-columns: 1fr;
+                .topFooterIndexItemPic{
+                    display: grid;
+                    justify-content: center;
+                    svg{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+                span{
+                    text-align: center;
+                    margin-top: 1rem;
+                    color: $text2;
+                    font-weight: 500;
+                    font-size: .85rem;
+                }
+            }
+        }
+        .botFooterIndex{
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(8rem , 1fr));
+            justify-content: space-between;
+            grid-gap: 2.5rem;
+            .botFooterIndexItem{
+                justify-self: center;
+                .footerPic{
+                    img{
+                        width: 100%;
+                        height: 4rem;
+                        object-fit: contain;
+                    }
+                }
+                p{
+                    color: $text2;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    margin-top: 1rem;
+                }
+                span{
+                    color: $text2;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+                ul{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: .5rem;
+                    margin-top: .5rem;
+                    li{
+                        a{
+                            color: $text2;
+                            font-size: .8rem;
+                            font-weight: 500;
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+            .communicationFooter{
+                justify-self: left;
+                span{
+                    color: $text2;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+                .communicationFooterItem{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit , minmax(2rem , auto));
+                    align-items: center;
+                    justify-content: right;
+                    grid-gap: .5rem;
+                    margin-top: .5rem;
+                    a{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        align-items: center;
+                        justify-content: center;
+                        padding: .4rem .6rem;
+                        background: $backPage2;
+                        border-radius: 5px;
+                        i{
+                            cursor: pointer;
+                            font-size: 1rem;
+                            transition: all .3s ease-in-out;
+                            svg{
+                                width: 1rem;
+                                height: 1rem;
+                                fill: #79788d;
+                            }
+                        }
+                    }
+                }
+                .trustFooter{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    align-items: center;
+                    grid-gap: 1rem;
+                    margin-top: 1rem;
+                    a{
+                        height: 5rem;
+                        width: 5rem;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: fill;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .botFooterIndex{
+                grid-template-columns: 1fr;
+                .botFooterIndexItem{
+                    &:nth-child(2){
+                        justify-self: right;
+                    }
+                    &:nth-child(3){
+                        justify-self: right;
+                    }
+                }
+                .communicationFooter{
+                    justify-self: right;
+                }
+            }
+        }
+        .footerContact{
+            padding-top: 2rem;
+            border-top: 1px solid $backPage2;
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(10rem , auto));
+            justify-content: right;
+            align-items: center;
+            grid-gap: 2rem;
+            span{
+                color: $text2;
+                font-size: .8rem;
+                font-weight: 500;
+                &:first-child{
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

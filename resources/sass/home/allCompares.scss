@@ -1,0 +1,202 @@
+.comparePostsContainer{
+    .comparePostsContainerCount{
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: $redFront;
+        padding: .5rem 1rem;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: right;
+        align-items: center;
+        color: white;
+        font-weight: 300;
+        font-size: 1rem;
+        border-radius: .3rem;
+        cursor: pointer;
+        z-index: 200;
+    }
+    .comparePostsContainerIndex{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        background: rgba(0 , 0 ,0 , .8);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        .comparePostsContainerItems{
+            width: 95%;
+            height: 90%;
+            margin: auto;
+            background: white;
+            border-radius: .3rem;
+            overflow-y: scroll;
+            table{
+                display: grid;
+                grid-template-columns: 1fr;
+                margin-top: 0;
+                tr{
+                    display: grid;
+                    grid-template-columns: repeat(7 , 1fr);
+                    div{
+                        min-height: auto;
+                        padding: 0;
+                        border-bottom: 0;
+                    }
+                    th{
+                        position: relative;
+                        padding: 1rem;
+                        border-left: 1px solid #EAEAEA;
+                        h5{
+                            font-size: 1.1rem;
+                            font-weight: 700;
+                            color: $text2;
+                        }
+                        .comparePostsContainerItemsDelete{
+                            position: absolute;
+                            right: .5rem;
+                            top: .5rem;
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            z-index: 100;
+                            width: 1rem;
+                            height: 1rem;
+                            border-radius: 5rem;
+                            background: white;
+                            min-height: auto;
+                            padding: 0;
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    width: 1rem;
+                                    height: 1rem;
+                                }
+                            }
+                        }
+                        .comparePostsContainerItemsTitle{
+                            h4{
+                                text-align: right;
+                                max-width: 99%;
+                                font-size: .7rem;
+                                line-height: 25px;
+                                color: #4A5F73;
+                                font-weight: 400;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                text-overflow: ellipsis;
+                                height: 3.5rem;
+                                overflow: hidden;
+                            }
+                        }
+                        .comparePostsContainerItemsAddCart{
+                            background: $redFront;
+                            padding: .3rem .5rem;
+                            border-radius: .3rem;
+                            text-align: center;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                    td{
+                        padding: .5rem;
+                        border-left: 1px solid #EAEAEA;
+                        h4{
+                            font-size: .9rem;
+                            font-weight: 700;
+                            text-align: right;
+                        }
+                        ul{
+                            li{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                grid-gap: 1rem;
+                                &:before{
+                                    border-radius: 10px;
+                                    width: 5px;
+                                    height: 5px;
+                                    background-color: $text2;
+                                    content: "";
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                        span{
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit , minmax(5px , auto));
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: normal;
+                            line-height: 32px;
+                            text-align: center;
+                            color: #535353;
+                        }
+                    }
+                    &:first-child{
+                        padding: 0;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        th{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: space-between;
+                            padding: .5rem;
+                            .comparePostsContainerItemsClose{
+                                width: 2rem;
+                                height: 2rem;
+                                background: white;
+                                visibility: visible;
+                                position: relative;
+                                min-height: auto;
+                                padding: 0;
+                                border-radius: 5rem;
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                bottom: auto;
+                                cursor: pointer;
+                                z-index: 100;
+                                i{
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        width: 2rem;
+                                        height: 2rem;
+                                        fill: $text2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(odd){
+                        background: #EAEAEA;
+                        padding: .5rem;
+                    }
+                    &:nth-child(2){
+                        div{
+                            position: relative;
+                            bottom: auto;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.showAllShare{
+    background: rgba(0,0,0,.5);
+    z-index: 4000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    .showAllShareHome{
+        width: 30%;
+        margin: auto;
+        background: $headerPanel;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: .4rem;
+        overflow: hidden;
+        .showAllShareTop{
+            display: grid;
+            grid-template-columns: 1fr auto;
+            background: $backPage2;
+            border-bottom: 2px solid $border2;
+            i{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                cursor: pointer;
+                svg{
+                    fill: $text2;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                }
+            }
+            h4{
+                font-size: .8rem;
+                font-weight: 300;
+                padding: 1rem;
+                color: $text2;
+            }
+        }
+        .showAllShareItems{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 1rem;
+            background: $headerPanel;
+            padding: 1rem;
+            padding-bottom: 0;
+            .showAllShareItem{
+                display: grid;
+                grid-template-columns: 1fr auto;
+                align-items: center;
+                justify-content: space-between;
+                grid-gap: .4rem;
+                text-align: center;
+                border: 1px solid $border2;
+                padding: .5rem;
+                border-radius: 5px;
+                .showAllShareItemName{
+                    h4{
+                        font-size: 1rem;
+                        text-align: right;
+                        color: $text2;
+                        font-weight: 300;
+                    }
+                    a{
+                        text-align: right;
+                        width: 100%;
+                        display: block;
+                        color: $text2;
+                        opacity: .5;
+                        font-size: .7rem;
+                        font-weight: 300;
+                        margin-top: .3rem;
+                        height: 15px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+                a{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    i{
+                        svg{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .showAllShareTag{
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            justify-content: left;
+            direction: ltr;
+            grid-gap: .5rem;
+            margin: 1rem;
+            padding: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $border2;
+            i{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                svg{
+                    fill: $text2;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                }
+                .copy{
+                    fill: $green;
+                }
+            }
+            h4{
+                color: $text2;
+                text-align: left;
+                font-weight: 300;
+            }
+            input{
+                visibility: hidden;
+                position: absolute;
+                opacity: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .showAllShare{
+        .showAllShareHome {
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width:1000px) {
+    .showAllShare{
+        .showAllShareHome {
+            width: 55%;
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .showAllShare{
+        .showAllShareHome {
+            width: 98%;
+            display: block;
+        }
+    }
+}

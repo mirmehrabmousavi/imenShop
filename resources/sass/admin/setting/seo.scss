@@ -1,0 +1,131 @@
+.allSeoSetting{
+    .allSeoSettingTitle{
+        background: white;
+        padding: 1rem;
+        display: grid;
+        .allSeoSettingAddress{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: right;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:first-child{
+                    color: $text3;
+                }
+            }
+        }
+    }
+    .allSeoSettingItems{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+        border-radius: .2rem;
+        margin: 1rem;
+        .allSeoSettingItem{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: .5rem;
+            label{
+                font-size: .8rem;
+                font-weight: 250;
+            }
+            .allCategoryPanel{
+                position: relative;
+                .categoryShow{
+                    border: 1.4px solid $border1;
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    padding: 0 1rem;
+                    border-radius: .3rem;
+                    display: grid;
+                    align-items: center;
+                    height: 2.5rem;
+                    cursor: pointer;
+                    h4{
+                        color: $text3;
+                        font-size: .85rem;
+                        font-weight: 400;
+                    }
+                    i{
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            fill: $text2;
+                        }
+                    }
+                }
+                ul{
+                    position: absolute;
+                    top: 94%;
+                    right: 0;
+                    width: 100%;
+                    background: white;
+                    border-bottom-left-radius: .3rem;
+                    border-bottom-right-radius: .3rem;
+                    direction: ltr;
+                    overflow: hidden;
+                    border: 1.4px solid $border1;
+                    border-top: 0;
+                    z-index: 80;
+                    .scroll-area {
+                        position: relative;
+                        margin: auto;
+                        width: 100%;
+                        height: 15rem;
+                    }
+                    li{
+                        direction: rtl;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        padding: .4rem;
+                        padding-right: 1rem;
+                        color: $text3;
+                        font-size: .75rem;
+                        font-weight: 300;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+                        height: 2rem;
+                        &:hover{
+                            background: $text4;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            input{
+                padding: .4rem;
+                background: #EEEEEE;
+                border: 2px solid #EEEEEE;
+                border-radius: .2rem;
+                transition: all .3s ease-in-out;
+                &:focus{
+                    border: 2px solid $blue;
+                    background: #F6F6F6;
+                }
+            }
+        }
+        button{
+            background: $blue;
+            color: white;
+            border-radius: .2rem;
+            padding: .4rem 1rem;
+            width: 10rem;
+        }
+    }
+}

@@ -1,0 +1,418 @@
+.allCartIndex{
+    margin: 9rem auto auto auto;
+    .allCartIndexTitle{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        h4{
+            color: $redFront;
+            padding: 1rem;
+            border-bottom: 2px solid $redFront;
+            font-size: .9rem;
+            font-weight: 500;
+            height: 3.8rem;
+        }
+        .allCartIndexAddress{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            border-bottom: 2px solid $border1;
+            height: 3.8rem;
+            padding: 1rem;
+            span{
+                color: $text2;
+                font-size: .8rem;
+                font-weight: 300;
+                opacity: .7;
+            }
+            a{
+                color: $text2;
+                font-size: .8rem;
+                opacity: .7;
+                font-weight: 300;
+            }
+        }
+    }
+    .allCartIndexItem{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 1rem;
+        .allCartIndexItemDetail{
+            ul{
+                li{
+                    padding: 1rem;
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    align-items: center;
+                    border-radius: 10px;
+                    box-shadow: 0 0 5px rgba(0,0,0,.05);
+                    background: $headerPanel;
+                    margin-bottom: 1rem;
+                    grid-gap: 1rem;
+                    .cartDetailPic{
+                        img{
+                            width: 100%;
+                            max-width: 10rem;
+                            height: 8rem;
+                            object-fit: cover;
+                        }
+                    }
+                    .cartDetailInfo{
+                        .cartDetailInfoItem{
+                            margin-top: .5rem;
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            grid-gap: .5rem;
+                            align-items: center;
+                            span{
+                                color: $text2;
+                                opacity: .7;
+                                font-size: .85rem;
+                                font-weight: 300;
+                            }
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    fill: $text2;
+                                    width: 1.1rem;
+                                    height: 1.1rem;
+                                    opacity: .7;
+                                }
+                            }
+                            h3{
+                                font-size: 1rem;
+                                line-height: 1.375;
+                                color: $text2;
+                                font-weight: 500;
+                            }
+                            &:first-child{
+                                display: block;
+                                margin-top: 0;
+                            }
+                        }
+                        .cartDetailInfoPrice{
+                            margin-top: 1rem;
+                            display: grid;
+                            grid-template-columns: auto auto 1fr;
+                            grid-gap: 1rem;
+                            align-items: center;
+                            .cartCount{
+                                border: 1px solid $border2;
+                                border-radius: 10px;
+                                span{
+                                    color: $text2;
+                                    font-size: .85rem;
+                                    font-weight: 300;
+                                    padding: .3rem;
+                                }
+                                button{
+                                    color: $text2;
+                                    padding: .2rem .5rem;
+                                    font-size: .95rem;
+                                    background: transparent;
+                                }
+                            }
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                svg{
+                                    fill: $redFront;
+                                    width: 1.1rem;
+                                    height: 1.1rem;
+                                }
+                            }
+                            .cartPrice{
+                                text-align: left;
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                justify-content: left;
+                                .offPrice{
+                                    display: grid;
+                                    justify-content: left;
+                                    s{
+                                        font-size: .8rem;
+                                        line-height: 1.692;
+                                        color: $text2;
+                                        display: -webkit-box;
+                                        display: -ms-flexbox;
+                                        display: flex;
+                                        width: 100%;
+                                    }
+                                }
+                                h3{
+                                    text-align: left;
+                                    width: 100%;
+                                    color: $text2;
+                                    font-weight: 500;
+                                    font-size: 1.2rem;
+                                    line-height: 1.5;
+                                    span{
+                                        letter-spacing: .1px;
+                                        font-size: .8rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                @media screen and (max-width: 700px) {
+                    li{
+                        grid-template-columns: 1fr;
+                        .cartDetailPic{
+                            display: grid;
+                            justify-content: center;
+                            img{
+                                width: 100%;
+                                height: 9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .allCartIndexItemNext{
+            position: sticky;
+            top: 9rem;
+            background: $headerPanel;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 1rem;
+            width: 17rem;
+            height: 18rem;
+            .WithoutOff , .postCount{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin-bottom: .5rem;
+                label{
+                    color: $text2;
+                    font-size: .85rem;
+                    font-weight: 300;
+                }
+                span{
+                    color: $text2;
+                    font-weight: 300;
+                    font-size: .9rem;
+                    letter-spacing: .1px;
+                }
+            }
+            .allOff{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                padding-bottom: .5rem;
+                border-bottom: 1px solid $border2;
+                label{
+                    color: $redFront;
+                    font-size: .8rem;
+                    font-weight: 300;
+                }
+                span{
+                    color: $redFront;
+                    font-weight: 300;
+                    font-size: .85rem;
+                    letter-spacing: .1px;
+                }
+            }
+            .allMoney{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin: .5rem 0;
+                label{
+                    color:$text2;
+                    font-size: .8rem;
+                    font-weight: 500;
+                }
+                span{
+                    color:$text2;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    letter-spacing: .1px;
+                }
+            }
+            .allSum{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin: .5rem 0;
+                label{
+                    color:$text2;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+                span{
+                    color:$text2;
+                    font-size: .8rem;
+                    font-weight: 400;
+                    letter-spacing: .1px;
+                }
+            }
+            .sendMoney{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin: .5rem 0;
+                label{
+                    color: $text2;
+                    font-size: .75rem;
+                    font-weight: 300;
+                }
+                span{
+                    color: $text2;
+                    font-size: .75rem;
+                    font-weight: 300;
+                    letter-spacing: .1px;
+                }
+            }
+            .allProfit{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin: .5rem 0;
+                label{
+                    color: $redFront;
+                    font-size: .75rem;
+                    font-weight: 300;
+                }
+                span{
+                    color: $redFront;
+                    font-size: .75rem;
+                    font-weight: 300;
+                    letter-spacing: .1px;
+                }
+            }
+            .nextItem{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                width: 15rem;
+                a{
+                    text-align: center;
+                    color: $redFront;
+                    padding: .5rem 1rem;
+                    border: 1px solid $redFront;
+                    background: transparent;
+                    margin-top: 1rem;
+                    border-radius: .4rem;
+                }
+            }
+            .scoreCart{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 1rem;
+                .rightScore{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    grid-gap: .3rem;
+                    align-items: center;
+                    svg{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+                span{
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text2;
+                }
+            }
+        }
+    }
+    .allCartIndexEmpty{
+        background: $headerPanel;
+        padding: 1rem;
+        margin-top: 1rem;
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: .3rem;
+        h3{
+            color: $text2;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        p{
+            color: $text2;
+            margin-top: 1rem;
+            font-size: .8rem;
+        }
+        .allCartIndexEmptyOptions{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            grid-gap: 1rem;
+            a{
+                border-bottom: 1px dashed #1ca2bd;
+                color: #1ca2bd;
+            }
+        }
+    }
+    .getCartLoader{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+        svg{
+            fill: $text2;
+            width: 3rem;
+            height: 3rem;
+            animation: arrow-anim2 .5s ease infinite;
+            @keyframes arrow-anim2 {
+                0% {
+                    transform: rotate(0deg);
+                }
+                15% {
+                    transform: rotate(45deg);
+                }
+                25% {
+                    transform: rotate(90deg);
+                }
+                50% {
+                    transform: rotate(180deg);
+                }
+                75% {
+                    transform: rotate(270deg);
+                }
+                85% {
+                    transform: rotate(300deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .allCartIndexItem{
+            grid-template-columns: 1fr;
+            .allCartIndexItemNext{
+                position: relative;
+                top: auto;
+                width: auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .allCartIndex{
+        margin-top: 1rem;
+    }
+}

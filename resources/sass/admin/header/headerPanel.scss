@@ -1,0 +1,191 @@
+.allHeaderPanel{
+    background: $headerPanel;
+    border-bottom: 1px solid rgba(107,122,144,0.1);
+    z-index: 998;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    margin: 0 auto;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .rightOption{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+        justify-content: right;
+        align-items: center;
+        height: 4rem;
+        .logoHeaderPanel{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 17rem;
+            height: 4rem;
+            img{
+                height: 2.5rem;
+                line-height: 2rem;
+                vertical-align: middle;
+                margin-right: .5rem;
+                width: auto;
+                max-width: 15rem;
+            }
+        }
+        .iconHeaderPanel{
+            font-size: .7rem;
+            color: $blue;
+            svg{
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+        .searchHeaderPanel{
+            margin: 0 1rem;
+            label{
+                display: grid;
+                grid-template-columns: 1fr auto;
+                align-items: center;
+                position: relative;
+                background: #f5f5f5;
+                width: 300px;
+                border-radius: 7px;
+                padding: .4rem .5rem;
+                cursor: pointer;
+                input{
+                    background: transparent;
+                    font-size: .8rem;
+                    color: $text2;
+                    opacity: .7;
+                }
+                i{
+                    svg{
+                        width: 1rem;
+                        height: 1rem;
+                        color: $text2;
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+    .leftOption{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+        justify-content: left;
+        grid-gap: 2rem;
+        align-items: center;
+        height: 4rem;
+        padding-left: 1rem;
+        .iconHeaderPanel{
+            margin-top: .3rem;
+            cursor: pointer;
+            svg{
+                width: 1rem;
+                height: 1rem;
+                fill: rgba(0,0,0,.6);
+            }
+        }
+        .alarmHeaderPanel{
+            position: relative;
+            i{
+                cursor: pointer;
+                svg{
+                    margin-top: .5rem;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    fill: rgba(0,0,0,.6);
+                }
+            }
+            .active{
+                svg{
+                    animation: mymove 1s ease-in-out infinite;
+                    transition: all .3s ease-in-out;
+                    @keyframes mymove {
+                        0%   {transform: rotate(-40deg);}
+                        50%  {transform: rotate(40deg);}
+                        100% {transform: rotate(-40deg);}
+                    }
+                    fill: red;
+                }
+            }
+            ul{
+                position: absolute;
+                top: 150%;
+                left: -.5rem;
+                box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+                width: 12rem;
+                background: white;
+                border-radius: .2rem;
+                padding: .5rem 0;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    left: 8px;
+                    border-style: solid;
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent #fff transparent;
+                }
+                li{
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    grid-gap: .5rem;
+                    padding: .3rem 1rem;
+                    &:first-child{
+                        display: block;
+                        border-bottom: 1px solid rgba(107,122,144,0.1);
+                        text-align: center;
+                        color: $text2;
+                        font-weight: 400;
+                        padding: .5rem;
+                    }
+                    .alarmHeaderPanelIcon{
+                        background-color: #2fd8c6;
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 5rem;
+                        overflow: hidden;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                            color: #fff;
+                        }
+                    }
+                    .alarmHeaderPanelInfo{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        a{
+                            font-size: 12px;
+                            font-weight: 500;
+                            color: #4a4a4a;
+                        }
+                        span{
+                            color: #9fa6b1;
+                            font-size: 87.5%;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+        .userHeaderPanel{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: .8rem;
+            justify-content: left;
+            align-items: center;
+            img{
+                width: 2rem;
+                height: 2rem;
+                border-radius: 5rem;
+            }
+            span{
+                color: $text2;
+                font-weight: 300;
+                font-size: .9rem;
+            }
+        }
+    }
+}

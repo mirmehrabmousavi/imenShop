@@ -1,0 +1,169 @@
+.allShowPostPanel{
+    .allShowPostPanelTopTitle{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        h1{
+            color: $text2;
+        }
+        .allShowPostPanelTitle{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:last-child{
+                    color: $blue;
+                }
+            }
+        }
+    }
+    .allShowPostPanelTop{
+        margin: 1rem;
+        padding: 1rem;
+        background: white;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 1rem;
+        border-radius: .5rem;
+        .allShowPostPanelPic{
+            width: 15rem;
+            height: 12rem;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .allShowPostPanelTopItems{
+            .allShowPostPanelTopTitle{
+                h1{
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    color: #535353;
+                }
+            }
+            .postPrice{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: .4rem;
+                align-items: center;
+                margin-top: .5rem;
+                .postPriceItem{
+                    text-align: left;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-content: left;
+                    .offPrice{
+                        display: grid;
+                        justify-content: left;
+                        s{
+                            font-size: 1rem;
+                            line-height: 1.692;
+                            font-weight: 300;
+                            color: #ababab;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            width: 100%;
+                        }
+                    }
+                    h3{
+                        text-align: left;
+                        width: 100%;
+                        color: $red;
+                        letter-spacing: 0;
+                        font-weight: 500;
+                        font-size: 1.3rem;
+                        line-height: 1.5;
+                        span{
+                            font-size: 1rem;
+                            letter-spacing: .1px;
+                        }
+                    }
+                }
+            }
+            .allShowPostPanelTopInfo{
+                display: grid;
+                grid-template-columns: repeat(3 , 1fr);
+                grid-gap: .5rem;
+                .allShowPostPanelTopItem{
+                    display: grid;
+                    grid-template-columns: repeat(3 , auto);
+                    justify-content: right;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    margin-top: 2rem;
+                    label , span{
+                        font-size: .9rem;
+                        font-weight: 300;
+                        color: #535353;
+                    }
+                    span{
+                        font-weight: 500;
+                    }
+                    svg{
+                        width: 1.1rem;
+                        height: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allShowPostPanelTop{
+            grid-template-columns: 1fr;
+            .allShowPostPanelPic{
+                width: 100%;
+            }
+            .allShowPostPanelTopItems{
+                .allShowPostPanelTopInfo{
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+    .allShowPostPanelComment{
+        margin: 1rem;
+        margin-top: 0;
+        background: white;
+        border-radius: .5rem;
+    }
+    .allShowPostPanelPays{
+        margin: 1rem;
+        margin-top: 0;
+        background: white;
+        border-radius: .5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        label{
+            color: #858585;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 1rem;
+            border-right: 3px solid $blue;
+            border-top-right-radius: .5rem;
+        }
+        .allTableContainer{
+            margin: 1rem;
+            .paginate{
+                &:first-child{
+                    margin-bottom: 1rem;
+                }
+                &:last-child{
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

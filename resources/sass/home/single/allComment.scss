@@ -1,0 +1,945 @@
+.allComment{
+    padding: 1rem;
+    .allCommentContainerSend{
+        .allCommentContainerTop{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 1rem;
+            .allCommentContainerTopPic{
+                width: 15rem;
+                height: 15rem;
+            }
+            .allCommentContainerTopItems{
+                .allCommentContainerTopItemsTitle{
+                    margin-bottom: 1rem;
+                    h3{
+                        font-size: 1rem;
+                        line-height: 24px;
+                        font-weight: 300;
+                        color: $text2;
+                    }
+                }
+                .allCommentContainerTopItemsRate{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1rem;
+                    .allCommentContainerTopItemsRateItem{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: .5rem;
+                        margin-top: 1rem;
+                        label{
+                            font-size: .75rem;
+                            line-height: 1.692;
+                            color: $text2;
+                        }
+                        .rateItemsCount{
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit , minmax(2rem , auto));
+                            justify-content: right;
+                            align-items: center;
+                            .rateItemsCountItem{
+                                position: relative;
+                                height: 5px;
+                                .rateItemsCountItemBar{
+                                    width: 5rem;
+                                    height: 5px;
+                                    background: #D5D5D5;
+                                }
+                                .rateItemsCountItemBarActive{
+                                    width: 5rem;
+                                    height: 5px;
+                                    background: #EF394E;
+                                }
+                                .rateItemsCountItemCircle{
+                                    position: absolute;
+                                    width: 12px;
+                                    height: 12px;
+                                    z-index: 2;
+                                    border-radius: 50%;
+                                    top: 50%;
+                                    -webkit-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                    border: 2px solid #fcfcfc;
+                                    background-color: #D5D5D5;
+                                    cursor: pointer;
+                                }
+                                .rateItemsCountItemCircleActives{
+                                    background-color: #EF394E;
+                                    position: absolute;
+                                    width: 12px;
+                                    height: 12px;
+                                    z-index: 2;
+                                    border-radius: 50%;
+                                    top: 50%;
+                                    -webkit-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                    border: 2px solid #fcfcfc;
+                                    cursor: pointer;
+                                }
+                                .rateItemsCountItemCircleActive{
+                                    width: 19px;
+                                    position: absolute;
+                                    background: #EF394E;
+                                    height: 19px;
+                                    top: -7px;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    border-radius: 50%;
+                                    border: none;
+                                    z-index: 4;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+                                    box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+                                }
+                            }
+                            span{
+                                font-size: .7rem;
+                                font-weight: 300;
+                                color: $text2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .allCommentContainerTop{
+                grid-template-columns: 1fr;
+                .allCommentContainerTopItems{
+                    .allCommentContainerTopItemsRate{
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+        .allCommentContainerBottom{
+            border-top: 1px solid $border2;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            .allCommentContainerBottomCoercion{
+                display: grid;
+                grid-template-columns: repeat(auto-fit , minmax(10rem , 1fr));
+                justify-content: center;
+                align-items: center;
+                grid-gap: 1rem;
+                .allCommentContainerBottomCoercionItem{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: .5rem;
+                    margin-bottom: 1rem;
+                    input{
+                        padding: .5rem;
+                        border: 2px solid $border2;
+                        border-radius: .2rem;
+                        width: 100%;
+                        transition: all .3s ease-in-out;
+                        font-size: .75rem;
+                        font-weight: 300;
+                    }
+                    label{
+                        font-size: .95rem;
+                        line-height: 1.692;
+                        color: $text2;
+                    }
+                }
+            }
+            .allCommentContainerBottomItem{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: .5rem;
+                margin-bottom: 1rem;
+                input{
+                    padding: .5rem;
+                    border: 2px solid $border2;
+                    border-radius: .2rem;
+                    width: 100%;
+                    transition: all .3s ease-in-out;
+                    font-size: .75rem;
+                    font-weight: 300;
+                }
+                textarea{
+                    padding: .5rem;
+                    border: 2px solid $border2;
+                    border-radius: 5px;
+                    width: 100%;
+                    outline-style: unset;
+                    transition: all .3s ease-in-out;
+                    font-size: .75rem;
+                    font-weight: 300;
+                    height: 15rem;
+                    resize: vertical;
+                }
+                .allCommentContainerBottomItemTitle{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    grid-gap: .5rem;
+                    align-items: center;
+                    i{
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            fill: $green;
+                            width: .6rem;
+                            height: .6rem;
+                        }
+                    }
+                }
+                label{
+                    font-size: .95rem;
+                    line-height: 1.692;
+                    color: $text2;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        left: 1rem;
+                        top: 0;
+                        bottom: 0;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        svg{
+                            width: 1.2rem;
+                            height: 1.2rem;
+                        }
+                    }
+                }
+                span{
+                    margin-top: .5rem;
+                    width: 100%;
+                    border: 1px solid $green;
+                    background: #EDF6F7;
+                    position: relative;
+                    padding: .5rem;
+                    color: $green;
+                    border-radius: 5px;
+                    i{
+                        position: absolute;
+                        left: 1rem;
+                        top: 0;
+                        bottom: 0;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    .allCommentContainerBottomItemTitle{
+                        i{
+                            svg{
+                                fill: #fb3449;
+                            }
+                        }
+                    }
+                    input{
+                        &:focus{
+                            border: 2px solid #EF394E;
+                        }
+                    }
+                    span{
+                        border: 1px solid #fb3449;
+                        background: #FFF3F4;
+                        color: #fb3449;
+                    }
+                }
+            }
+            .allCommentContainerBottomSuggest{
+                margin-bottom: 1rem;
+                label{
+                    font-size: .95rem;
+                    line-height: 1.692;
+                    color: $text2;
+                }
+                .allCategoryPanel{
+                    position: relative;
+                    margin: 1rem 0;
+                    .categoryShow{
+                        background: $backPage2;
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: .7rem;
+                        border-radius: .1rem;
+                        cursor: pointer;
+                        h4{
+                            font-weight: 450;
+                            font-size: .8rem;
+                            letter-spacing: 1px;
+                            line-height: 1.833;
+                            color: #56595e;
+                        }
+                        i{
+                            position: relative;
+                            svg{
+                                width: .8rem;
+                                height: .8rem;
+                            }
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        top: 110%;
+                        right: 0;
+                        box-shadow: rgba(0, 0, 0, 0.16) 0 1px 3px;
+                        background: white;
+                        border-radius: .2rem;
+                        width: 100%;
+                        margin: 0;
+                        z-index: 9000;
+                        li{
+                            padding: .5rem;
+                            padding-right: 1rem;
+                            transition: all .3s ease-in-out;
+                            cursor: pointer;
+                            font-weight: 450;
+                            font-size: .8rem;
+                            letter-spacing: 1px;
+                            line-height: 1.833;
+                            color: #56595e;
+                            &:hover{
+                                background: #F6F6F6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .allCommentButtons{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: 1rem;
+            button{
+                display: grid;
+                grid-template-columns: auto 4rem auto;
+                justify-content: right;
+                align-items: center;
+                color: $text1;
+                background: $redFront;
+                padding: .5rem 1rem;
+                border-radius: .2rem;
+                i{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        fill: white;
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                    .loading{
+                        fill: #fff;
+                        width: 1rem;
+                        height: 1rem;
+                        animation: arrow-anim2 .5s ease infinite;
+                        @keyframes arrow-anim2 {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+                            15% {
+                                transform: rotate(45deg);
+                            }
+                            25% {
+                                transform: rotate(90deg);
+                            }
+                            50% {
+                                transform: rotate(180deg);
+                            }
+                            75% {
+                                transform: rotate(270deg);
+                            }
+                            85% {
+                                transform: rotate(300deg);
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+                }
+                img{
+                    width: 4rem;
+                    height: 1rem;
+                    object-fit: cover;
+                }
+                &:last-child{
+                    display: block;
+                    background: #7A7A7A;
+                }
+            }
+        }
+    }
+    .allCommentAllow{
+        .allCommentAllowTitle{
+            font-size: 1.65rem;
+            line-height: 1.571;
+            letter-spacing: -.6px;
+            color: $text2;
+        }
+        .allCommentAllowItem{
+            display: grid;
+            grid-template-columns: 30rem 1fr;
+            grid-gap: 2rem;
+            margin-top: 20px;
+            .allCommentAllowItemRate{
+                ul{
+                    background: $backPage2;
+                    padding: 2rem;
+                    border-radius: .2rem;
+                    li{
+                        display: grid;
+                        grid-template-columns: 10rem auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: 1rem;
+                        margin: 1rem;
+                        span{
+                            font-size: .8rem;
+                            font-weight: 300;
+                            color: $text2;
+                        }
+                        .allSingleHomeDetailBodyItemRate{
+                            height: 5px;
+                            width: 10rem;
+                            background: #d5d5d5;
+                            position: relative;
+                            border-radius: 3px;
+                            .allSingleHomeDetailBodyItemRateValue{
+                                position: absolute;
+                                height: 5px;
+                                top: 0;
+                                background: #EF394E;
+                                border-radius: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            .allCommentAllowItemBtn{
+                h5{
+                    font-size: 1.15rem;
+                    line-height: 1.158;
+                    color: $text2;
+                    letter-spacing: -.4px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-size: .9rem;
+                    line-height: 2.27;
+                    margin-bottom: 20px;
+                    color: $text2;
+                    width: 100%;
+                }
+                button{
+                    width: 13rem;
+                    padding: 1rem 3rem;
+                    color: white;
+                    background: #7A7A7A;
+                    border-radius: .2rem;
+                    text-align: center;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        background: #969696;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .allCommentAllowItem{
+                grid-template-columns: 1fr;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .allCommentAllowItem{
+                grid-template-columns: 1fr;
+                .allCommentAllowItemRate{
+                    ul{
+                        li{
+                            grid-template-columns: auto auto auto;
+                            margin: .5rem;
+                            span{
+                                font-size: .7rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .allCommentContainerGet{
+        .allCommentContainerGetTitle{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            padding-bottom: 1rem;
+            grid-gap: .5rem;
+            border-bottom: 1px solid $border2;
+            margin: 3rem 0;
+            i{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    fill: #EF394E;
+                    width: .8rem;
+                    height: .8rem;
+                }
+            }
+            span{
+                color: $text2;
+                font-size: 1.1rem;
+                font-weight: 300;
+            }
+        }
+        .allCommentContainerGetItems{
+            .showGetLoader{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                .loading{
+                    fill: $redFront;
+                    width: 3rem;
+                    height: 3rem;
+                    animation: arrow-anim2 .45s ease infinite;
+                    @keyframes arrow-anim2 {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+                        10% {
+                            transform: rotate(25deg);
+                        }
+                        15% {
+                            transform: rotate(45deg);
+                        }
+                        25% {
+                            transform: rotate(90deg);
+                        }
+                        35% {
+                            transform: rotate(130deg);
+                        }
+                        50% {
+                            transform: rotate(180deg);
+                        }
+                        60% {
+                            transform: rotate(220deg);
+                        }
+                        75% {
+                            transform: rotate(270deg);
+                        }
+                        85% {
+                            transform: rotate(300deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+            .allCommentContainerGetItem{
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-gap: 3rem;
+                padding-top: 4rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid $border2;
+                .allCommentContainerGetUser{
+                    .allCommentContainerUser{
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        .allCommentContainerUserPic{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            overflow: hidden;
+                            border-radius: 5rem;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .allCommentContainerUserName{
+                            font-size: 1.1rem;
+                            line-height: 1.375;
+                            font-weight: 700;
+                            color: $text2;
+                        }
+                        .allCommentContainerUserOnline{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: .5rem;
+                            span{
+                                color: $text2;
+                                font-size: .7rem;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                    .allCommentContainerCreated{
+                        margin-top: 1rem;
+                        span{
+                            font-size: .88rem;
+                            line-height: 1.692;
+                            color: $text2;
+                        }
+                    }
+                    .allCommentContainerStatusUnknown{
+                        font-size: .9rem;
+                        line-height: 2.23;
+                        background-color: #fff9f2;
+                        border: 1px solid #fcdfbf;
+                        border-radius: 3px;
+                        color: #dd7e19;
+                        padding: 7px 12px;
+                        text-align: right;
+                        margin-top: 1rem;
+                    }
+                    .allCommentContainerStatusBad{
+                        font-size: .9rem;
+                        line-height: 2.23;
+                        background-color: #fff8f9;
+                        border: 1px solid #ffbcc7;
+                        border-radius: 3px;
+                        color: #ff637d;
+                        padding: 7px 40px 7px 12px;
+                        margin-top: 1rem;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: 1rem;
+                        i{
+                            display: grid;
+                            justify-content: right;
+                            align-items: center;
+                            svg{
+                                fill: #ff637d;
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                    }
+                    .allCommentContainerStatusGood{
+                        font-size: .9rem;
+                        line-height: 2.23;
+                        background-color: #f1feff;
+                        border: 1px solid #c2f2f7;
+                        border-radius: 3px;
+                        color: #1599a9;
+                        padding: 7px 40px 7px 12px;
+                        margin-top: 1rem;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: 1rem;
+                        i{
+                            display: grid;
+                            justify-content: right;
+                            align-items: center;
+                            svg{
+                                fill: #1599a9;
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                    }
+                    .allCommentContainerRate{
+                        margin-top: 1rem;
+                        label{
+                            color: $text2;
+                            font-size: .85rem
+                        }
+                        .allCommentContainerRateContainer{
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-gap: 1rem;
+                            margin-top: 1rem;
+                            .allCommentContainerRateContainerItem{
+                                display: grid;
+                                grid-template-columns: auto auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                grid-gap: .5rem;
+                                span{
+                                    font-size: .8rem;
+                                    font-weight: 300;
+                                    color: $text2;
+                                }
+                                .allSingleHomeDetailBodyItemRate{
+                                    height: 5px;
+                                    width: 10rem;
+                                    background: #d5d5d5;
+                                    position: relative;
+                                    border-radius: 3px;
+                                    .allSingleHomeDetailBodyItemRateValue{
+                                        position: absolute;
+                                        height: 5px;
+                                        top: 0;
+                                        background: #EF394E;
+                                        border-radius: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .allCommentContainerGetBody{
+                    .allCommentTitle{
+                        font-size: 1.357rem;
+                        line-height: 1.158;
+                        color: $text2;
+                        font-weight: 500;
+                        border-bottom: 1px solid $border2;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                    }
+                    .allCommentBody{
+                        font-size: 1rem;
+                        line-height: 2.71;
+                        color: #505050;
+                    }
+                    .allCommentGoodItemsContainer{
+                        display: grid;
+                        grid-template-columns: 3rem 1fr;
+                        grid-gap: 2rem;
+                        margin-top: 20px;
+                        label{
+                            flex-shrink: 0;
+                            color: #00bfd6;
+                            font-size: .85rem;
+                            line-height: 1.571;
+                            white-space: nowrap
+                        }
+                        .allCommentGoodItems{
+                            display: grid;
+                            grid-gap: 1rem;
+                            .allCommentGoodItem{
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                justify-content: right;
+                                align-items: center;
+                                grid-gap: 1rem;
+                                color: $text2;
+                                font-weight: 400;
+                                font-size: .8rem;
+                                i{
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        fill: #00bfd6;
+                                        width: .5rem;
+                                        height: .5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .allCommentBadItemsContainer{
+                        @extend .allCommentGoodItemsContainer;
+                        label{
+                            color: #FF637D;
+                        }
+                        .allCommentBadItems{
+                            display: grid;
+                            grid-gap: 1rem;
+                            .allCommentBadItem{
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                grid-gap: .5rem;
+                                justify-content: right;
+                                align-items: center;
+                                color: $text2;
+                                font-weight: 400;
+                                font-size: .8rem;
+                                i{
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        fill: #FF637D;
+                                        width: .5rem;
+                                        height: .5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .allCommentContainerAnswer{
+                        margin-top: 5rem;
+                        .allCommentContainerAnswerTitle{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: .5rem;
+                            margin-right: 2rem;
+                            width: 4rem;
+                            cursor: pointer;
+                            span{
+                                color: $text2;
+                                font-size: 14px;
+                                line-height: 1.692;
+                            }
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    fill: $text2;
+                                    width: 1rem;
+                                    height: 1rem;
+                                }
+                            }
+                        }
+                        .allCommentContainerAnswerBody{
+                            background: $headerPanel;
+                            border-radius: .2rem;
+                            overflow: hidden;
+                            .allCommentContainerAnswerBodyBtn{
+                                display: grid;
+                                grid-template-columns: 4rem 1fr;
+                                .allCommentContainerAnswerBodyBtnItem{
+                                    span{
+                                        color: $text2;
+                                        font-size: 14px;
+                                        line-height: 1.692;
+                                    }
+                                    i{
+                                        display: grid;
+                                        justify-content: center;
+                                        align-items: center;
+                                        svg{
+                                            fill: $text2;
+                                            width: 1rem;
+                                            height: 1rem;
+                                        }
+                                    }
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: left;
+                                    align-items: center;
+                                    grid-gap: .5rem;
+                                    padding: .5rem;
+                                    background: $headerPanel;
+                                    button{
+                                        padding: .2rem .5rem;
+                                        border-radius: .2rem;
+                                        color: white;
+                                        &:first-child{
+                                            background: #FB3449;
+                                        }
+                                        &:last-child{
+                                            background: #7A7A7A;
+                                        }
+                                    }
+                                }
+                            }
+                            textarea{
+                                color: $text2;
+                                font-size: .9rem;
+                                line-height: 2.25;
+                                padding: .5rem;
+                                outline-style: unset;
+                                width: 100%;
+                                resize: vertical;
+                                background: $headerPanel;
+                            }
+                        }
+                    }
+                    .allCommentContainerReply{
+                        .allCommentContainerReplyItem{
+                            padding: .5rem;
+                            background: $headerPanel;
+                            margin-top: 1rem;
+                            border-radius: .2rem;
+                            .allCommentContainerReplyItemUser{
+                                display: grid;
+                                grid-template-columns: auto auto auto;
+                                justify-content: right;
+                                grid-gap: .5rem;
+                                align-items: center;
+                                .allCommentContainerReplyItemUserPic{
+                                    width: 2.5rem;
+                                    height: 2.5rem;
+                                    border-radius: 5rem;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                                .allCommentContainerReplyItemUserName{
+                                    font-size: 1.1rem;
+                                    line-height: 1.375;
+                                    font-weight: 500;
+                                    color: $text2;
+                                }
+                                .allCommentContainerReplyItemUserOnline{
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: right;
+                                    align-items: center;
+                                    grid-gap: .5rem;
+                                    span{
+                                        color: $text2;
+                                        font-size: .7rem;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                            .allCommentContainerReplyItemP{
+                                p{
+                                    color: $text2;
+                                    font-size: .85rem;
+                                    line-height: 2.25;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-last-child(1){
+                    border-bottom: 0;
+                }
+            }
+            @media screen and (max-width: 700px) {
+                .allCommentContainerGetItem{
+                    grid-template-columns: 1fr;
+                }
+            }
+            .paginate{
+                margin: 0 1rem;
+                &:first-child{
+                    margin-bottom: 1rem;
+                }
+                &:last-child{
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,836 @@
+.allTaxonami{
+    margin: 1rem;
+    .allTaxonamiPanelTop{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        h1{
+            color: $text2;
+        }
+        .allTaxonamiTitle{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:last-child{
+                    color: $blue;
+                }
+            }
+        }
+    }
+    .allTaxonamiOptions{
+        display: grid;
+        grid-template-columns: repeat(2 , auto);
+        justify-content: space-between;
+        align-items: center;
+        grid-gap: .5rem;
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,.05);
+        .allTaxonamiOptionsButtons{
+            display: grid;
+            grid-template-columns: repeat(2 , auto);
+            justify-content: right;
+            align-items: center;
+            grid-gap: 1rem;
+            button{
+                padding: .5rem 1rem;
+                border-radius: .3rem;
+                background-color: $blue;
+                color: #FFFFFF;
+                box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: $blue2;
+                }
+                &:nth-child(2){
+                    background-color: #FF5B5C;
+                    color: #FFFFFF;
+                    &:hover{
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+        .filterItems{
+            position: relative;
+            .ContentOptionsFilterButton{
+                display: grid;
+                cursor: pointer;
+                grid-template-columns: auto auto;
+                justify-content: center;
+                grid-gap: .5rem;
+                align-items: center;
+                background-color: #A3AFBD;
+                box-shadow: 0 2px 4px 0 rgba(163, 175, 189, 0.5);
+                padding: .5rem 1rem;
+                transition: all .3s ease-in-out;
+                border-radius: .3rem;
+                color: #FFFFFF;
+                svg{
+                    width: 1rem;
+                    height: 1rem;
+                    fill: white;
+                }
+                &:hover{
+                    background: #394C62;
+                    box-shadow: 0 4px 12px 0 rgba(163, 175, 189, 0.6) !important;
+                }
+            }
+            .bounce-enter-active {
+                animation: bounce-in .3s;
+            }
+            .bounce-leave-active {
+                animation: bounce-in .3s reverse;
+            }
+            @keyframes bounce-in {
+                0% {
+                    transform: scale(0);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+            .filterContent{
+                position: absolute;
+                top: 120%;
+                left: 0;
+                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+                background: white;
+                border-radius: .2rem;
+                padding: .5rem;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    left: 8px;
+                    border-style: solid;
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent #fff transparent;
+                }
+                .filterContentItem{
+                    display: grid;
+                    grid-gap: .5rem;
+                    label{
+                        color: $text2;
+                        font-weight: 300;
+                        font-size:.7rem;
+                    }
+                    .allTicketPanelTitleDate{
+                        border: 1px solid rgba(0, 0, 0, 0.125);
+                        border-radius: .2rem;
+                        overflow: hidden;
+                        width: 15rem;
+                        position: relative;
+                        input{
+                            width: auto;
+                            padding: .3rem;
+                            height: 1.9rem;
+                            font-size: .7rem;
+                            border: 0;
+                            box-shadow: 0 0 0 0;
+                            background: transparent;
+                            border-radius: 0;
+                        }
+                        i{
+                            position: absolute;
+                            left: .3rem;
+                            top: .5rem;
+                            cursor: pointer;
+                            svg{
+                                width: .5rem;
+                                height: .5rem;
+                            }
+                        }
+                    }
+                    input{
+                        padding: .3rem;
+                        width: 15rem;
+                        border: 1px solid $border1;
+                        font-size: .7rem;
+                        border-radius: .2rem;
+                        background: transparent;
+                    }
+                    .allCategoryPanel{
+                        position: relative;
+                        .categoryShow{
+                            border: 1.4px solid $border1;
+                            display: grid;
+                            grid-template-columns: 1fr auto;
+                            padding: .4rem .5rem .4rem 1rem;
+                            border-radius: .3rem;
+                            cursor: pointer;
+                            h4{
+                                color: $text3;
+                                font-size: .7rem;
+                                font-weight: 400;
+                            }
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    width: 0.8rem;
+                                    height: 0.8rem;
+                                    fill: $text2;
+                                }
+                            }
+                        }
+                        ul{
+                            position: absolute;
+                            top: 94%;
+                            right: 0;
+                            width: 100%;
+                            background: white;
+                            border-bottom-left-radius: .3rem;
+                            border-bottom-right-radius: .3rem;
+                            direction: ltr;
+                            overflow: hidden;
+                            border: 1.4px solid $border1;
+                            border-top: 0;
+                            z-index: 80;
+                            .scroll-area {
+                                position: relative;
+                                margin: auto;
+                                width: 100%;
+                                height: 15rem;
+                            }
+                            li{
+                                direction: rtl;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                padding: .4rem;
+                                padding-right: 1rem;
+                                color: $text3;
+                                font-size: .65rem;
+                                font-weight: 300;
+                                cursor: pointer;
+                                transition: all .3s ease-in-out;
+                                height: 2rem;
+                                &:hover{
+                                    background: $text4;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allTaxonamiOptions{
+            grid-template-columns: 1fr;
+            grid-gap: .5rem;
+        }
+    }
+    .slide-fade-enter-active {
+        transition: all .3s ease-in-out;
+    }
+    .slide-fade-enter{
+        transform: translateX(50px);
+    }
+    .createTaxonamiPanel{
+        background: white;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
+        box-shadow: 0 2px 4px rgba(15,34,58,.12);
+        p{
+            font-size: .9rem;
+            color: $text3;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .errorsCreate{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: 1rem;
+            background: $lowRed;
+            border-top: 1px solid $red;
+            color: $red;
+            border-radius: .2rem;
+            padding: .5rem 1rem;
+            span{
+                font-size: .75rem;
+                font-weight: 400;
+            }
+        }
+        .allCreateTaxonamiItems{
+            .allCreateTaxonamiItem{
+                display: grid;
+                grid-template-columns: 10rem 1fr;
+                margin-bottom: 2rem;
+                label{
+                    color: $text2;
+                    font-weight: 500;
+                    font-size: .9rem;
+                }
+                input,select{
+                    border: 1.4px solid $border1;
+                    padding: 0.3rem .5rem;
+                    background: white;
+                    color: $text2;
+                    border-radius: .3rem;
+                    font-size: .8rem;
+                    transition: all .3s ease-in-out;
+                    &:focus{
+                        box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                        border:1.4px solid $blue;
+                    }
+                }
+                .ck.ck-toolbar.ck-toolbar_grouping.ck-reset_all.ck-rounded-corners{
+                    width: 99.7%;
+                }
+                .ck.ck-content,textarea{
+                    border: 1.4px solid $border1;
+                    padding: 0.3rem .5rem;
+                    color: $text2;
+                    border-radius: .3rem;
+                    font-size: .8rem;
+                    transition: all .3s ease-in-out;
+                    width: 99.7%;
+                    height: 15rem;
+                    outline-style: unset;
+                    &:focus{
+                        box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                        border:1.4px solid $blue;
+                    }
+                }
+                .allTaxes{
+                    position: relative;
+                    .taxShow{
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        align-items: center;
+                        width: 100%;
+                        padding: .3rem .5rem;
+                        border: 1.4px solid $border1;
+                        border-radius: .3rem;
+                        cursor: pointer;
+                        h4{
+                            color: $text3;
+                            font-size: .7rem;
+                            font-weight: 300;
+                        }
+                        ul{
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit ,minmax(6rem,auto));
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: 1rem;
+                            li{
+                                position: relative;
+                                padding: .4rem;
+                                background: $lowBlue;
+                                border-radius: .2rem;
+                                color: $text2;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-align: center;
+                                i{
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        fill:$text2;
+                                        width: .7rem;
+                                        height: .7rem;
+                                    }
+                                }
+                                span{
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    font-size: .65rem;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                        svg{
+                            width: .65rem;
+                            height: .65rem;
+                            fill: $text2;
+                        }
+                    }
+                    .showAllTaxes{
+                        position: absolute;
+                        top: 94%;
+                        right: 0;
+                        width: 100%;
+                        display: grid;
+                        background: white;
+                        grid-template-columns: 1fr;
+                        border-bottom-left-radius: .3rem;
+                        border-bottom-right-radius: .3rem;
+                        direction: ltr;
+                        overflow: hidden;
+                        border: 1.4px solid $border1;
+                        border-top: 0;
+                        z-index: 80;
+                        .searchTax{
+                            display: grid;
+                            grid-template-columns: 1fr auto;
+                            align-items: center;
+                            cursor: auto;
+                            height: 3rem;
+                            border-bottom: 2px solid #F6F6F6;
+                            input{
+                                border-left: 0;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                                transition: all .3s ease-in-out;
+                                &:focus{
+                                    border: 1px solid $border1;
+                                }
+                            }
+                            button{
+                                width: 2.3rem;
+                                border: 1px solid $border1;
+                                border-right: 0;
+                                font-size: 1.1rem;
+                                background: transparent;
+                                border-radius: .3rem;
+                                font-weight: 300;
+                                transition: all .3s ease-in-out;
+                                border-top-right-radius: 0;
+                                border-bottom-right-radius: 0;
+                                color: $text3;
+                                &:hover{
+                                    background: $blue;
+                                    color: white;
+                                }
+                            }
+                            &:hover{
+                                background: white;
+                            }
+                        }
+                        .scroll-area {
+                            position: relative;
+                            margin: auto;
+                            width: 100%;
+                            max-height: 15rem;
+                        }
+                        li{
+                            direction: rtl;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            padding: .4rem;
+                            color: $text3;
+                            font-size: .75rem;
+                            font-weight: 300;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            height: 2rem;
+                            &:hover{
+                                background: $text4;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            .allCreateTaxonamiItemBody{
+                @extend .allCreateTaxonamiItem;
+                grid-template-columns: 1fr;
+                grid-gap: .5rem;
+            }
+            .allCategoryPanel{
+                position: relative;
+                .categoryShow{
+                    border: 1.4px solid $border1;
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    padding: .4rem .5rem .4rem 1rem;
+                    border-radius: .3rem;
+                    cursor: pointer;
+                    h4{
+                        color: $text3;
+                        font-size: .7rem;
+                        font-weight: 400;
+                    }
+                    i{
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            fill: $text2;
+                        }
+                    }
+                }
+                ul{
+                    position: absolute;
+                    top: 94%;
+                    right: 0;
+                    width: 100%;
+                    background: white;
+                    border-bottom-left-radius: .3rem;
+                    border-bottom-right-radius: .3rem;
+                    direction: ltr;
+                    overflow: hidden;
+                    border: 1.4px solid $border1;
+                    border-top: 0;
+                    z-index: 80;
+                    .scroll-area {
+                        position: relative;
+                        margin: auto;
+                        width: 100%;
+                        height: 15rem;
+                    }
+                    li{
+                        direction: rtl;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        padding: .4rem;
+                        padding-right: 1rem;
+                        color: $text3;
+                        font-size: .65rem;
+                        font-weight: 300;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+                        height: 2rem;
+                        &:hover{
+                            background: $text4;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .checkTax{
+                margin-bottom: 2rem;
+                .allCreatePostDetailItemData{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    align-items: center;
+                    justify-content: right;
+                    grid-gap: .5rem;
+                    padding: 0 .5rem;
+                    border-radius: .4rem;
+                    height: 3rem;
+                    color: $text2;
+                    cursor: pointer;
+                    font-size: .85rem;
+                    font-weight: 300;
+                    @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+                        input[type='checkbox'],
+                        input[type='radio'] {
+                            --active: #275EFE;
+                            --active-inner: #fff;
+                            --focus: 2px rgba(39, 94, 254, .3);
+                            --border: #BBC1E1;
+                            --border-hover: #275EFE;
+                            --background: #fff;
+                            --disabled: #F6F8FF;
+                            --disabled-inner: #E1E6F9;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            height: 21px;
+                            outline: none;
+                            display: inline-block;
+                            vertical-align: top;
+                            position: relative;
+                            margin: 0;
+                            cursor: pointer;
+                            border: 1px solid var(--bc, var(--border));
+                            background: var(--b, var(--background));
+                            transition: background .3s, border-color .3s, box-shadow .2s;
+                            &:after {
+                                content: '';
+                                display: block;
+                                left: 0;
+                                top: 0;
+                                position: absolute;
+                                transition: transform var(--d-t)  var(--d-t-e, ease), opacity var(--d-o, .2s);
+                            }
+                            &:checked {
+                                --b: var(--active);
+                                --bc: var(--active);
+                                --d-o: .3s;
+                                --d-t: .6s;
+                                --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+                            }
+                            &:disabled {
+                                --b: var(--disabled);
+                                cursor: not-allowed;
+                                opacity: .9;
+                                &:checked {
+                                    --b: var(--disabled-inner);
+                                    --bc: var(--border);
+                                }
+                                & + label {
+                                    cursor: not-allowed;
+                                }
+                            }
+                            &:hover {
+                                &:not(:checked) {
+                                    &:not(:disabled) {
+                                        --bc: var(--border-hover);
+                                    }
+                                }
+                            }
+                            &:focus {
+                                box-shadow: 0 0 0 var(--focus);
+                            }
+                            &:not(.switch) {
+                                width: 21px;
+                                &:after {
+                                    opacity: var(--o, 0);
+                                }
+                                &:checked {
+                                    --o: 1;
+                                }
+                            }
+                            & + label {
+                                font-size: 14px;
+                                line-height: 21px;
+                                display: inline-block;
+                                vertical-align: top;
+                                cursor: pointer;
+                                margin-left: 4px;
+                            }
+                        }
+                        input[type='checkbox'] {
+                            &:not(.switch) {
+                                border-radius: 7px;
+                                &:after {
+                                    width: 5px;
+                                    height: 9px;
+                                    border: 2px solid var(--active-inner);
+                                    border-top: 0;
+                                    border-left: 0;
+                                    left: 7px;
+                                    top: 4px;
+                                    transform: rotate(var(--r, 20deg));
+                                }
+                                &:checked {
+                                    --r: 43deg;
+                                }
+                            }
+                            &.switch {
+                                width: 38px;
+                                border-radius: 11px;
+                                &:after {
+                                    left: 2px;
+                                    top: 2px;
+                                    border-radius: 50%;
+                                    width: 15px;
+                                    height: 15px;
+                                    background: var(--ab, var(--border));
+                                    transform: translateX(var(--x, 0));
+                                }
+                                &:checked {
+                                    --ab: var(--active-inner);
+                                    --x: 17px;
+                                }
+                                &:disabled {
+                                    &:not(:checked) {
+                                        &:after {
+                                            opacity: .6;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        input[type='radio'] {
+                            border-radius: 50%;
+                            &:after {
+                                width: 19px;
+                                height: 19px;
+                                border-radius: 50%;
+                                background: var(--active-inner);
+                                opacity: 0;
+                                transform: scale(var(--s, .7));
+                            }
+                            &:checked {
+                                --s: .5;
+                            }
+                        }
+                    }
+                    input[type='number']{
+                        border: 1px solid #DFE3E7;
+                        width: 3rem;
+                        padding: 0.3rem;
+                        color: $text2;
+                        border-radius: .3rem;
+                        font-size: .7rem;
+                        transition: all .3s ease-in-out;
+                        resize: vertical;
+                        &:focus{
+                            box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                            border: 1px solid $blue;
+                        }
+                    }
+                }
+            }
+            .allCreateTaxonamiItemTimer{
+                position: relative;
+                input{
+                    width: 100%;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    padding: 0 .5rem;
+                }
+                i{
+                    position: absolute;
+                    left: 1rem;
+                    top: 0;
+                    bottom: 0;
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+            }
+            .sendGallery{
+                background: white;
+                margin-bottom: 1rem;
+                border-radius: .2rem;
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                .getImageItem{
+                    height: 12rem;
+                    border-radius: .4rem;
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    grid-gap: 1rem;
+                    border: 2px dashed $border1;
+                    span{
+                        color: $text2;
+                        font-size: .7rem;
+                        font-weight: 300;
+                    }
+                    .getImagePic{
+                        img{
+                            height: 10rem;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            justify-content: left;
+            grid-gap: 1rem;
+            overflow: hidden;
+            button{
+                padding: .5rem 1rem;
+                border-radius: .3rem;
+                background-color: $blue;
+                color: #FFFFFF;
+                box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: $blue2;
+                }
+                &:nth-child(2){
+                    background-color: #FF5B5C;
+                    color: #FFFFFF;
+                    &:hover{
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+    .pages{
+        margin-top: 1rem;
+    }
+    .allShowNotify{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        background: rgba(0,0,0,.7);
+        .allShowNotifyItems{
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 1rem;
+            width: 30rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            h1{
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $text2;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: .9rem;
+                font-weight: 300;
+                color: $text2;
+                opacity: .7;
+            }
+            button{
+                padding: .5rem 1rem;
+                border-radius: .3rem;
+                box-shadow: 0 2px 4px 0 rgba(255, 0, 0, 0.5);
+                transition: all .3s ease-in-out;
+                background-color: #FF5B5C;
+                color: #FFFFFF;
+                margin-top: 2rem;
+                &:hover{
+                    background-color: $red;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1000px) {
+    .allTaxonami{
+        .allTaxonamiPanelTop{
+            display: block;
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
+        .createTaxonamiPanel{
+            .allCreateTaxonamiItems{
+                .allCreateTaxonamiItem{
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}

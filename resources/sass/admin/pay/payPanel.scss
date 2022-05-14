@@ -1,0 +1,585 @@
+.allPayPanel{
+    .allPayPanelTop{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        h1{
+            color: $text2;
+        }
+        .allPayPanelTitle{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:last-child{
+                    color: $blue;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allPayPanelTop{
+            display: block;
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .allTable{
+        margin: 1rem;
+        .allTopTable{
+            display: grid;
+            grid-template-columns: 1fr auto;
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 0 5px rgba(0,0,0,.05);
+            .allTopTableItem{
+                display: grid;
+                grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+                justify-content: right;
+                align-items: center;
+                grid-gap: 1rem;
+                .filterItems{
+                    position: relative;
+                    border-top-left-radius: .3rem;
+                    border-bottom-left-radius: .3rem;
+                    .ContentOptionsFilterButton{
+                        display: grid;
+                        cursor: pointer;
+                        grid-template-columns: auto auto;
+                        justify-content: center;
+                        grid-gap: .5rem;
+                        align-items: center;
+                        background-color: #A3AFBD;
+                        box-shadow: 0 2px 4px 0 rgba(163, 175, 189, 0.5);
+                        padding: .5rem 1rem;
+                        transition: all .3s ease-in-out;
+                        border-radius: .3rem;
+                        color: #FFFFFF;
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                            fill: white;
+                        }
+                        &:hover{
+                            background: #394C62;
+                            box-shadow: 0 4px 12px 0 rgba(163, 175, 189, 0.6) !important;
+                        }
+                    }
+                    .bounce-enter-active {
+                        animation: bounce-in .3s;
+                    }
+                    .bounce-leave-active {
+                        animation: bounce-in .3s reverse;
+                    }
+                    @keyframes bounce-in {
+                        0% {
+                            transform: scale(0);
+                        }
+                        50% {
+                            transform: scale(1.1);
+                        }
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                    .filterContent{
+                        position: absolute;
+                        top: 120%;
+                        left: 0;
+                        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+                        background: white;
+                        border-radius: .2rem;
+                        padding: .5rem;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: 1rem;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: -10px;
+                            left: 8px;
+                            border-style: solid;
+                            border-width: 0 10px 10px 10px;
+                            border-color: transparent transparent #fff transparent;
+                        }
+                        .filterContentItem{
+                            display: grid;
+                            grid-gap: .5rem;
+                            label{
+                                color: $text2;
+                                font-weight: 300;
+                                font-size:.7rem;
+                            }
+                            .allCategoryPanel{
+                                position: relative;
+                                .categoryShow{
+                                    border: 1.4px solid $border1;
+                                    display: grid;
+                                    grid-template-columns: 1fr auto;
+                                    padding: .3rem .5rem .3rem 1rem;
+                                    border-radius: .3rem;
+                                    cursor: pointer;
+                                    h4{
+                                        color: $text3;
+                                        font-size: .7rem;
+                                        font-weight: 400;
+                                        padding: .2rem;
+                                    }
+                                    i{
+                                        display: grid;
+                                        justify-content: center;
+                                        align-items: center;
+                                        svg{
+                                            width: 0.8rem;
+                                            height: 0.8rem;
+                                            fill: $text2;
+                                        }
+                                    }
+                                }
+                                ul{
+                                    position: absolute;
+                                    top: 94%;
+                                    right: 0;
+                                    width: 100%;
+                                    background: white;
+                                    border-bottom-left-radius: .3rem;
+                                    border-bottom-right-radius: .3rem;
+                                    direction: ltr;
+                                    overflow: hidden;
+                                    border: 1.4px solid $border1;
+                                    border-top: 0;
+                                    z-index: 80;
+                                    .scroll-area {
+                                        position: relative;
+                                        margin: auto;
+                                        width: 100%;
+                                        height: 15rem;
+                                    }
+                                    li{
+                                        direction: rtl;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        padding: .4rem;
+                                        padding-right: 1rem;
+                                        color: $text3;
+                                        font-size: .65rem;
+                                        font-weight: 300;
+                                        cursor: pointer;
+                                        transition: all .3s ease-in-out;
+                                        height: 2rem;
+                                        &:hover{
+                                            background: $text4;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                            .allTicketPanelTitleDate{
+                                border: 1px solid rgba(0, 0, 0, 0.125);
+                                border-radius: .2rem;
+                                overflow: hidden;
+                                width: 15rem;
+                                position: relative;
+                                input{
+                                    width: auto;
+                                    padding: .3rem;
+                                    height: 1.9rem;
+                                    font-size: .7rem;
+                                    border: 0;
+                                    box-shadow: 0 0 0 0;
+                                    background: transparent;
+                                    border-radius: 0;
+                                }
+                                i{
+                                    position: absolute;
+                                    left: .3rem;
+                                    top: .5rem;
+                                    cursor: pointer;
+                                    svg{
+                                        width: .5rem;
+                                        height: .5rem;
+                                    }
+                                }
+                            }
+                            input{
+                                padding: .3rem;
+                                width: 15rem;
+                                border: 1px solid $border1;
+                                font-size: .7rem;
+                                border-radius: .2rem;
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+                .button{
+                    padding: .5rem 1rem;
+                    border-radius: .3rem;
+                    background-color: $blue;
+                    color: #FFFFFF;
+                    box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        background-color: $blue2;
+                    }
+                    &:nth-child(1){
+                        background-color: #FF5B5C;
+                        color: #FFFFFF;
+                        &:hover{
+                            background-color: $red;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width:1000px) {
+            .allTopTable{
+                grid-template-columns: 1fr;
+            }
+        }
+        .paginate{
+            margin: 0 1rem;
+            margin-top: 1rem;
+            &:last-child{
+                display: grid;
+                grid-template-columns: auto 1fr;
+                justify-content: left;
+                align-items: center;
+                grid-gap: 1rem;
+            }
+            .showInfo{
+                font-size: .75rem;
+                font-weight: 350;
+                line-height: 1.5;
+                color: #121029;
+                text-align: right;
+            }
+        }
+        .allTableContainer{
+            background: white;
+            margin: 1rem 0;
+            border-radius: 10px;
+            .postItem{
+                padding: 1rem;
+                border-bottom: 1px solid $border1;
+                cursor: pointer;
+                .postTop{
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    align-items: center;
+                    .postTitle{
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        grid-gap: 1rem;
+                        align-items: center;
+                        .postImages{
+                            display: grid;
+                            grid-template-columns: auto auto auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            .postImage{
+                                img{
+                                    width: 100%;
+                                    height: 5rem;
+                                    object-fit: contain;
+                                }
+                            }
+                            .postMore{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                border: 1px solid $border1;
+                                border-radius: 5px;
+                                i{
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 5rem;
+                                    width: 5rem;
+                                    svg{
+                                        width: 2.5rem;
+                                        height: 2.5rem;
+                                        fill: $text2;
+                                        opacity: .7;
+                                    }
+                                }
+                            }
+                        }
+                        ul{
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: 1rem;
+                            li{
+                                font-size: .9rem;
+                                font-weight: 300;
+                                color: $text2;
+                                opacity: .7;
+                                span{
+                                    &:last-child{
+                                        color: black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .postOptions{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: .5rem;
+                        align-items: center;
+                        a,i{
+                            display: grid;
+                            align-items: center;
+                            justify-content: center;
+                            padding: .5rem;
+                            background: #f5f5f5;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            svg{
+                                width: 1.2rem;
+                                height: 1.2rem;
+                                fill: #606265;
+                            }
+                        }
+                    }
+                }
+                .postBot{
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    margin-top: .5rem;
+                    background: #f5f5f5;
+                    border-radius: 5px;
+                    padding: 1rem;
+                    ul{
+                        display: grid;
+                        grid-template-columns: auto auto auto auto auto;
+                        justify-content: right;
+                        grid-gap: 2rem;
+                        align-items: center;
+                        li{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: .5rem;
+                            span{
+                                font-size: .85rem;
+                                font-weight: 300;
+                                color: #606265;
+                                &:last-child{
+                                    color: rgba(0,0,0,.8);
+                                }
+                            }
+                        }
+                    }
+                    i{
+                        display: grid;
+                        align-items: center;
+                        svg{
+                            width: 1.1rem;
+                            height: 1.1rem;
+                            fill: $text2;
+                            &:nth-child(2){
+                                visibility: hidden;
+                                position: absolute;
+                                bottom: 100rem;
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    .allShowFastPost{
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        .allShowFastPostPanel{
+            background-color: rgb(247, 247, 247);
+            width: 30rem;
+            height: 100%;
+            position: relative;
+            overflow-y: scroll;
+            padding: 1rem;
+            ul{
+                background: white;
+                border-radius: .3rem;
+                overflow: hidden;
+                li{
+                    .payMetaItem{
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        padding: .5rem;
+                        grid-gap: .5rem;
+                        .payMetaPic{
+                            width: 8rem;
+                            img{
+                                width: 100%;
+                                height: 10rem;
+                                object-fit: contain;
+                            }
+                        }
+                        .payMetaSubject{
+                            .payMetaSubjectTitle{
+                                font-size: .7rem;
+                                line-height: 24px;
+                                font-weight: 600;
+                                color: #4a4a4a;
+                            }
+                            .payMetaSubjectItem{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                grid-gap: .5rem;
+                                color: $text4;
+                                margin-top: .5rem;
+                                i{
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        width: .8rem;
+                                        fill: $text2;
+                                        height: .8rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(even){
+                        .payMetaItem{
+                            background: #F0F3F7;
+                        }
+                    }
+                }
+            }
+            .allCategoryPanel{
+                position: relative;
+                margin: 1rem 0;
+                .categoryShow{
+                    background: #fff;
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: .7rem;
+                    border-radius: .1rem;
+                    cursor: pointer;
+                    h4{
+                        font-weight: 450;
+                        font-size: .7rem;
+                    }
+                    i{
+                        position: relative;
+                        svg{
+                            width: .8rem;
+                            height: .8rem;
+                        }
+                    }
+                }
+                ul{
+                    position: absolute;
+                    top: 110%;
+                    right: 0;
+                    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 3px;
+                    background: white;
+                    border-radius: .2rem;
+                    width: 100%;
+                    margin: 0;
+                    z-index: 9000;
+                    li{
+                        padding: .5rem;
+                        padding-right: 1rem;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+                        &:hover{
+                            background: #F6F6F6;
+                        }
+                    }
+                }
+            }
+            .userInfo{
+                background: white;
+                border-radius: .3rem;
+                overflow: hidden;
+                margin-bottom: 1rem;
+                .userInfoItem{
+                    display: grid;
+                    grid-template-columns: repeat(2 , auto);
+                    justify-content: space-between;
+                    padding: .5rem;
+                    border-bottom: 1px solid rgba(0 , 0 , 0 , .1);
+                    span{
+                        font-weight: 300;
+                        font-size: .8rem;
+                        letter-spacing: .5px;
+                        color: $text2;
+                    }
+                    label{
+                        font-weight: 300;
+                        font-size: .8rem;
+                        letter-spacing: .5px;
+                        color: $text3;
+                    }
+                    &:last-child{
+                        grid-template-columns: 1fr;
+                        span{
+                            margin-top: .5rem;
+                        }
+                    }
+                }
+            }
+            .buttons{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1rem;
+                margin-bottom: 1rem;
+                button{
+                    background: white;
+                    border-radius: .3rem;
+                    padding: .5rem;
+                    font-size: .7rem;
+                    font-weight: 400;
+                    color: $text2;
+                }
+            }
+        }
+        @media screen and (max-width:1000px) {
+            .allShowFastPostPanel{
+                width: 100%;
+            }
+        }
+    }
+    .printPay{
+        position: fixed;
+        top: 0;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+}

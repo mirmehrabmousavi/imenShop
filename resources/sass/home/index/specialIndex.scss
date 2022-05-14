@@ -1,0 +1,487 @@
+.containerCategoriesSuggest{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 1rem;
+    margin: auto;
+    margin-bottom: 3rem;
+    .containerCategories{
+        background: $headerPanel;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        padding-right: 1rem;
+        .containerCategoriesTitle{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            label{
+                font-size: 1.4rem;
+                font-weight: 700;
+                line-height: 31px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                border-bottom: 2px solid $redFront;
+                padding: 1rem;
+                padding-right: 0;
+                color: $text2;
+            }
+            .moreProduct{
+                display: grid;
+                grid-template-columns: auto auto;
+                align-items: center;
+                justify-content: left;
+                grid-gap: .4rem;
+                color: #616161;
+                padding: 1rem;
+                padding-left: 0;
+                border-bottom: 2px solid $backPage2;
+                margin-left:  1rem;
+                a{
+                    color: $text2;
+                    font-size: .85rem;
+                    font-weight: 300;
+                }
+                i{
+                    color: $text2;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    display: grid;
+                    align-items: center;
+                    justify-content: left;
+                    svg{
+                        fill: #616161;
+                        width: .6rem;
+                        height: .6rem;
+                    }
+                }
+            }
+            @media screen and (max-width: 700px) {
+                label{
+                    font-size: 1rem;
+                }
+                .moreProduct{
+                    a{
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+        .hooper{
+            overflow: hidden;
+            min-height: 24rem;
+            margin: .5rem;
+            margin-right: 0;
+            .hooper-list{
+                .hooper-navigation.is-rtl{
+                    .hooper-next{
+                        left: .2rem;
+                    }
+                    .is-disabled{
+                        visibility: hidden;
+                    }
+                    .hooper-prev{
+                        right: -.8rem;
+                    }
+                    button{
+                        svg{
+                            background: $backPage2;
+                            width: 2rem;
+                            height: 4rem;
+                            padding: .1rem;
+                            border-radius: 10px;
+                            box-shadow: 0 0 5px rgba(0,0,0,.05);
+                            fill: $text2;
+                        }
+                    }
+                }
+                .hooper-track{
+                    padding: .5rem 0;
+                    .hooper-slide{
+                        padding-left: 1rem;
+                        .containerCategoriesItem{
+                            overflow: hidden;
+                            padding: 1rem;
+                            transition: all .2s ease-in-out;
+                            border-radius: 10px;
+                            position: relative;
+                            display: grid;
+                            border: 1px solid $backPage2;
+                            height: 100%;
+                            .offProduct{
+                                position: absolute;
+                                top: .5rem;
+                                right: .5rem;
+                                z-index: 100;
+                                background-color: $redFront;
+                                color: white;
+                                line-height: 2;
+                                font-weight: 300;
+                                font-size: 13px;
+                                width: 2.4rem;
+                                height: 2.4rem;
+                                text-align: center;
+                                border-radius: 5rem;
+                                display: grid;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            .pic{
+                                overflow: hidden;
+                                height: 14rem;
+                                img{
+                                    height: 100%;
+                                    width: 100%;
+                                    object-fit: contain;
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-color: transparent;
+                                    background-position: center;
+                                }
+                            }
+                            .postTitle{
+                                margin-top: .5rem;
+                                height: 3rem;
+                                a{
+                                    text-align: right;
+                                    max-width: 90%;
+                                    font-size: .85rem;
+                                    line-height: 25px;
+                                    color: $text2;
+                                    font-weight: 300;
+                                    overflow: hidden;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    opacity: .7;
+                                    -webkit-box-orient: vertical;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            .postPrice{
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                grid-gap: .4rem;
+                                align-items: center;
+                                margin-top: 1rem;
+                                .postPriceItem{
+                                    text-align: left;
+                                    display: grid;
+                                    grid-template-columns: 1fr;
+                                    justify-content: left;
+                                    .offPrice{
+                                        display: grid;
+                                        justify-content: left;
+                                        s{
+                                            font-size: .8rem;
+                                            line-height: 1.692;
+                                            font-weight: 300;
+                                            color: #ababab;
+                                            display: -webkit-box;
+                                            display: -ms-flexbox;
+                                            display: flex;
+                                            width: 100%;
+                                        }
+                                    }
+                                    h3{
+                                        display: grid;
+                                        grid-template-columns: auto auto;
+                                        justify-content: left;
+                                        align-items: center;
+                                        grid-gap: .3rem;
+                                        text-align: left;
+                                        width: 100%;
+                                        color: $text2;
+                                        font-weight: 500;
+                                        font-size: 1.1rem;
+                                        line-height: 1.5;
+                                        span{
+                                            font-size: .8rem;
+                                            letter-spacing: .1px;
+                                        }
+                                    }
+                                    i{
+                                        color: white;
+                                        padding: .3rem;
+                                        border-radius: 5px;
+                                        display: grid;
+                                        align-items: center;
+                                        justify-content: center;
+                                        box-shadow:  0 0 5px rgb(255, 0, 0,.2);
+                                        border-top: 2px solid rgba(255, 0, 0, 0.5);
+                                        svg{
+                                            width: 1rem;
+                                            height: 1rem;
+                                            fill: $redFront;
+                                        }
+                                        .loading{
+                                            fill: $redFront;
+                                            width: 1rem;
+                                            height: 1rem;
+                                            animation: arrow-anim2 .5s ease infinite;
+                                            @keyframes arrow-anim2 {
+                                                0% {
+                                                    transform: rotate(0deg);
+                                                }
+                                                15% {
+                                                    transform: rotate(45deg);
+                                                }
+                                                25% {
+                                                    transform: rotate(90deg);
+                                                }
+                                                50% {
+                                                    transform: rotate(180deg);
+                                                }
+                                                75% {
+                                                    transform: rotate(270deg);
+                                                }
+                                                85% {
+                                                    transform: rotate(300deg);
+                                                }
+                                                100% {
+                                                    transform: rotate(360deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .checkCount{
+                                border-bottom: 1px solid $border2;
+                                z-index: 2;
+                                height: 27px;
+                                position: relative;
+                                width: 100%;
+                                span{
+                                    color: $text2;
+                                    font-size: 1rem;
+                                    line-height: 1.222;
+                                    font-weight: 400;
+                                    position: absolute;
+                                    left: 50%;
+                                    -webkit-transform: translate(-50%,-50%);
+                                    transform: translate(-50%,-50%);
+                                    top: 115%;
+                                    background: $headerPanel;
+                                    padding: 0 1rem;
+                                    height: 21px;
+                                }
+                            }
+                            .productOptions{
+                                position: absolute;
+                                left: -.5rem;
+                                top: 0;
+                                display: grid;
+                                justify-content: left;
+                                background: $headerPanel;
+                                width: 2.5rem;
+                                padding: .5rem;
+                                border: 1px solid $backPage2;
+                                margin-left: .5rem;
+                                transition: all .3s ease-in-out;
+                                z-index: 100;
+                                visibility: hidden;
+                                opacity: 0;
+                                border-bottom-right-radius: 10px;
+                                .productOption{
+                                    margin-top: 1rem;
+                                    cursor: pointer;
+                                    i{
+                                        display: grid;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 1.4rem;
+                                        height: 1.3rem;
+                                        svg{
+                                            fill: $color6;
+                                            width: 1.3rem;
+                                            height: 1.3rem;
+                                        }
+                                        &:nth-child(2){
+                                            visibility: hidden;
+                                            position: absolute;
+                                            top: 0;
+                                            opacity: 0;
+                                        }
+                                        .loading{
+                                            fill: $color6;
+                                            width: 1rem;
+                                            height: 1rem;
+                                            animation: arrow-anim2 .5s ease infinite;
+                                            @keyframes arrow-anim2 {
+                                                0% {
+                                                    transform: rotate(0deg);
+                                                }
+                                                15% {
+                                                    transform: rotate(45deg);
+                                                }
+                                                25% {
+                                                    transform: rotate(90deg);
+                                                }
+                                                50% {
+                                                    transform: rotate(180deg);
+                                                }
+                                                75% {
+                                                    transform: rotate(270deg);
+                                                }
+                                                85% {
+                                                    transform: rotate(300deg);
+                                                }
+                                                100% {
+                                                    transform: rotate(360deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .active{
+                                        svg{
+                                            fill: #F71938;
+                                        }
+                                    }
+                                    &:first-child{
+                                        margin-top: .5rem;
+                                    }
+                                }
+                            }
+                            &:hover{
+                                box-shadow: 0 0 10px rgba(0,0,0,.05);
+                                .productOptions{
+                                    visibility: visible;
+                                    opacity: 1;
+                                    left: -.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .containerCategoriesSuggestItem{
+        background: $headerPanel;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(255, 0, 0, 0.12);
+        overflow: hidden;
+        width: 17rem;
+        .hooper{
+            overflow: hidden;
+            height: auto;
+            .hooper-list{
+                .hooper-track{
+                    .hooper-slide{
+                        padding: 1rem;
+                        border-radius: .3rem;
+                        .containerCategoriesSuggestItemTitle{
+                            text-align: center;
+                            font-size: 1.1rem;
+                            padding-bottom: 1rem;
+                            font-weight: 700;
+                            color: $text2;
+                            margin-bottom: 13px;
+                            position: relative;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            &:before{
+                                height: 1px;
+                                background: $backPage2;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                content: "";
+                                box-sizing: inherit;
+                            }
+                            &:after{
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 0;
+                                height: 2px;
+                                background: -webkit-gradient(linear,left top,right top,from($backPage2),to(rgba(255,0,0)));
+                                background: linear-gradient(90deg, $backPage2, rgba(255,0,0));
+                                content: "";
+                                transition: all 11s ease-in-out;
+                                box-shadow: 0 0 5px rgba(255,0,0,.1);
+                            }
+                        }
+                        .containerCategoriesSuggestItemPic{
+                            img{
+                                width: 100%;
+                                height: 15rem;
+                                object-fit: contain;
+                            }
+                        }
+                        .containerCategoriesSuggestItemSubject{
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            margin-top: .5rem;
+                            a{
+                                text-align: right;
+                                max-width: 90%;
+                                font-size: .9rem;
+                                line-height: 25px;
+                                color: $text2;
+                                font-weight: 300;
+                                opacity: .7;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                text-overflow: ellipsis;
+                                height: 3rem;
+                            }
+                            span{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                grid-gap: .3rem;
+                                justify-content: left;
+                                align-items: center;
+                                text-align: left;
+                                color: $text2;
+                                font-weight: 500;
+                                font-size: 1.1rem;
+                                line-height: 1.5;
+                                margin-top: 1.5rem;
+                                span{
+                                    font-size: .8rem;
+                                    letter-spacing: .1px;
+                                    margin-top: 0;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .hooper-slide.is-active.is-current{
+                        .containerCategoriesSuggestItemTitle{
+                            &:after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .containerCategories{
+        .hooper{
+            .hooper-list{
+                .hooper-track{
+                    .hooper-slide{
+                        &:hover{
+                            .productOption{
+                                left: -.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 920px) {
+    .containerCategoriesSuggest{
+        grid-template-columns: 1fr;
+        .containerCategoriesSuggestItem{
+            width: auto;
+        }
+    }
+}

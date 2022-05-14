@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/irsans-b.eot);
+    src: url(fonts/irsans-b.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-b.woff) format("woff"), url(fonts/irsans-b.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/irsans-m.eot);
+    src: url(fonts/irsans-m.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-m.woff) format("woff"), url(fonts/irsans-m.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/irsans.eot);
+    src: url(fonts/irsans.eot?#iefix) format("embedded-opentype"), url(fonts/irsans.woff) format("woff"), url(fonts/irsans.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/irsans-l.eot);
+    src: url(fonts/irsans-l.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-l.woff) format("woff"), url(fonts/irsans-l.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 100;
+    src: url(fonts/irsans-u.eot);
+    src: url(fonts/irsans-u.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-u.woff) format("woff"), url(fonts/irsans-u.ttf) format("truetype")
+}
+i,
+i:before {
+    font-family: laravel
+}
+html {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: 'irsans', irsans, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    height: 100%;
+}
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    line-height: normal;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    display: inline-block;
+}
+input, textarea, select, select option, button{
+    outline-style: none;
+    font-family: 'irsans', irsans, sans-serif;
+}
+button, input[type='submit']{
+    cursor: pointer;
+}
+input:focus{
+    outline: 0;
+}
+li,
+a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    outline: 0;
+}
+li{
+    transition:none
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+@import "variablesDark";
+body {
+    direction: rtl;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    overflow-x: hidden;
+    height: 100%;
+    background: $backPage2;
+    .allHome{
+        .allPostPanel{
+            margin: 0;
+        }
+        .allPostPanel .allTable .allTableContainer .postItem .postTop .postOptions{
+            grid-template-columns: 1fr;
+            a{
+                display: grid;
+                grid-template-columns: auto auto;
+                align-items: center;
+                color: $text2;
+                font-size: .8rem;
+                font-weight: 300;
+                grid-gap: .5rem;
+            }
+        }
+        .allShowPostPanel{
+            .allShowPostPanelTop{
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+            .allShowPostPanelComment{
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+            .allShowPostPanelPays{
+                margin: 0;
+            }
+        }
+        .allCreatePost{
+            .allPostPanelTop{
+                margin: 0;
+            }
+            .allCreatePostData{
+                margin: 1rem 0;
+            }
+        }
+        .searches{
+            input{
+                width: 100%;
+                font-size: 1rem;
+                font-weight: 300;
+                color: $text2;
+                letter-spacing: .1px;
+            }
+        }
+    }
+    .hidden{
+        position: absolute;
+        opacity: 0;
+        top: 0;
+    }
+    .width{
+        width: 70%;
+    }
+    @media screen and (max-width:1800px) {
+        .width{
+            width: 85%;
+        }
+    }
+    @media screen and (max-width:1600px) {
+        .width{
+            width: 90%;
+        }
+    }
+    @media screen and (max-width:1400px) {
+        .width{
+            width: 97%;
+        }
+    }
+    @media screen and (max-width:700px) {
+        .width{
+            width: 95%;
+        }
+    }
+    .en{
+        font-family: Trebuchet MS, sans-serif;
+    }
+}
+
+@import "home/header/headerHome";
+@import "home/header/sendTicket";
+@import "home/index/index";
+@import "home/index/adHooper";
+@import "home/index/siteProperty";
+@import "home/index/suggestContainer";
+@import "home/index/searchIndex";
+@import "home/index/specialIndex";
+@import "home/index/brandIndex";
+@import "home/index/backProduct";
+@import "home/index/bigSlider";
+@import "home/index/homeHooper";
+@import "home/index/fileIndex";
+@import "home/index/professionalCategory";
+@import "home/index/horizontalProduct";
+@import "home/index/imageWidget";
+@import "home/index/newsIndex";
+@import "home/index/adIndex";
+@import "home/footer/footerIndex";
+@import "home/single/singleIndex";
+@import "home/single/allComment";
+@import "home/single/singleTop1";
+@import "home/single/singleTop2";
+@import "home/user/addVariety";
+@import "home/single/singleRel2";
+@import "home/single/singleDownload";
+@import "home/single/allShare";
+@import "home/single/allQuestion";
+@import "home/single/singleNotification";
+@import "home/single/singleRel";
+@import "home/single/singleDetail";
+@import "home/single/singleDetail2";
+@import "home/single/singleNews";
+@import "home/single/reportSingle";
+@import "home/cart/cartIndex";
+@import "home/cart/userCart";
+@import "home/cart/buy";
+@import "home/cart/addAddress";
+@import "home/page/pageIndex";
+@import "home/archive/productArchive";
+@import "home/archive/allNews";
+@import "home/user/userIndex";
+@import "home/user/auth";
+@import "home/user/showPay";
+@import "home/user/payProduct";
+@import "home/user/becomeSeller";
+@import "home/user/checkout";
+@import "admin/paginatePanel";
+@import "home/showFast";
+@import "admin/showImage";
+@import "admin/post/create";
+@import "admin/post/show";
+@import "admin/post/index";
+@import "home/charge/index";
+@import "admin/table/allTable";
+@import "home/allCompares";
+@import "home/archive/suggestProduct";

@@ -1,0 +1,351 @@
+.allCheckoutPanel{
+    .allCheckoutTop{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        h1{
+            color: $text2;
+        }
+        .allCheckoutTitle{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:last-child{
+                    color: $blue;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allCheckoutTop{
+            display: block;
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .allTable{
+        margin: 1rem;
+        .allTopTable{
+            display: grid;
+            grid-template-columns: repeat(2 , auto);
+            justify-content: space-between;
+            align-items: center;
+            grid-gap: .5rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,.05);
+            .allTopTableItem{
+                display: grid;
+                grid-template-columns: repeat(2 , auto);
+                justify-content: right;
+                align-items: center;
+                grid-gap: 1rem;
+                button{
+                    padding: .5rem 1rem;
+                    border-radius: .3rem;
+                    background-color: $blue;
+                    color: #FFFFFF;
+                    box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        background-color: $blue2;
+                    }
+                    &:nth-child(2){
+                        background-color: #FF5B5C;
+                        color: #FFFFFF;
+                        &:hover{
+                            background-color: $red;
+                        }
+                    }
+                }
+            }
+            .filterItems{
+                position: relative;
+                .ContentOptionsFilterButton{
+                    display: grid;
+                    cursor: pointer;
+                    grid-template-columns: auto auto;
+                    justify-content: center;
+                    grid-gap: .5rem;
+                    align-items: center;
+                    background-color: #A3AFBD;
+                    box-shadow: 0 2px 4px 0 rgba(163, 175, 189, 0.5);
+                    padding: .5rem 1rem;
+                    transition: all .3s ease-in-out;
+                    border-radius: .3rem;
+                    color: #FFFFFF;
+                    svg{
+                        width: 1rem;
+                        height: 1rem;
+                        fill: white;
+                    }
+                    &:hover{
+                        background: #394C62;
+                        box-shadow: 0 4px 12px 0 rgba(163, 175, 189, 0.6) !important;
+                    }
+                }
+                .bounce-enter-active {
+                    animation: bounce-in .3s;
+                }
+                .bounce-leave-active {
+                    animation: bounce-in .3s reverse;
+                }
+                @keyframes bounce-in {
+                    0% {
+                        transform: scale(0);
+                    }
+                    50% {
+                        transform: scale(1.1);
+                    }
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+                .filterContent{
+                    position: absolute;
+                    top: 120%;
+                    left: 0;
+                    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+                    background: white;
+                    border-radius: .2rem;
+                    padding: .5rem;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 1rem;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: -10px;
+                        left: 8px;
+                        border-style: solid;
+                        border-width: 0 10px 10px 10px;
+                        border-color: transparent transparent #fff transparent;
+                    }
+                    .filterContentItem{
+                        display: grid;
+                        grid-gap: .5rem;
+                        label{
+                            color: $text2;
+                            font-weight: 300;
+                            font-size:.7rem;
+                        }
+                        input{
+                            padding: .3rem;
+                            width: 15rem;
+                            border: 1px solid $border1;
+                            font-size: .7rem;
+                            border-radius: .2rem;
+                            background: transparent;
+                        }
+                        .allCategoryPanel{
+                            position: relative;
+                            .categoryShow{
+                                border: 1.4px solid $border1;
+                                display: grid;
+                                grid-template-columns: 1fr auto;
+                                padding: .4rem .5rem .4rem 1rem;
+                                border-radius: .3rem;
+                                cursor: pointer;
+                                h4{
+                                    color: $text3;
+                                    font-size: .7rem;
+                                    font-weight: 400;
+                                }
+                                i{
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        width: 0.8rem;
+                                        height: 0.8rem;
+                                        fill: $text2;
+                                    }
+                                }
+                            }
+                            ul{
+                                position: absolute;
+                                top: 94%;
+                                right: 0;
+                                width: 100%;
+                                background: white;
+                                border-bottom-left-radius: .3rem;
+                                border-bottom-right-radius: .3rem;
+                                direction: ltr;
+                                overflow: hidden;
+                                border: 1.4px solid $border1;
+                                border-top: 0;
+                                z-index: 80;
+                                .scroll-area {
+                                    position: relative;
+                                    margin: auto;
+                                    width: 100%;
+                                    height: 15rem;
+                                }
+                                li{
+                                    direction: rtl;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    padding: .4rem;
+                                    padding-right: 1rem;
+                                    color: $text3;
+                                    font-size: .65rem;
+                                    font-weight: 300;
+                                    cursor: pointer;
+                                    transition: all .3s ease-in-out;
+                                    height: 2rem;
+                                    &:hover{
+                                        background: $text4;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .createCheckoutPanel{
+        background: white;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
+        box-shadow: 0 2px 4px rgba(15,34,58,.12);
+        margin: 1rem;
+        p{
+            font-size: .9rem;
+            color: $text3;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .createCheckoutItems{
+            .allCreateItem{
+                display: grid;
+                grid-template-columns: 10rem 1fr;
+                margin-bottom: 2rem;
+                label{
+                    color: $text2;
+                    font-weight: 500;
+                    font-size: .9rem;
+                }
+                input,h3{
+                    border: 1.4px solid $border1;
+                    padding: 0.3rem .5rem;
+                    color: $text2;
+                    font-weight: 300;
+                    border-radius: .3rem;
+                    font-size: .85rem;
+                    transition: all .3s ease-in-out;
+                    &:focus{
+                        box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                        border:1.4px solid $blue;
+                    }
+                }
+                .allCategoryPanel{
+                    position: relative;
+                    .categoryShow{
+                        border: 1.4px solid $border1;
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        padding: .4rem .5rem .4rem 1rem;
+                        border-radius: .3rem;
+                        cursor: pointer;
+                        h4{
+                            color: $text3;
+                            font-size: .7rem;
+                            font-weight: 400;
+                        }
+                        i{
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            svg{
+                                width: 0.8rem;
+                                height: 0.8rem;
+                                fill: $text2;
+                            }
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        top: 94%;
+                        right: 0;
+                        width: 100%;
+                        background: white;
+                        border-bottom-left-radius: .3rem;
+                        border-bottom-right-radius: .3rem;
+                        direction: ltr;
+                        overflow: hidden;
+                        border: 1.4px solid $border1;
+                        border-top: 0;
+                        z-index: 80;
+                        .scroll-area {
+                            position: relative;
+                            margin: auto;
+                            width: 100%;
+                            height: 15rem;
+                        }
+                        li{
+                            direction: rtl;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            padding: .4rem;
+                            padding-right: 1rem;
+                            color: $text3;
+                            font-size: .65rem;
+                            font-weight: 300;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            height: 2rem;
+                            &:hover{
+                                background: $text4;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            justify-content: left;
+            grid-gap: 1rem;
+            overflow: hidden;
+            button{
+                padding: .5rem 1rem;
+                border-radius: .3rem;
+                background-color: $blue;
+                color: #FFFFFF;
+                box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: $blue2;
+                }
+                &:nth-child(2){
+                    background-color: #FF5B5C;
+                    color: #FFFFFF;
+                    &:hover{
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+}

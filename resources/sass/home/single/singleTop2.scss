@@ -1,0 +1,1052 @@
+.allSingleTop2{
+    .address{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(2px, auto));
+        justify-content: right;
+        align-items: center;
+        i{
+            margin-left: .5rem;
+            svg{
+                width: 1rem;
+                height: 1rem;
+                fill: $text2;
+                opacity: .7;
+            }
+        }
+        a{
+            font-size: .9rem;
+            font-weight: 500;
+            color: $text2;
+            opacity: .7;
+            &:after{
+                content: "/";
+                padding: 0 .5rem;
+            }
+            &:last-child{
+                &:after{
+                    content: "";
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .containerSingle{
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 1rem;
+        background: $headerPanel;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 25rem 1fr;
+        .right{
+            .options{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(1px, auto));
+                justify-content: center;
+                align-items: center;
+                grid-gap: 2rem;
+                background: $backPage2;
+                border-radius: 5rem;
+                height: 3rem;
+                .option{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+                    justify-content: center;
+                    grid-gap: .5rem;
+                    align-items: center;
+                    transition: all .3s ease-in-out;
+                    padding: .3rem 0;
+                    border-radius: 5rem;
+                    width: 1.4rem;
+                    cursor: pointer;
+                    .loading{
+                        animation: arrow-anim2 .5s ease infinite;
+                        @keyframes arrow-anim2 {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+                            15% {
+                                transform: rotate(45deg);
+                            }
+                            25% {
+                                transform: rotate(90deg);
+                            }
+                            50% {
+                                transform: rotate(180deg);
+                            }
+                            75% {
+                                transform: rotate(270deg);
+                            }
+                            85% {
+                                transform: rotate(300deg);
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+                    i{
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        svg{
+                            width: 1.45rem;
+                            height: 1.4rem;
+                            fill: $text2;
+                            opacity: .7;
+                            &:nth-child(2){
+                                visibility: hidden;
+                                position: absolute;
+                                top: 0;
+                                opacity: 0;
+                            }
+                        }
+                        &:nth-child(2){
+                            visibility: hidden;
+                            position: absolute;
+                            top: 0;
+                            opacity: 0;
+                        }
+                    }
+                    .active{
+                        svg{
+                            fill: $redFront;
+                        }
+                    }
+                    h4{
+                        opacity: 0;
+                        color: $text2;
+                        font-size: 0;
+                        font-weight: 500;
+                        position: absolute;
+                        top: 0;
+                        visibility: hidden;
+                    }
+                    &:hover{
+                        width: 6rem;
+                        box-shadow: 0 0 5px rgba(0,0,0,.05);
+                        background: $headerPanel;
+                        h4{
+                            opacity: .7;
+                            font-size: .85rem;
+                            visibility: visible;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+            .pic{
+                margin-top: 1rem;
+            }
+            .hooper{
+                overflow: hidden;
+                height: auto;
+                outline: transparent;
+                margin-top: .5rem;
+                .hooper-list{
+                    .hooper-navigation.is-rtl{
+                        button{
+                            svg{
+                                background: $headerPanel;
+                                border-radius: 100%;
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                fill: $text3;
+                            }
+                        }
+                    }
+                    .hooper-track{
+                        .hooper-slide{
+                            cursor: pointer;
+                            padding-right: .5rem;
+                            width: auto;
+                            img{
+                                width: 100%;
+                                height: 6rem;
+                                object-fit: contain;
+                                border-radius: .3rem;
+                                overflow: hidden;
+                            }
+                        }
+                        .hooper-slide.is-active.is-current{
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .left{
+            .titleProduct{
+                position: relative;
+                overflow: hidden;
+                h1{
+                    padding-right: 1rem;
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                    margin-bottom: 10px;
+                    letter-spacing: 1px;
+                    color: $text2;
+                    span {
+                        padding: .1rem .8rem;
+                        font-size: .8rem;
+                        border-radius: 5px;
+                        font-weight: 300;
+                        margin-right: .5rem;
+                        letter-spacing: .1px;
+                    }
+
+                    .fake {
+                        color: #fff;
+                        background: #FFD300;
+                    }
+
+                    .original {
+                        color: #fff;
+                        background: $green;
+                    }
+
+                    .used {
+                        color: #fff;
+                        background: orange;
+                    }
+                }
+                span{
+                    color: $text3;
+                    font-size: .7rem;
+                    background: $headerPanel;
+                    position: relative;
+                    font-weight: 300;
+                    padding: 10px;
+                    padding-right: 1rem;
+                    z-index: 10;
+                    line-height: 1.5rem;
+                }
+                &::after{
+                    content: "";
+                    width: 100%;
+                    left: 0;
+                    bottom: .6rem;
+                    margin-left: 20rem;
+                    height: .08rem;
+                    background: $border2;
+                    position: absolute;
+                }
+            }
+            .productDetail{
+                display: grid;
+                grid-template-columns: 1fr auto;
+                .detailRight{
+                    padding: 1rem;
+                    .detailRightCats{
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        align-items: center;
+                        .detailCatsRight{
+                            display: grid;
+                            grid-gap: .5rem;
+                            align-items: center;
+                            .singleComment{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                grid-gap: .5rem;
+                                h4{
+                                    font-size: .8rem;
+                                    font-weight: 300;
+                                    color: $text2;
+                                }
+                            }
+                            .singleCategory{
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                grid-gap: .3rem;
+                                h4{
+                                    font-size: .8rem;
+                                    font-weight: 300;
+                                    color: $text2;
+                                }
+                                ul{
+                                    display: grid;
+                                    grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+                                    justify-content: right;
+                                    align-items: center;
+                                    grid-gap: .5rem;
+                                    li{
+                                        a{
+                                            font-size: .8rem;
+                                            font-weight: 300;
+                                            color: $text2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .singleBrand{
+                            margin-top: 1rem;
+                            ul{
+                                li{
+                                    a{
+                                        display: grid;
+                                        grid-template-columns: 1fr;
+                                        grid-gap: .5rem;
+                                        border: 1px dashed $border2;
+                                        padding: .5rem;
+                                        border-radius: 10px;
+                                        .picBrand{
+                                            display: grid;
+                                            justify-content: center;
+                                            img{
+                                                width: 3rem;
+                                                height: 2rem;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                        h5{
+                                            text-align: center;
+                                            font-size: .7rem;
+                                            font-weight: 300;
+                                            color: $text2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .singleAbility{
+                        margin-top: 1rem;
+                        h4{
+                            font-size: 1rem;
+                            font-weight: 500;
+                            color: $text2;
+                        }
+                        ul {
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            li {
+                                color: $text2;
+                                font-size: .8rem;
+                                margin-top: 1rem;
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                grid-gap: .5rem;
+                                font-weight: 300;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                i{
+                                    display: grid;
+                                    align-items: center;
+                                    svg{
+                                        width: 1.1rem;
+                                        height: 1.1rem;
+                                        fill: $green;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .allSingleHomePrice {
+                        margin-top: 2rem;
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        grid-gap: 1rem;
+                        .allSingleHomePriceNext {
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: 1rem;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            background: #23bf53;
+                            box-shadow: -46px 0px 0px 0px rgba(0, 0, 0, 0.12) inset;
+                            width: 13rem;
+                            padding: 0 1rem;
+                            transition: all .3s ease-in-out;
+                            cursor: pointer;
+                            height: 3rem;
+                            i {
+                                .loading{
+                                    animation: arrow-anim2 .5s ease infinite;
+                                    @keyframes arrow-anim2 {
+                                        0% {
+                                            transform: rotate(0deg);
+                                        }
+                                        15% {
+                                            transform: rotate(45deg);
+                                        }
+                                        25% {
+                                            transform: rotate(90deg);
+                                        }
+                                        50% {
+                                            transform: rotate(180deg);
+                                        }
+                                        75% {
+                                            transform: rotate(270deg);
+                                        }
+                                        85% {
+                                            transform: rotate(300deg);
+                                        }
+                                        100% {
+                                            transform: rotate(360deg);
+                                        }
+                                    }
+                                }
+                                svg {
+                                    width: 1.3rem;
+                                    height: 1.3rem;
+                                    fill: white;
+                                }
+                            }
+
+                            button {
+                                font-size: 1rem;
+                                color: #fff;
+                                font-weight: 300;
+                                overflow: hidden;
+                                text-align: center;
+                                padding: .5rem;
+                                background: transparent;
+                            }
+
+                            &:hover {
+                                box-shadow: -250px 0px 0px 0px rgba(0, 0, 0, 0.12) inset;
+                            }
+                        }
+                        .abilityPostToolTip{
+                            background: rgba(255,0,0,.1);
+                            padding: 0 .5rem;
+                            border-radius: 10px;
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            align-items: center;
+                            grid-gap: .5rem;
+                            height: 3rem;
+                            i{
+                                svg{
+                                    fill: $red;
+                                    width: 1.2rem;
+                                    height: 1.2rem;
+                                    animation: arrow-anim 1s ease infinite;
+                                    margin-bottom: 0;
+                                    @keyframes arrow-anim {
+                                        0% {
+                                            margin-bottom: 0;
+                                        }
+                                        10% {
+                                            margin-bottom: .5rem;
+                                        }
+                                        30% {
+                                            transform: rotate(-40deg);
+                                        }
+                                        50% {
+                                            transform: rotate(40deg);
+                                        }
+                                        60% {
+                                            transform: rotate(-40deg);
+                                        }
+                                        70% {
+                                            transform: rotate(-20deg);
+                                        }
+                                        80% {
+                                            transform: rotate(0);
+                                            margin-bottom: 1rem;
+                                        }
+                                        100% {
+                                            margin-bottom: .5rem;
+                                        }
+                                    }
+                                }
+                            }
+                            p{
+                                font-size: .8rem;
+                                font-weight: 300;
+                                color: $redFront;
+                                height: 3rem;
+                                display: grid;
+                                align-items: center;
+                            }
+                        }
+                    }
+                    .allSingleHomeInfoPriceCheck2 {
+                        margin-top: 2rem;
+                        span {
+                            display: grid;
+                            background: $backPage2;
+                            color: $text2;
+                            border-radius: 8px;
+                            text-align: center;
+                            padding: .5rem;
+                            font-size: .9rem;
+                            width: 13rem;
+                        }
+                    }
+                    .reportSingle{
+                        display: grid;
+                        grid-template-columns: auto;
+                        justify-content: right;
+                        align-items: center;
+                        .reportSingleItem{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: .5rem;
+                            margin-top: 2rem;
+                            border-bottom: 1px dashed $border2;
+                            padding-bottom: .5rem;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            i{
+                                display: grid;
+                                align-items: center;
+                                svg{
+                                    width: 1.1rem;
+                                    height: 1.1rem;
+                                    fill: $text2;
+                                    transition: all .3s ease-in-out;
+                                    opacity: .6;
+                                }
+                            }
+                            span{
+                                transition: all .3s ease-in-out;
+                                font-size: .75rem;
+                                font-weight: 300;
+                                color: $text2;
+                                opacity: .6;
+                            }
+                            &:hover{
+                                border-bottom: 1px dashed $text2;
+                                svg{
+                                    opacity: 1;
+                                }
+                                span{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    .scoreSingle{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        margin-top: 1.5rem;
+                        .rightScore{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: .2rem;
+                            svg{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                        span{
+                            font-size: .85rem;
+                            font-weight: 300;
+                            color: $orange;
+                        }
+                    }
+                    .detailRightOptions{
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit , minmax(1px , 1fr));
+                        grid-gap: 1rem;
+                        margin-top: 2rem;
+                        .detailRightOption{
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            grid-gap: .5rem;
+                            i{
+                                svg{
+                                    width: 2.5rem;
+                                    height: 2.5rem;
+                                }
+                            }
+                            .detailRightOptionText{
+                                h4,h5{
+                                    font-size: .9rem;
+                                    font-weight: 500;
+                                    color: $text2;
+                                }
+                                h5{
+                                    font-weight: 300;
+                                    opacity: .7;
+                                }
+                            }
+                        }
+                    }
+                }
+                .detailLeft{
+                    width: 21rem;
+                    .timeSingle {
+                        background: linear-gradient(to right, $backPage2 20%, #FF0 40%, #FF0 60%, $backPage2 80%);
+                        background-size: 200% auto;
+                        animation: shine 1s linear infinite;
+                        padding: 1rem;
+                        overflow: hidden;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: .5rem;
+                        border-radius: 20px;
+                        @keyframes shine {
+                            to {
+                                background-position: 200% center;
+                            }
+                        }
+                        .timeSingleText {
+                            text-align: center;
+                            h4{
+                                font-size: 1rem;
+                                font-weight: 700;
+                                color: $text2;
+                                opacity: .9;
+                                letter-spacing: 1px;
+                            }
+                            h5{
+                                font-size: .8rem;
+                                font-weight: 300;
+                                color: $text2;
+                                opacity: .5;
+                            }
+                        }
+                        .timeSingleItem {
+                            direction: ltr;
+                            .flip-card[data-v-78efe7f6] {
+                                font-size: 1.1rem;
+                            }
+                            .flip-card__top[data-v-78efe7f6], .flip-card__bottom[data-v-78efe7f6], .flip-card__back-bottom[data-v-78efe7f6], .flip-card__back[data-v-78efe7f6]::before, .flip-card__back[data-v-78efe7f6]::after{
+                                padding: 0;
+                            }
+                            .flip-card__top[data-v-78efe7f6], .flip-card__bottom[data-v-78efe7f6], .flip-card__back-bottom[data-v-78efe7f6], .flip-card__back[data-v-78efe7f6]::before, .flip-card__back[data-v-78efe7f6]::after{
+                                background: $headerPanel;
+                                color: $text2;
+                            }
+                            .flip-card__bottom[data-v-78efe7f6], .flip-card__back-bottom[data-v-78efe7f6], .flip-card__bottom-4digits[data-v-78efe7f6], .flip-card__back-bottom-4digits[data-v-78efe7f6]{
+                                background: $headerPanel;
+                                border-top: 0;
+                                color: $text2;
+                            }
+                            .flip-clock__slot[data-v-78efe7f6] {
+                                position: absolute;
+                                top: 0;
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                    .singleData{
+                        background: $backPage2;
+                        margin-top: 1rem;
+                        border-radius: 20px;
+                        .singleDataItem{
+                            h4{
+                                font-size: .9rem;
+                                font-weight: 500;
+                                color: $text2;
+                                opacity: .7;
+                            }
+                            .singlePrice{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 1rem;
+                                h5{
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    color: $redFront;
+                                    letter-spacing: 1px;
+                                    span{
+                                        font-size: .8rem;
+                                        font-weight: 300;
+                                        letter-spacing: .1px;
+                                    }
+                                }
+                            }
+                            .singleRate {
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                padding: 1rem;
+                                .singleRateItem {
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    grid-gap: .5rem;
+                                    font-size: .8rem;
+                                    font-weight: 500;
+                                    color: $text2;
+                                    opacity: .7;
+                                }
+                                .rateItems {
+                                    display: grid;
+                                    grid-template-columns: repeat(5, auto);
+                                    justify-content: left;
+                                    grid-gap: .5rem;
+                                    .rateItem {
+                                        cursor: pointer;
+                                        i {
+                                            display: grid;
+                                            justify-content: center;
+                                            align-items: center;
+                                            svg {
+                                                fill: #9b9b9b;
+                                                width: 1.3rem;
+                                                height: 1.3rem;
+                                            }
+                                            &:nth-child(2) {
+                                                visibility: hidden;
+                                                position: absolute;
+                                                top: 0;
+                                                opacity: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .singleGuarantee{
+                                display: grid;
+                                grid-template-columns: auto 1fr auto;
+                                justify-content: right;
+                                align-items: center;
+                                grid-gap: 1rem;
+                                border-radius: 10px;
+                                position: relative;
+                                padding: 1rem;
+                                cursor: pointer;
+                                span {
+                                    font-size: .85rem;
+                                    line-height: 24px;
+                                    font-weight: 500;
+                                    opacity: .9;
+                                    color: $text2;
+                                }
+                                i {
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg {
+                                        width: 1.4rem;
+                                        height: 1.4rem;
+                                        opacity: .9;
+                                        fill: $text2;
+                                        transform: rotate(0);
+                                        transition: all .3s ease-in-out;
+                                    }
+                                    .active{
+                                        transform: rotate(180deg);
+                                        width: .8rem;
+                                        height: .8rem;
+                                    }
+                                    &:last-child{
+                                        svg{
+                                            width: .8rem;
+                                            height: .8rem;
+                                        }
+                                    }
+                                }
+                                .singleGuaranteeItems{
+                                    position: absolute;
+                                    top: 88%;
+                                    right: 0;
+                                    left: 0;
+                                    border-bottom-right-radius: 10px;
+                                    border-bottom-left-radius: 10px;
+                                    padding: 1rem;
+                                    z-index: 500;
+                                    box-shadow: 0 8px 1px rgba(0, 0, 0, 0.04);
+                                    background: $backPage2;
+                                    .singleGuaranteeItem{
+                                        direction: rtl;
+                                        margin-top: 1rem;
+                                        &:first-child{
+                                            margin-top: 0;
+                                        }
+                                        label{
+                                            display: grid;
+                                            grid-gap: .5rem;
+                                            grid-template-columns: auto auto;
+                                            justify-content: right;
+                                            align-items: center;
+                                            cursor: pointer;
+                                            color: $text2;
+                                            letter-spacing: .1px;
+                                            font-weight: 300;
+                                            font-size: .85rem;
+                                            line-height: 1.571;
+                                        }
+                                        span{
+                                            font-size: .75rem;
+                                            font-weight: 300;
+                                        }
+                                        @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+                                            input[type='checkbox'],
+                                            input[type='radio'] {
+                                                --active: #275EFE;
+                                                --active-inner: #fff;
+                                                --focus: 2px rgba(39, 94, 254, .3);
+                                                --border: #BBC1E1;
+                                                --border-hover: #275EFE;
+                                                --background: #fff;
+                                                --disabled: #F6F8FF;
+                                                --disabled-inner: #E1E6F9;
+                                                -webkit-appearance: none;
+                                                -moz-appearance: none;
+                                                height: 21px;
+                                                outline: none;
+                                                display: inline-block;
+                                                vertical-align: top;
+                                                position: relative;
+                                                margin: 0;
+                                                cursor: pointer;
+                                                border: 2px solid var(--bc, var(--border));
+                                                background: var(--b, var(--background));
+                                                transition: background .3s, border-color .3s, box-shadow .2s;
+                                                &:after {
+                                                    content: '';
+                                                    display: block;
+                                                    left: 0;
+                                                    top: 0;
+                                                    position: absolute;
+                                                    transition: all .3s ease-in-out;
+                                                }
+                                                &:checked {
+                                                    --b: var(--active);
+                                                    --bc: var(--active);
+                                                    --d-o: .3s;
+                                                    --d-t: .6s;
+                                                    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+                                                }
+                                                &:disabled {
+                                                    --b: var(--disabled);
+                                                    cursor: not-allowed;
+                                                    opacity: .9;
+                                                    &:checked {
+                                                        --b: var(--disabled-inner);
+                                                        --bc: var(--border);
+                                                    }
+                                                    & + label {
+                                                        cursor: not-allowed;
+                                                    }
+                                                }
+                                                &:hover {
+                                                    &:not(:checked) {
+                                                        &:not(:disabled) {
+                                                            --bc: var(--border-hover);
+                                                        }
+                                                    }
+                                                }
+                                                &:focus {
+                                                    box-shadow: 0 0 0 var(--focus);
+                                                }
+                                                &:not(.switch) {
+                                                    width: 21px;
+                                                    &:after {
+                                                        opacity: var(--o, 0);
+                                                    }
+                                                    &:checked {
+                                                        --o: 1;
+                                                    }
+                                                }
+                                                & + label {
+                                                    font-size: 14px;
+                                                    line-height: 21px;
+                                                    display: inline-block;
+                                                    vertical-align: top;
+                                                    cursor: pointer;
+                                                    margin-left: 4px;
+                                                }
+                                            }
+                                            input[type='checkbox'] {
+                                                &:not(.switch) {
+                                                    border-radius: 7px;
+                                                    &:after {
+                                                        width: 5px;
+                                                        height: 9px;
+                                                        border: 2px solid var(--active-inner);
+                                                        border-top: 0;
+                                                        border-left: 0;
+                                                        left: 7px;
+                                                        top: 4px;
+                                                        transform: rotate(var(--r, 20deg));
+                                                    }
+                                                    &:checked {
+                                                        --r: 43deg;
+                                                    }
+                                                }
+                                                &.switch {
+                                                    width: 38px;
+                                                    border-radius: 11px;
+                                                    &:after {
+                                                        left: 2px;
+                                                        top: 2px;
+                                                        border-radius: 50%;
+                                                        width: 15px;
+                                                        height: 15px;
+                                                        background: var(--ab, var(--border));
+                                                        transform: translateX(var(--x, 0));
+                                                    }
+                                                    &:checked {
+                                                        --ab: var(--active-inner);
+                                                        --x: 17px;
+                                                    }
+                                                    &:disabled {
+                                                        &:not(:checked) {
+                                                            &:after {
+                                                                opacity: .6;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            input[type='radio'] {
+                                                border-radius: 50%;
+                                                &:after {
+                                                    width: 19px;
+                                                    height: 19px;
+                                                    border-radius: 50%;
+                                                    background: var(--active-inner);
+                                                    opacity: 0;
+                                                    transform: scale(var(--s, .7));
+                                                }
+                                                &:checked {
+                                                    --s: .5;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .singleCount{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: space-between;
+                                align-items: center;
+                                grid-gap: 1rem;
+                                padding: 1rem;
+                                span {
+                                    font-size: .85rem;
+                                    line-height: 24px;
+                                    font-weight: 500;
+                                    opacity: .9;
+                                    color: $text2;
+                                }
+                            }
+                            .singleColor{
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                align-items: center;
+                                padding: 1rem;
+                                ul {
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: left;
+                                    align-items: center;
+                                    grid-gap: 1rem;
+
+                                    .unActive {
+                                        display: grid;
+                                        grid-template-columns: 1fr auto;
+                                        justify-content: right;
+                                        align-items: center;
+                                        grid-gap: .5rem;
+                                        padding: .3rem .5rem;
+                                        border-radius: 20px;
+                                        cursor: pointer;
+                                        background: $headerPanel;
+                                        box-shadow: 0 0 5px rgba(0,0,0,.05);
+                                    }
+
+                                    .active {
+                                        display: grid;
+                                        grid-template-columns: 1fr auto;
+                                        justify-content: right;
+                                        align-items: center;
+                                        grid-gap: .5rem;
+                                        padding: .4rem .5rem;
+                                        border-radius: 20px;
+                                        cursor: pointer;
+                                        background: $green;
+                                        box-shadow: 0 0 5px rgba(0,0,0,.05);
+                                        span {
+                                            color: white;
+                                            opacity: 1;
+                                        }
+                                    }
+
+                                    i {
+                                        display: grid;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 1.1rem;
+                                        height: 1.1rem;
+                                        svg {
+                                            width: 1.1rem;
+                                            height: 1.1rem;
+                                        }
+                                    }
+
+                                    span {
+                                        color: $text2;
+                                        font-size: .8rem;
+                                        opacity: .7;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                            &:nth-child(even){
+                                background: $headerPanel;
+                            }
+                            &:last-child{
+                                border-bottom-right-radius: 20px;
+                                border-bottom-left-radius: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1250px) {
+        .containerSingle{
+            grid-template-columns: 1fr;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .address{
+            opacity: 0;
+            position: absolute;
+            a{
+                font-size: .7rem;
+            }
+        }
+        .containerSingle{
+            .left{
+                .productDetail{
+                    grid-template-columns: 1fr;
+                    .detailLeft{
+                        width: 100%;
+                    }
+                    .detailRight{
+                        .detailRightCats{
+                            grid-template-columns: 1fr;
+                        }
+                        .allSingleHomePrice{
+                            grid-template-columns: 1fr;
+                        }
+                        .detailRightOptions{
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

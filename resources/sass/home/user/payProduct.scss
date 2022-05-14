@@ -1,0 +1,128 @@
+.allPayPanel{
+    .vidgetItems{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr));
+        grid-gap: 1rem;
+        margin-bottom: 1rem;
+        .vidgetItem{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            grid-gap: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            .vidgetIcon{
+                position: relative;
+                background: rgba(255, 255, 255, 0.4);
+                width: 2.8rem;
+                height: 2.8rem;
+                border-radius: 5rem;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                z-index: 5;
+                svg{
+                    width: 1rem;
+                    height: 1rem;
+                    fill: white;
+                }
+            }
+            .vidgetSubject{
+                position: relative;
+                z-index: 5;
+                h4{
+                    font-size: .9rem;
+                    color: white;
+                    font-weight: 500;
+                }
+                h5{
+                    font-size: .8rem;
+                    color: #f5f5f5;
+                    font-weight: 300;
+                    margin-top: .5rem;
+                }
+            }
+            &:first-child{
+                background: linear-gradient(to left,$orange 0%,$redFront 100%);
+            }
+            &:nth-child(2){
+                background: linear-gradient(to left,#31A945 0%,#31A991 100%);
+            }
+            &:nth-child(3){
+                background: linear-gradient(to left,#3C31A9 0%,#31A5A9 100%);
+            }
+        }
+    }
+    .allShowFastPost{
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        .allShowFastPostPanel{
+            background-color: $backPage2;
+            width: 30rem;
+            height: 100%;
+            position: relative;
+            overflow-y: scroll;
+            padding: 1rem;
+            .userInfo{
+                background: $headerPanel;
+                border-radius: .3rem;
+                overflow: hidden;
+                margin-bottom: 1rem;
+                .userInfoItem{
+                    display: grid;
+                    grid-template-columns: repeat(2 , auto);
+                    justify-content: space-between;
+                    padding: 1rem;
+                    border-bottom: 1px solid $border2;
+                    span{
+                        font-weight: 300;
+                        font-size: .8rem;
+                        letter-spacing: .5px;
+                        color: $text2;
+                    }
+                    label{
+                        font-weight: 300;
+                        font-size: .8rem;
+                        letter-spacing: .5px;
+                        color: $text3;
+                    }
+                    &:last-child{
+                        grid-template-columns: 1fr;
+                        span{
+                            margin-top: .5rem;
+                        }
+                    }
+                    &:nth-child(even){
+                        background: $backPage2;
+                    }
+                }
+            }
+            .buttons{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1rem;
+                margin-bottom: 1rem;
+                button{
+                    background: $headerPanel;
+                    border-radius: .3rem;
+                    padding: .5rem;
+                    font-size: .7rem;
+                    font-weight: 400;
+                    color: $text2;
+                }
+            }
+        }
+        @media screen and (max-width:1000px) {
+            .allShowFastPostPanel{
+                width: 100%;
+            }
+        }
+    }
+}

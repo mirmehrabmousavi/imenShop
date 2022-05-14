@@ -1,0 +1,219 @@
+.allSingleHomeRel2{
+    overflow: hidden;
+    margin-top: 2rem;
+    .title {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        margin-bottom: 1rem;
+        label {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 31px;
+            white-space: nowrap;
+            color: $text2;
+        }
+    }
+    .hooper{
+        overflow: hidden;
+        min-height: 22rem;
+        outline: transparent;
+        .hooper-list{
+            .hooper-track{
+                .hooper-slide{
+                    padding-right: 1rem;
+                    a{
+                        display: grid;
+                        overflow: hidden;
+                        background: $headerPanel;
+                        border-radius: 10px;
+                        padding: 1rem;
+                        transition: all .2s ease-in-out;
+                        position: relative;
+                        box-shadow: 0 0 10px rgba(0,0,0,.05);
+                        height: 100%;
+                        .pic{
+                            overflow: hidden;
+                            height: 11rem;
+                            position: relative;
+                            img{
+                                width: 100%;
+                                height: 11rem;
+                                object-fit: contain;
+                                transition: all .6s ease-in-out;
+                                padding-top: 1rem;
+                                &:nth-child(2){
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                }
+                            }
+                        }
+                        .postTitle{
+                            a{
+                                text-align: center;
+                                max-width: 90%;
+                                font-size: .85rem;
+                                font-weight: 300;
+                                line-height: 25px;
+                                color: $text2;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                text-overflow: ellipsis;
+                                opacity: .7;
+                                padding: 0;
+                                height: auto;
+                                box-shadow: 0 0 0 0;
+                            }
+                        }
+                        .postPrice{
+                            display: grid;
+                            grid-gap: .4rem;
+                            align-items: center;
+                            margin-top: .5rem;
+                            .postPriceItem{
+                                text-align: center;
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                justify-content: center;
+                                s{
+                                    font-size: .8rem;
+                                    line-height: 1.692;
+                                    font-weight: 300;
+                                    color: #ababab;
+                                    text-align: center;
+                                    width: 100%;
+                                }
+                                h3{
+                                    text-align: center;
+                                    width: 100%;
+                                    color: $text2;
+                                    letter-spacing: 0;
+                                    font-weight: 500;
+                                    font-size: 1.2rem;
+                                    line-height: 1.5;
+                                    span{
+                                        letter-spacing: .1px;
+                                        font-size: .8rem;
+                                    }
+                                }
+                                i{
+                                    color: white;
+                                    padding: .5rem;
+                                    border-radius: .4rem;
+                                    display: grid;
+                                    align-items: center;
+                                    justify-content: center;
+                                    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+                                    svg{
+                                        width: 1rem;
+                                        height: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                        .checkCount{
+                            border-bottom: 1px solid #969696;
+                            z-index: 2;
+                            height: 27px;
+                            position: relative;
+                            width: 100%;
+                            span{
+                                color: #ababab;
+                                font-size: 1rem;
+                                line-height: 1.222;
+                                font-weight: 400;
+                                position: absolute;
+                                left: 50%;
+                                -webkit-transform: translate(-50%,-50%);
+                                transform: translate(-50%,-50%);
+                                top: 115%;
+                                background: white;
+                                padding: 0 1rem;
+                                height: 21px;
+                            }
+                        }
+                        .productOption{
+                            position: absolute;
+                            left: 1rem;
+                            top: 1rem;
+                            z-index: 100;
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                width: 1.5rem;
+                                svg{
+                                    fill: $text2;
+                                    width: 1.3rem;
+                                    height: 1.3rem;
+                                }
+                                &:nth-child(2){
+                                    visibility: hidden;
+                                    position: absolute;
+                                    top: 0;
+                                    opacity: 0;
+                                }
+                                .loading{
+                                    fill: #9b9b9b;
+                                    width: 1rem;
+                                    height: 1rem;
+                                    animation: arrow-anim2 .5s ease infinite;
+                                    @keyframes arrow-anim2 {
+                                        0% {
+                                            transform: rotate(0deg);
+                                        }
+                                        15% {
+                                            transform: rotate(45deg);
+                                        }
+                                        25% {
+                                            transform: rotate(90deg);
+                                        }
+                                        50% {
+                                            transform: rotate(180deg);
+                                        }
+                                        75% {
+                                            transform: rotate(270deg);
+                                        }
+                                        85% {
+                                            transform: rotate(300deg);
+                                        }
+                                        100% {
+                                            transform: rotate(360deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            .pic{
+                                img{
+                                    &:nth-child(1){
+                                        top: 0;
+                                        right: 0;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        position: absolute;
+                                    }
+                                    &:nth-child(2){
+                                        position: relative;
+                                        top: auto;
+                                        visibility: visible;
+                                        opacity: 1;
+                                        right: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .hooper-slide.is-current{
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

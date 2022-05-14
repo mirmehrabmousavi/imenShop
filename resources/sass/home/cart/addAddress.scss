@@ -1,0 +1,131 @@
+.allAddAddress{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: hsla(0,0%,52.9%,.5);
+    z-index: 999;
+    .CreateAddress{
+        background: $headerPanel;
+        padding: 1rem;
+        width: 35%;
+        margin: auto;
+        border-radius: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .titleAddress{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            align-items: center;
+            span{
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $text2;
+            }
+            i{
+                cursor: pointer;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                    fill: $text2;
+                }
+            }
+        }
+        .map{
+            border-radius: 10px;
+            border: 1px solid $border2;
+            overflow: hidden;
+            margin-top: 1rem;
+            .map-wrapper{
+                width: 100%;
+                height: 25rem;
+            }
+            .holder-logo,.mapboxgl-control-container{
+                visibility: hidden;
+            }
+            @media screen and (max-width: 1600px) {
+                .map-wrapper{
+                    height: 19rem;
+                }
+            }
+        }
+        .form{
+            .items{
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-columns: repeat(auto-fit,minmax(5rem , 1fr));
+            }
+            .item{
+                margin-top: 2rem;
+                h4{
+                    color: $text2;
+                    font-weight: 300;
+                    font-size: .9rem;
+                    margin-bottom: .5rem;
+                }
+                .alert{
+                    color: $redFront;
+                    font-weight: 300;
+                    font-size: .8rem;
+                    margin-top: .5rem;
+                }
+                input,select,h5{
+                    border: 1px solid $border2;
+                    padding: 0 .5rem;
+                    background: $headerPanel;
+                    color: $text2;
+                    border-radius: 5px;
+                    font-size: .85rem;
+                    width: 100%;
+                    height: 2.5rem;
+                    font-weight: 300;
+                    transition: all .3s ease-in-out;
+                    &:focus{
+                        box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                        border: 1px solid $blue;
+                    }
+                }
+            }
+            @media screen and (max-width: 1600px) {
+                .item{
+                    margin-top: .5rem;
+                }
+            }
+        }
+        .bottomAddress{
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid $border2;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            align-items: center;
+            span{
+                font-size: .85rem;
+                font-weight: 300;
+                color: $text2;
+            }
+            .toMap{
+                color: $blue;
+                cursor: pointer;
+            }
+            button{
+                padding: .3rem 1rem;
+                background: $redFront;
+                color: white;
+                font-size: .9rem;
+                font-weight: 300;
+                border-radius: 5px;
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .CreateAddress{
+            width: 98%;
+        }
+    }
+}

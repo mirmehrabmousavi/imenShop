@@ -1,0 +1,133 @@
+.allExcelPanel{
+    .allExcelPanelTop{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        h1{
+            color: $text2;
+        }
+        .allExcelPanelTitle{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:last-child{
+                    color: $blue;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allPayPanelTop{
+            display: block;
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .allExcelPanelItems{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(12rem , 1fr));
+        grid-gap: 1rem;
+        margin: 1rem;
+        .allExcelItem{
+            background: white;
+            box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            padding: 1rem;
+            i{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    width: 3rem;
+                    height: 3rem;
+                    fill: $blue;
+                }
+            }
+            h3{
+                font-weight: 700;
+                color: $text2;
+                text-align: center;
+                font-size: .9rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .importData{
+        border-radius: .4rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        cursor: pointer;
+        grid-gap: 1rem;
+        border: 2px dashed $border1;
+        background: white;
+        margin: 1rem;
+        .vue-dropzone{
+            border-radius: .3rem;
+            color: black;
+            border: 0;
+            span{
+                margin-right: .5rem;
+                font-size: 1rem;
+                font-weight: 500;
+                color: black;
+            }
+            .dropzone-custom-content {
+                text-align: center;
+            }
+
+            .dropzone-custom-title {
+                margin-top: 0;
+                color: $blue;
+                font-family: 'irsans';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 1rem;
+            }
+
+            .subtitle {
+                margin-top: 1rem;
+                color: $text2;
+                font-family: 'irsans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: .8rem;
+            }
+        }
+    }
+    .infoImport{
+        margin: 0 1rem;
+        ul{
+            li{
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                grid-gap: .3rem;
+                font-size: 1rem;
+                font-weight: 300;
+                color: $text2;
+                margin-bottom: 1rem;
+                &:before{
+                    content: "";
+                    background: $green;
+                    border-radius: 100%;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}

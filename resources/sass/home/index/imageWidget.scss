@@ -1,0 +1,210 @@
+.imageWidget{
+    position: relative;
+    margin-bottom: 3rem;
+    background: $headerPanel;
+    background-size: cover;
+    background-attachment: fixed;
+    .imageWidgetBlock{
+        margin: auto;
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        .imageWidgetPic{
+            img{
+                width: 15rem;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .imageWidgetPosts{
+            .hooper{
+                display: grid;
+                overflow: hidden;
+                height: auto;
+                .hooper-list{
+                    padding: 1rem 0;
+                    .hooper-navigation.is-rtl{
+                        .hooper-next{
+                            left: -.8rem;
+                        }
+                        .is-disabled{
+                            visibility: hidden;
+                        }
+                        .hooper-prev{
+                            right: -.8rem;
+                        }
+                        button{
+                            svg{
+                                background: $headerPanel;
+                                width: 2rem;
+                                height: 4rem;
+                                padding: .1rem;
+                                border-radius: 10px;
+                                box-shadow: 0 0 5px rgba(0,0,0,.05);
+                                fill: $text2;
+                            }
+                        }
+                    }
+                    .hooper-track{
+                        .hooper-slide{
+                            padding: 0 .5rem;
+                            .imageWidgetItem{
+                                overflow: hidden;
+                                padding: 1rem;
+                                transition: all .2s ease-in-out;
+                                border-radius: 10px;
+                                position: relative;
+                                display: grid;
+                                background: $headerPanel;
+                                height: 100%;
+                                .offProduct{
+                                    position: absolute;
+                                    top: 1rem;
+                                    right: 1rem;
+                                    z-index: 100;
+                                    background-color: $redFront;
+                                    color: white;
+                                    line-height: 2;
+                                    font-weight: 300;
+                                    font-size: 13px;
+                                    width: 2rem;
+                                    height: 2rem;
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 100%;
+                                }
+                                .pic{
+                                    overflow: hidden;
+                                    height: 14rem;
+                                    img{
+                                        height: 100%;
+                                        width: 100%;
+                                        object-fit: contain;
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        background-color: transparent;
+                                        background-position: center;
+                                    }
+                                }
+                                .postTitle{
+                                    margin-top: .5rem;
+                                    height: 3rem;
+                                    h3{
+                                        text-align: right;
+                                        max-width: 90%;
+                                        font-size: .9rem;
+                                        line-height: 25px;
+                                        color: $text2;
+                                        font-weight: 300;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 2;
+                                        opacity: .7;
+                                        -webkit-box-orient: vertical;
+                                        text-overflow: ellipsis;
+                                    }
+                                }
+                                .postPrice{
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: right;
+                                    grid-gap: .5rem;
+                                    align-items: center;
+                                    margin-top: 1rem;
+                                    s{
+                                        font-size: .8rem;
+                                        font-weight: 300;
+                                        color: $text2;
+                                        opacity: .6;
+                                    }
+                                    span{
+                                        font-size: 1.1rem;
+                                        font-weight: 500;
+                                        color: $text2;
+                                        span{
+                                            font-size: .8rem;
+                                            letter-spacing: .1px;
+                                        }
+                                    }
+                                }
+                                .productOptions{
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    justify-content: left;
+                                    grid-gap: .5rem;
+                                    transition: all .3s ease-in-out;
+                                    margin-top: 1rem;
+                                    .productOption{
+                                        cursor: pointer;
+                                        i{
+                                            display: grid;
+                                            justify-content: left;
+                                            align-items: center;
+                                            width: 1.5rem;
+                                            svg{
+                                                fill: $text2;
+                                                width: 1.1rem;
+                                                height: 1.1rem;
+                                            }
+                                            &:nth-child(2){
+                                                visibility: hidden;
+                                                position: absolute;
+                                                top: 0;
+                                                opacity: 0;
+                                            }
+                                            .loading{
+                                                fill: $text2;
+                                                width: 1rem;
+                                                height: 1rem;
+                                                animation: arrow-anim2 .5s ease infinite;
+                                                @keyframes arrow-anim2 {
+                                                    0% {
+                                                        transform: rotate(0deg);
+                                                    }
+                                                    15% {
+                                                        transform: rotate(45deg);
+                                                    }
+                                                    25% {
+                                                        transform: rotate(90deg);
+                                                    }
+                                                    50% {
+                                                        transform: rotate(180deg);
+                                                    }
+                                                    75% {
+                                                        transform: rotate(270deg);
+                                                    }
+                                                    85% {
+                                                        transform: rotate(300deg);
+                                                    }
+                                                    100% {
+                                                        transform: rotate(360deg);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .active{
+                                            svg{
+                                                fill: #F71938;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .imageWidgetBlock{
+            grid-template-columns: 1fr;
+            .imageWidgetPic{
+                display: grid;
+                justify-content: center;
+            }
+        }
+    }
+}

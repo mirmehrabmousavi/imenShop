@@ -1,0 +1,405 @@
+.allHeaderIndexRegister{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    margin-top: 8.5rem;
+    justify-items: center;
+    .allHeaderIndexRegisterData{
+        width: 26rem;
+        background: $headerPanel;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        box-shadow: 0 0 5px rgba(0,0,0,.05);
+        .allHeaderIndexRegisterItems{
+            padding: 1rem;
+            .allHeaderIndexRegisterItemsTitle{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 1rem;
+                .allHeaderIndexRegisterTitleItem{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 1rem;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: $text2;
+                    text-align: right;
+                    margin-bottom: 2rem;
+                }
+                svg{
+                    width: 24rem;
+                    height: 10rem;
+                }
+            }
+            .slide-fade-enter-active{
+                transition: all .5s ease-in-out;
+                opacity: 1;
+            }
+            .slide-fade-leave-active{
+                position: absolute;
+                right: 0;
+                opacity: 0;
+            }
+            .slide-fade-enter{
+                transition: all .5s ease-in-out;
+                opacity: 0;
+            }
+            .allHeaderIndexRegisterItemsContainer{
+                .allHeaderIndexRegisterItemsContainerCounter{
+                    display: grid;
+                    justify-content: center;
+                    margin-bottom: 2rem;
+                    h3{
+                        margin-top: 1rem;
+                        text-align: center;
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: $text2;
+                    }
+                    .allHeaderIndexRegisterItemsContainerCounterTimer{
+                        display: grid;
+                        justify-content: center;
+                    }
+                    p{
+                        font-size: .7rem;
+                        font-weight: 300;
+                        color: $text2;
+                        opacity: .5;
+                    }
+                }
+                .allHeaderIndexRegisterItemsContainerSend{
+                    font-size: .75rem;
+                    opacity: .7;
+                    margin-bottom: 1rem;
+                    margin-top: 0;
+                    font-weight: 300;
+                }
+                .allHeaderIndexRegisterItem{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: .3rem;
+                    margin-bottom: 1rem;
+                    span,label{
+                        font-size: .8rem;
+                        font-weight: 500;
+                        color: $text2;
+                    }
+                    .allHeaderIndexInput{
+                        border: 1.4px solid $border2;
+                        height: 2.5rem;
+                        border-radius: .3rem;
+                        position: relative;
+                        margin-top: .5rem;
+                        input{
+                            padding: 0 .5rem;
+                            direction: ltr;
+                            text-align: right;
+                            background: transparent;
+                            color: $text2;
+                            font-weight: 300;
+                            width: 100%;
+                            font-size: .9rem;
+                            height: 100%;
+                            border-radius: .3rem;
+                        }
+                        .start{
+                            font-size: .65rem;
+                            right: .5rem;
+                            top: -.7rem;
+                        }
+                        &:focus-within{
+                            border:1.4px solid $orange;
+                            box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                        }
+                    }
+                    .allHeaderIndexRegisterItemInputs{
+                        display: grid;
+                        grid-template-columns: auto;
+                        justify-content: center;
+                        direction: ltr;
+                        .code-container {
+                            position: relative;
+                            label {
+                                width: 70%;
+                                height: 40px;
+                                font-size: 0;
+                                display: grid;
+                                margin: auto;
+                                grid-template-columns: repeat(6, auto);
+                                justify-content: center;
+                                span {
+                                    width: 3rem;
+                                    vertical-align: top;
+                                    display: inline-block;
+                                    text-align: center;
+                                    font-size: 2rem;
+                                    line-height: 21px;
+                                    padding-bottom: .5rem;
+                                    border-bottom: 2px solid $border2;
+                                    &.highlight {
+                                        animation: mymove .7s ease-in-out infinite;
+                                        @keyframes mymove {
+                                            0%   {border-color: #eee;}
+                                            50%  {border-color: red;}
+                                            100% {border-color: #eee;}
+                                        }
+                                    }
+                                }
+
+                                span + span {
+                                    margin-left: 5.333px;
+                                }
+                            }
+                            input {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                                height: 100%;
+                                border: 1px solid red;
+                                opacity: 0;
+                                width: 100%;
+                            }
+                        }
+                        @media screen and (max-width:700px) {
+                            .code-container{
+                                label{
+                                    height: 30px;
+                                    span{
+                                        width: 1.5rem;
+                                        font-size: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                .allHeaderIndexRegisterItemsContainerButton{
+                    display: grid;
+                    justify-content: center;
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                    div{
+                        background: linear-gradient(to left,$orange 0%,$redFront 100%) !important;
+                        padding: 1px;
+                        border-radius: 20rem;
+                        button{
+                            display: grid;
+                            justify-content: center;
+                            padding: 0.4rem 0;
+                            text-align: center;
+                            background: $headerPanel;
+                            border-radius: 20rem;
+                            span{
+                                font-weight: 300;
+                                background: linear-gradient(to left,$orange 0%,$redFront 100%);
+                                background-clip: border-box;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                            .loading{
+                                fill: $redFront;
+                                width: 30px;
+                                height: 30px;
+                                animation: arrow-anim2 .5s ease infinite;
+                                @keyframes arrow-anim2 {
+                                    0% {
+                                        transform: rotate(0deg);
+                                    }
+                                    15% {
+                                        transform: rotate(45deg);
+                                    }
+                                    25% {
+                                        transform: rotate(90deg);
+                                    }
+                                    50% {
+                                        transform: rotate(180deg);
+                                    }
+                                    75% {
+                                        transform: rotate(270deg);
+                                    }
+                                    85% {
+                                        transform: rotate(300deg);
+                                    }
+                                    100% {
+                                        transform: rotate(360deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .allHeaderIndexRegisterItemsContainerDetail{
+                    color: #62666d;
+                    cursor: pointer;
+                    font-size: 12px;
+                }
+            }
+            .allHeaderIndexRegisterLoader{
+                display: grid;
+                justify-content: center;
+                margin-bottom: 2rem;
+                .lds-ring {
+                    display: inline-block;
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                }
+                .lds-ring div {
+                    box-sizing: border-box;
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    border: 4px solid $redFront;
+                    border-radius: 100%;
+                    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+                    border-color: $redFront transparent transparent transparent;
+                }
+                .lds-ring div:nth-child(1) {
+                    animation-delay: -0.45s;
+                }
+                .lds-ring div:nth-child(2) {
+                    animation-delay: -0.3s;
+                }
+                .lds-ring div:nth-child(3) {
+                    animation-delay: -0.15s;
+                }
+                @keyframes lds-ring {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+
+            }
+            .allHeaderIndexRegisterItemsContainerSecurity{
+                margin-top: 2rem;
+                text-align: center;
+                color:$text2;
+                font-size: .85rem;
+                line-height: 25px;
+            }
+            .registerWays{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                grid-gap: 1rem;
+                margin-bottom: 1rem;
+                button,a{
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text2;
+                    background: $backPage2;
+                    display: grid;
+                    grid-template-columns: auto 1fr auto;
+                    grid-gap: .5rem;
+                    padding: .5rem;
+                    border-radius: 5px;
+                    transition: all .3s ease-in-out;
+                    height: 3.2rem;
+                    align-items: center;
+                    text-align: right;
+                    span{
+                        span{
+                            font-weight: 500;
+                            color: $redFront;
+                        }
+                    }
+                    svg{
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        &:last-child{
+                            width: .9rem;
+                            height: .9rem;
+                            fill:rgba(0,0,0,.5);
+                            @keyframes move {
+                                0% {
+                                    margin-left: 0;
+                                }
+                                50% {
+                                    margin-left: 1rem;
+                                }
+                                100% {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        svg{
+                            &:last-child{
+                                animation: move .5s ease infinite;
+                            }
+                        }
+                    }
+                }
+            }
+            .registerWayBody{
+                p{
+                    font-size: .85rem;
+                    font-weight: 300;
+                    color: $text2;
+                    opacity: .5;
+                    text-align: center;
+                }
+            }
+        }
+        .allHeaderIndexRegisterIcon{
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            cursor: pointer;
+            svg{
+                width: 2rem;
+                height: 2rem;
+                opacity: .3;
+            }
+        }
+    }
+    @media screen and (max-width:700px) {
+        .allHeaderIndexRegisterData{
+            width: 95%;
+            .allHeaderIndexRegisterItems{
+                .allHeaderIndexRegisterItemsTitle{
+                    svg{
+                        width: auto;
+                    }
+                    .allHeaderIndexRegisterTitleItem{
+                        font-size: .7rem;
+                    }
+                }
+                .allHeaderIndexRegisterItemsContainer {
+                    .allHeaderIndexRegisterItem {
+                        input{
+                            padding: .2rem;
+                        }
+                    }
+                }
+            }
+            .allHeaderIndexRegisterIcon{
+                svg{
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 920px) {
+    .allHeaderIndexRegister{
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,373 @@
+.allEditComment{
+    .allPayPanelTop{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        h1{
+            color: $text3;
+        }
+        .allPayPanelTitle{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text3;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text3;
+                font-weight: 400;
+                font-size:.95rem;
+                &:last-child{
+                    color: $text4;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allPayPanelTop{
+            display: block;
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .allCommentContainerSend{
+        margin: 1rem;
+        background: white;
+        padding: 1rem;
+        .allCommentContainerTop{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 1rem;
+            .allCommentContainerTopPic{
+                width: 15rem;
+                height: 15rem;
+            }
+            .allCommentContainerTopItems{
+                .allCommentContainerTopItemsTitle{
+                    margin-bottom: 1rem;
+                    h3{
+                        font-size: 1rem;
+                        line-height: 24px;
+                        font-weight: 300;
+                        color: #494949;
+                    }
+                }
+                .allCommentContainerTopItemsRate{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1rem;
+                    .allCommentContainerTopItemsRateItem{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: .5rem;
+                        margin-top: 1rem;
+                        label{
+                            font-size: .75rem;
+                            line-height: 1.692;
+                            color: #858585;
+                        }
+                        .rateItemsCount{
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit , minmax(2rem , auto));
+                            justify-content: right;
+                            align-items: center;
+                            .rateItemsCountItem{
+                                position: relative;
+                                height: 5px;
+                                .rateItemsCountItemBar{
+                                    width: 5rem;
+                                    height: 5px;
+                                    background: #D5D5D5;
+                                }
+                                .rateItemsCountItemBarActive{
+                                    @extend .rateItemsCountItemBar;
+                                    background: $blue;
+                                }
+                                .rateItemsCountItemCircle{
+                                    position: absolute;
+                                    width: 12px;
+                                    height: 12px;
+                                    z-index: 2;
+                                    border-radius: 50%;
+                                    top: 50%;
+                                    -webkit-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                    border: 2px solid #fcfcfc;
+                                    background-color: #D5D5D5;
+                                    cursor: pointer;
+                                }
+                                .rateItemsCountItemCircleActives{
+                                    background-color: $blue;
+                                    @extend .rateItemsCountItemCircle;
+                                }
+                                .rateItemsCountItemCircleActive{
+                                    width: 19px;
+                                    position: absolute;
+                                    background: $blue;
+                                    height: 19px;
+                                    top: -7px;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    border-radius: 50%;
+                                    border: none;
+                                    z-index: 4;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+                                    box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+                                }
+                            }
+                            span{
+                                font-size: .7rem;
+                                font-weight: 300;
+                                color: #858585;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .allCommentContainerTop{
+                grid-template-columns: 1fr;
+                .allCommentContainerTopItems{
+                    .allCommentContainerTopItemsRate{
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+        .allCommentContainerBottom{
+            border-top: 1px solid #d5dadd;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            .allCommentContainerBottomCoercion{
+                display: grid;
+                grid-template-columns: repeat(auto-fit , minmax(10rem , 1fr));
+                justify-content: center;
+                align-items: center;
+                grid-gap: 1rem;
+                .allCommentContainerBottomCoercionItem{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: .5rem;
+                    margin-bottom: 1rem;
+                    label{
+                        font-size: .95rem;
+                        line-height: 1.692;
+                        color: #858585;
+                    }
+                }
+            }
+            input{
+                padding: .5rem;
+                background: $back2;
+                border: 2px solid #fff;
+                border-radius: .2rem;
+                width: 100%;
+                transition: all .3s ease-in-out;
+                font-size: .75rem;
+                font-weight: 300;
+                &:focus{
+                    border: 2px solid $blue;
+                }
+            }
+            .allCommentContainerBottomItem{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: .5rem;
+                margin-bottom: 1rem;
+                textarea{
+                    padding: .5rem;
+                    background: $back2;
+                    border: 2px solid #fff;
+                    border-radius: .2rem;
+                    width: 100%;
+                    transition: all .3s ease-in-out;
+                    font-size: .75rem;
+                    font-weight: 300;
+                    height: 15rem;
+                    resize: vertical;
+                    &:focus{
+                        border: 2px solid $blue;
+                    }
+                }
+                .allCommentContainerBottomItemTitle{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    grid-gap: .5rem;
+                    align-items: center;
+                    i{
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            fill: $blue;
+                            width: .7rem;
+                            height: .7rem;
+                        }
+                    }
+                }
+                label{
+                    font-size: .95rem;
+                    line-height: 1.692;
+                    color: $text3;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        left: 1rem;
+                        top: .4rem;
+                        padding: .3rem;
+                        border-radius: 5rem;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        svg{
+                            width: .9rem;
+                            height: .9rem;
+                            fill: $blue2;
+                        }
+                    }
+                }
+                span{
+                    margin-top: .5rem;
+                    width: 100%;
+                    padding: .5rem;
+                    background: $back2;
+                    border-radius: .2rem;
+                    position: relative;
+                    color: $text2;
+                    i{
+                        border: 0;
+                        position: absolute;
+                        left: 1rem;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        svg{
+                            fill: $blue;
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                }
+            }
+            .allCommentContainerBottomSuggest{
+                margin-bottom: 1rem;
+                label{
+                    font-size: .95rem;
+                    line-height: 1.692;
+                    color: $text3;
+                }
+                .allCategoryPanel{
+                    position: relative;
+                    margin: 1rem 0;
+                    .categoryShow{
+                        background: $back2;
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: .7rem;
+                        border-radius: .1rem;
+                        cursor: pointer;
+                        h4{
+                            font-weight: 450;
+                            font-size: .8rem;
+                            letter-spacing: 1px;
+                            line-height: 1.833;
+                            color: $text2;
+                        }
+                        i{
+                            display: grid;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            svg{
+                                width: .8rem;
+                                height: .8rem;
+                            }
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        top: 110%;
+                        right: 0;
+                        box-shadow: 0 0 10px rgba(0,0,0,.1);
+                        background: white;
+                        border-radius: .2rem;
+                        width: 100%;
+                        margin: 0;
+                        z-index: 9000;
+                        li{
+                            padding: .5rem;
+                            padding-right: 1rem;
+                            transition: all .3s ease-in-out;
+                            cursor: pointer;
+                            font-weight: 450;
+                            font-size: .8rem;
+                            letter-spacing: 1px;
+                            line-height: 1.833;
+                            color: #56595e;
+                            &:hover{
+                                background: #F6F6F6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .allCommentButtons{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: 1rem;
+            button{
+                display: grid;
+                grid-template-columns: auto 4rem auto;
+                justify-content: right;
+                align-items: center;
+                color: white;
+                background: #EF394E;
+                padding: .5rem 1rem;
+                border-radius: .2rem;
+                i{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        fill: white;
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+                img{
+                    width: 4rem;
+                    height: 1rem;
+                    object-fit: cover;
+                }
+                &:last-child{
+                    display: block;
+                    background: #7A7A7A;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1021 @@
+.allUserPanel{
+    margin: 1rem;
+    .allUserPanelTop{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        h1{
+            color: $text2;
+        }
+        .allUserTitle{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:last-child{
+                    color: $blue;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allUserPanelTop{
+            display: block;
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .allUserOptions{
+        display: grid;
+        grid-template-columns: repeat(2 , auto);
+        justify-content: space-between;
+        align-items: center;
+        grid-gap: .5rem;
+        background: white;
+        padding: 1rem;
+        border-radius: .3rem;
+        .allUserOptionsButtons{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: 1rem;
+            button{
+                padding: .5rem 1rem;
+                border-radius: .3rem;
+                background-color: $blue;
+                color: #FFFFFF;
+                box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: $blue2;
+                }
+                &:nth-child(2){
+                    background-color: #FF5B5C;
+                    color: #FFFFFF;
+                    &:hover{
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+        .filterItems{
+            position: relative;
+            .imageContentOptionsFilterButton{
+                display: grid;
+                cursor: pointer;
+                grid-template-columns: auto auto;
+                justify-content: center;
+                grid-gap: .5rem;
+                align-items: center;
+                background-color: #A3AFBD;
+                box-shadow: 0 2px 4px 0 rgba(163, 175, 189, 0.5);
+                padding: .5rem 1rem;
+                transition: all .3s ease-in-out;
+                border-radius: .3rem;
+                color: #FFFFFF;
+                svg{
+                    width: 1rem;
+                    height: 1rem;
+                    fill: white;
+                }
+                &:hover{
+                    background: #394C62;
+                    box-shadow: 0 4px 12px 0 rgba(163, 175, 189, 0.6) !important;
+                }
+            }
+            .bounce-enter-active {
+                animation: bounce-in .3s;
+            }
+            .bounce-leave-active {
+                animation: bounce-in .3s reverse;
+            }
+            @keyframes bounce-in {
+                0% {
+                    transform: scale(0);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+            .filterContent{
+                position: absolute;
+                top: 130%;
+                left: 0;
+                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+                background: white;
+                border-radius: .2rem;
+                padding: .5rem;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    left: 8px;
+                    border-style: solid;
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent #fff transparent;
+                }
+                .filterContentItem{
+                    display: grid;
+                    grid-gap: .5rem;
+                    label{
+                        color: $text2;
+                        font-weight: 300;
+                        font-size:.7rem;
+                    }
+                    .allCategoryPanel{
+                        position: relative;
+                        .categoryShow{
+                            border: 1.4px solid $border1;
+                            display: grid;
+                            grid-template-columns: 1fr auto;
+                            padding: .3rem .5rem .3rem 1rem;
+                            border-radius: .3rem;
+                            cursor: pointer;
+                            h4{
+                                color: $text3;
+                                font-size: .8rem;
+                                font-weight: 400;
+                            }
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    width: 0.8rem;
+                                    height: 0.8rem;
+                                    fill: $text2;
+                                }
+                            }
+                        }
+                        ul{
+                            position: absolute;
+                            top: 94%;
+                            right: 0;
+                            width: 100%;
+                            display: grid;
+                            background: white;
+                            grid-template-columns: 1fr;
+                            border-bottom-left-radius: .3rem;
+                            border-bottom-right-radius: .3rem;
+                            height: 15rem;
+                            direction: ltr;
+                            overflow: hidden;
+                            border: 1.4px solid $border1;
+                            border-top: 0;
+                            z-index: 80;
+                            .scroll-area {
+                                position: relative;
+                                margin: auto;
+                                width: 100%;
+                                height: 15rem;
+                            }
+                            li{
+                                direction: rtl;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                padding: .4rem;
+                                padding-right: 1rem;
+                                color: $text3;
+                                font-size: .75rem;
+                                font-weight: 300;
+                                cursor: pointer;
+                                transition: all .3s ease-in-out;
+                                height: 2rem;
+                                &:hover{
+                                    background: $text4;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    .allTicketPanelTitleDate{
+                        border: 1px solid rgba(0, 0, 0, 0.125);
+                        border-radius: .2rem;
+                        overflow: hidden;
+                        width: 15rem;
+                        position: relative;
+                        input{
+                            width: auto;
+                            padding: .3rem;
+                            height: 1.9rem;
+                            font-size: .7rem;
+                            border: 0;
+                            box-shadow: 0 0 0 0;
+                            background: transparent;
+                            border-radius: 0;
+                        }
+                        i{
+                            position: absolute;
+                            left: .3rem;
+                            top: .5rem;
+                            cursor: pointer;
+                            svg{
+                                width: .5rem;
+                                height: .5rem;
+                            }
+                        }
+                    }
+                    input{
+                        padding: .3rem;
+                        width: 15rem;
+                        border: 1px solid $border1;
+                        font-size: .7rem;
+                        border-radius: .2rem;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allUserOptions{
+            grid-template-columns: 1fr;
+            grid-gap: .5rem;
+        }
+    }
+    .showTable{
+        background: white;
+        margin: 1rem 0;
+        border-radius: 10px;
+        .postItem{
+            padding: 1rem;
+            border-bottom: 1px solid $border1;
+            cursor: pointer;
+            .postTop{
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                grid-gap: 1rem;
+                .postPic{
+                    img{
+                        width: 100%;
+                        height: 5rem;
+                        object-fit: contain;
+                    }
+                }
+                .postTitle{
+                    ul{
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: 1.5rem;
+                        li{
+                            font-size: .9rem;
+                            font-weight: 300;
+                            color: $text2;
+                            opacity: .7;
+                            span{
+                                &:last-child{
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+                .postOptions{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: .5rem;
+                    align-items: center;
+                    a,i{
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        padding: .5rem;
+                        background: #f5f5f5;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        svg{
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            fill: #606265;
+                        }
+                    }
+                }
+            }
+            .postBot{
+                display: grid;
+                grid-template-columns: 1fr auto;
+                align-items: center;
+                grid-gap: .5rem;
+                margin-top: .5rem;
+                background: #f5f5f5;
+                border-radius: 5px;
+                padding: 1rem;
+                ul{
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto;
+                    justify-content: right;
+                    grid-gap: 2rem;
+                    align-items: center;
+                    li{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        span{
+                            font-size: .85rem;
+                            font-weight: 300;
+                            color: #606265;
+                            position: absolute;
+                            top: 0;
+                            opacity: 0;
+                            &:nth-child(2){
+                                color: rgba(0,0,0,.8);
+                                position: relative;
+                                top: auto;
+                                opacity: 1;
+                            }
+                            &:nth-child(1){
+                                position: relative;
+                                top: auto;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                i{
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        width: 1.1rem;
+                        height: 1.1rem;
+                        fill: $text2;
+                        &:nth-child(2){
+                            visibility: hidden;
+                            position: absolute;
+                            bottom: 100rem;
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
+    .slide-fade-enter-active {
+        transition: all .3s ease-in-out;
+    }
+    .slide-fade-enter{
+        transform: translateX(50px);
+    }
+    .createUserPanel{
+        background: white;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: .3rem;
+        box-shadow: 0 2px 4px rgba(15,34,58,.12);
+        p{
+            font-size: .9rem;
+            color: $text3;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .errorsCreate{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: 1rem;
+            background: $lowRed;
+            border-top: 1px solid $red;
+            color: $red;
+            border-radius: .2rem;
+            padding: .5rem 1rem;
+            span{
+                font-size: .75rem;
+                font-weight: 400;
+            }
+        }
+        .allCreateUserItems{
+            .allCreateUserItem{
+                display: grid;
+                grid-template-columns: 10rem 1fr;
+                margin-bottom: 2rem;
+                label{
+                    color: $text2;
+                    font-weight: 500;
+                    font-size: .9rem;
+                }
+                input{
+                    border: 1.4px solid $border1;
+                    padding: 0.3rem .5rem;
+                    color: $text2;
+                    border-radius: .3rem;
+                    font-size: .8rem;
+                    transition: all .3s ease-in-out;
+                    &:focus{
+                        box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                        border:1.4px solid $blue;
+                    }
+                }
+                .allCategoryPanel{
+                    position: relative;
+                    .categoryShow{
+                        border: 1.4px solid $border1;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        padding: .3rem .5rem .3rem 1rem;
+                        border-radius: .3rem;
+                        cursor: pointer;
+                        h4{
+                            color: $text3;
+                            font-size: .8rem;
+                            font-weight: 400;
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        top: 94%;
+                        right: 0;
+                        width: 100%;
+                        display: grid;
+                        background: white;
+                        grid-template-columns: 1fr;
+                        border-bottom-left-radius: .3rem;
+                        border-bottom-right-radius: .3rem;
+                        height: 15rem;
+                        direction: ltr;
+                        overflow: hidden;
+                        border: 1.4px solid $border1;
+                        border-top: 0;
+                        z-index: 80;
+                        .scroll-area {
+                            position: relative;
+                            margin: auto;
+                            width: 100%;
+                            height: 15rem;
+                        }
+                        li{
+                            direction: rtl;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            padding: .4rem;
+                            padding-right: 1rem;
+                            color: $text3;
+                            font-size: .75rem;
+                            font-weight: 300;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            height: 2rem;
+                            &:hover{
+                                background: $text4;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .allPermissionItems{
+                    position: relative;
+                    .getPermissions{
+                        width: 100%;
+                        padding: .3rem .5rem;
+                        border: 1.4px solid $border1;
+                        border-radius: .3rem;
+                        cursor: pointer;
+                        h4{
+                            color: $text3;
+                            font-size: .8rem;
+                            font-weight: 400;
+                        }
+                        ul{
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit ,minmax(6rem,auto));
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: 1rem;
+                            li{
+                                position: relative;
+                                padding: .4rem;
+                                background: $lowBlue;
+                                border-radius: .2rem;
+                                color: $text2;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-align: center;
+                                i{
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        fill:$text2;
+                                        width: .7rem;
+                                        height: .7rem;
+                                    }
+                                }
+                                span{
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    font-size: .75rem;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                    .getAllPermissions{
+                        position: absolute;
+                        top: 94%;
+                        right: 0;
+                        width: 100%;
+                        display: grid;
+                        background: white;
+                        grid-template-columns: 1fr;
+                        border-bottom-left-radius: .3rem;
+                        border-bottom-right-radius: .3rem;
+                        height: 15rem;
+                        direction: ltr;
+                        overflow: hidden;
+                        border: 1.4px solid $border1;
+                        border-top: 0;
+                        z-index: 80;
+                        .scroll-area {
+                            position: relative;
+                            margin: auto;
+                            width: 100%;
+                            height: 15rem;
+                        }
+                        li{
+                            direction: rtl;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            padding: .4rem;
+                            padding-right: 1rem;
+                            color: $text3;
+                            font-size: .75rem;
+                            font-weight: 300;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            height: 2rem;
+                            &:hover{
+                                background: $text4;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width:1000px) {
+                .allCreateUserItem{
+                    grid-template-columns: 1fr;
+                }
+            }
+            .sendGallery{
+                background: white;
+                margin-bottom: 1rem;
+                border-radius: .2rem;
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                .getImageItem{
+                    height: 12rem;
+                    border-radius: .4rem;
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    grid-gap: 1rem;
+                    border: 2px dashed $border1;
+                    span{
+                        color: $text2;
+                        font-size: .7rem;
+                        font-weight: 300;
+                    }
+                    .getImagePic{
+                        img{
+                            height: 10rem;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            justify-content: left;
+            grid-gap: 1rem;
+            overflow: hidden;
+            button{
+                padding: .5rem 1rem;
+                border-radius: .3rem;
+                background-color: $blue;
+                color: #FFFFFF;
+                box-shadow: 0 2px 4px 0 rgba(90, 141, 238, 0.5);
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: $blue2;
+                }
+                &:nth-child(2){
+                    background-color: #FF5B5C;
+                    color: #FFFFFF;
+                    &:hover{
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+    .pages{
+        margin-top: 1rem;
+    }
+    .allShowUserPanel{
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow-y: scroll;
+        z-index: 9999;
+        .showUserPanel{
+            background-color: rgb(247, 247, 247);
+            width: 50%;
+            min-height: 100%;
+            padding: 1rem;
+            position: relative;
+            b{
+                position: absolute;
+                cursor: pointer;
+                right: 101%;
+                top: 1rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 5rem;
+                background: white;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                svg{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+            .showUserPanelUser{
+                background: white;
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-gap: 1rem;
+                .showUserPanelUserPic{
+                    img{
+                        height: 10rem;
+                        width: 100%;
+                    }
+                }
+                .showUserPanelUserSubject{
+                    display: grid;
+                    .showUserPanelUserSubjectItem{
+                        display: grid;
+                        grid-template-columns: repeat(2,auto);
+                        justify-content: space-between;
+                        align-items: center;
+                        label{
+                            font-size: .8rem;
+                            font-weight: 500;
+                            color: $text2;
+                        }
+                        h4{
+                            font-size: .8rem;
+                            font-weight: 400;
+                            color: $text3;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+            .showUserPanelItem{
+                background: white;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                label{
+                    color: #858585;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding-right: 1rem;
+                }
+                .paginate{
+                    padding: 1rem;
+                }
+                .allUserIndexInfoLikeItem{
+                    ul{
+                        li{
+                            display: grid;
+                            grid-template-columns: 1fr auto;
+                            border-bottom: 1px solid #f1f1f1;
+                            grid-gap: 1rem;
+                            padding: 1rem;
+                            a{
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                grid-gap: .5rem;
+                                .userItemPic{
+                                    img{
+                                        width: 3rem;
+                                        height: 3rem;
+                                        object-fit: cover;
+                                    }
+                                }
+                                .userItemSubject{
+                                    .userItemSubjectTitle{
+                                        font-size: .8rem;
+                                        font-weight: 400;
+                                        height: 2.5rem;
+                                        overflow: hidden;
+                                        color: #555;
+                                    }
+                                    .postPriceItem{
+                                        text-align: left;
+                                        display: grid;
+                                        grid-template-columns: 1fr;
+                                        justify-content: left;
+                                        height: 2.5rem;
+                                        overflow: hidden;
+                                        .offPrice{
+                                            display: grid;
+                                            justify-content: left;
+                                            s{
+                                                font-size: .8rem;
+                                                line-height: 1.692;
+                                                font-weight: 300;
+                                                color: #ababab;
+                                                display: -webkit-box;
+                                                display: -ms-flexbox;
+                                                display: flex;
+                                                width: 100%;
+                                            }
+                                        }
+                                        h3{
+                                            text-align: left;
+                                            width: 100%;
+                                            color: $red;
+                                            letter-spacing: 1px;
+                                            font-weight: 500;
+                                            font-size: .8rem;
+                                            line-height: 1.5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .allUserIndexComment{
+                background: white;
+                padding-top: 1rem;
+                margin-top: 1rem;
+                label{
+                    color: #858585;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding-right: 1rem;
+                }
+                .allUserIndexCommentItems{
+                    .allUserIndexCommentItem{
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        background: white;
+                        grid-gap: 1rem;
+                        border-bottom: 1px solid #f1f1f1;
+                        padding-bottom: 1rem;
+                        a{
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            align-items: center;
+                            grid-gap: 1rem;
+                            padding: 1rem;
+                            .allUserIndexCommentItemPic{
+                                img{
+                                    width: 5rem;
+                                    height: 5rem;
+                                    object-fit: contain;
+                                }
+                            }
+                            .allUserIndexCommentItemSubject{
+                                .allUserIndexCommentItemSubjectTitle{
+                                    font-size: .9rem;
+                                    font-weight: 400;
+                                    height: 2.5rem;
+                                    overflow: hidden;
+                                    color: #555;
+                                }
+                                .allUserIndexCommentItemSubjectStatus{
+                                    span{
+                                        font-size: .8rem;
+                                        color: #81858b;
+                                        font-weight: 300;
+                                    }
+                                }
+                                .allUserIndexCommentItemSubjectBody{
+                                    margin-top: 1rem;
+                                    p{
+                                        color: #232933;
+                                        font-size: .8rem;
+                                        line-height: 36px;
+                                        text-align: right;
+                                    }
+                                }
+                                .allUserIndexCommentItemSubjectAccept{
+                                    margin-top: 1rem;
+                                    span{
+                                        border-color: $red;
+                                        background-color: rgba(179, 27, 35, 0.1);
+                                        color: $red;
+                                        padding: .2rem;
+                                        border-radius: .5rem;
+                                    }
+                                    .active{
+                                        border-color: #4caf50;
+                                        background-color: rgba(76,175,80,.1);
+                                        color: #2e7b32;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .allUserIndexInfoPay{
+                background: white;
+                border-radius: .2rem;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                overflow: hidden;
+                label{
+                    color: #858585;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding-right: 1rem;
+                }
+                table{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    direction: rtl;
+                    margin-top: 1rem;
+                    tr{
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit , minmax(1rem , 1fr));
+                        &:first-child{
+                            box-shadow: 0 3px 1px -2px rgba(0,0,0,.1),0 2px 2px 0 rgba(0,0,0,.08),0 1px 5px 0 rgba(0,0,0,.08);
+                            border: 0;
+                        }
+                        th{
+                            box-shadow: 2px 0 2px -2px rgba(0, 0, 0, 0.2);
+                            padding: 2rem;
+                            text-align: center;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            font-size: .7rem;
+                            font-weight: 900;
+                            color: #81858b;
+                            svg{
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                            &:first-child{
+                                border-right: 0;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .showTr{
+                        tr{
+                            &:first-child{
+                                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                            }
+                            &:nth-child(even){
+                                background: #F6F6F6;
+                            }
+                            td{
+                                display: grid;
+                                grid-template-columns: repeat(auto-fit ,minmax(1rem,auto));
+                                justify-content: center;
+                                align-items: center;
+                                grid-gap: .5rem;
+                                text-align: center;
+                                padding: 2rem;
+                                box-shadow: 2px 0 2px -2px rgba(0, 0, 0, 0.2);
+                                i{
+                                    cursor: pointer;
+                                    svg{
+                                        width: 1rem;
+                                        height: 1rem;
+                                    }
+                                }
+                                span{
+                                    color: #81858b;
+                                    font-size: .75rem;
+                                    font-weight: 300;
+                                }
+                                &:first-child{
+                                    i{
+                                        &:nth-child(2){
+                                            position: absolute;
+                                            top: 0;
+                                            visibility: hidden;
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .active{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                font-weight: 500;
+                                color: #81858b;
+                                font-size: .7rem;
+                                &:before{
+                                    border-radius: 10px;
+                                    width: 10px;
+                                    height: 10px;
+                                    background-color: #00C58D;
+                                    content: "";
+                                    display: inline-block;
+                                    margin-left: 10px;
+                                }
+                            }
+                            .unActive{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                font-weight: 500;
+                                color: #81858b;
+                                font-size: .7rem;
+                                &:before{
+                                    border-radius: 10px;
+                                    width: 10px;
+                                    height: 10px;
+                                    background-color: #FC5C63;
+                                    content: "";
+                                    display: inline-block;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                @media screen and (max-width: 1200px) {
+                    table{
+                        tr{
+                            th{
+                                padding: 2rem 0;
+                            }
+                        }
+                        .showTr{
+                            tr{
+                                td{
+                                    padding: 2rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            button{
+                width: 15rem;
+                margin-top: 1rem;
+                padding: .4rem 1.5rem;
+                color: white;
+                font-size: .75rem;
+                border-radius: .2rem;
+                text-align: center;
+                background: $blue;
+            }
+        }
+    }
+}

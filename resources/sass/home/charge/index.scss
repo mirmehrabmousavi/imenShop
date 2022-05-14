@@ -1,0 +1,105 @@
+.allChargeIndex{
+    .chargeWidgets{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+        grid-gap: 1rem;
+        .WidgetItem{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            grid-gap: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            background: $headerPanel;
+            box-shadow: 0 0 10px rgba(0,0,0,.05);
+            .WidgetIcon{
+                position: relative;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            .WidgetSubject{
+                position: relative;
+                z-index: 5;
+                h4{
+                    font-size: .9rem;
+                    color: $text2;
+                    font-weight: 500;
+                }
+                h5{
+                    font-size: .85rem;
+                    color: $text2;
+                    opacity: .7;
+                    font-weight: 300;
+                    margin-top: .5rem;
+                    span{
+                        letter-spacing: .2px;
+                    }
+                }
+            }
+        }
+    }
+    .chargePrice{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        grid-gap: 1rem;
+        padding: 1rem;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        background: $headerPanel;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        margin-top: 1rem;
+        .right{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                font-size: .9rem;
+                font-weight: 300;
+                color: $text2;
+                letter-spacing: .5px;
+            }
+            input{
+                border: 1px solid $border2;
+                padding: 0.3rem .5rem;
+                color: $text2;
+                border-radius: 5px;
+                font-size: .8rem;
+                height: 2.2rem;
+                width: 20rem;
+                transition: all .3s ease-in-out;
+                &:focus{
+                    box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                    border: 1px solid $blue;
+                }
+            }
+            a{
+                font-size: .9rem;
+                font-weight: 300;
+                color: white;
+                background: $green;
+                padding: .3rem 1rem;
+                border-radius: 5px;
+                height: 2.2rem;
+            }
+        }
+        .left{
+            h4{
+                font-size: .85rem;
+                font-weight: 300;
+                color: $text2;
+                opacity: .7;
+            }
+        }
+    }
+}

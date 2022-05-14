@@ -1,0 +1,299 @@
+.allCreatePays{
+    .allPayPanelTop{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        h1{
+            color: $text2;
+        }
+        .allPayPanelTitle{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(2px , auto));
+            justify-content: left;
+            align-items: center;
+            grid-gap: .5rem;
+            span{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+            }
+            a{
+                color: $text2;
+                font-weight: 400;
+                font-size:.95rem;
+                &:last-child{
+                    color: $blue;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .allPayPanelTop{
+            display: block;
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .allCreatePay{
+        background: white;
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 0 5px rgba(0,0,0,.05);
+        margin: 1rem;
+        .createItems{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(15rem , 1fr));
+            grid-gap: 1rem;
+            h4{
+                color: $text2;
+                font-weight: 500;
+                font-size: .9rem;
+            }
+            .createItem {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: .5rem;
+                margin-bottom: 1rem;
+                .allCategoryPanel{
+                    position: relative;
+                    .categoryShow{
+                        border: 1.4px solid $border1;
+                        display: grid;
+                        grid-template-columns: 1fr auto auto;
+                        padding: .4rem .5rem .4rem 1rem;
+                        border-radius: .3rem;
+                        cursor: pointer;
+                        h4{
+                            color: $text2;
+                            font-size: .8rem;
+                            font-weight: 500;
+                            text-align: right;
+                        }
+                        i{
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            visibility: visible;
+                            opacity: 1;
+                            svg{
+                                width: 0.6rem;
+                                height: 0.6rem;
+                                fill: $text2;
+                            }
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        top: 94%;
+                        right: 0;
+                        width: 100%;
+                        background: white;
+                        border-bottom-left-radius: .3rem;
+                        border-bottom-right-radius: .3rem;
+                        direction: ltr;
+                        overflow: hidden;
+                        border: 1.4px solid $border1;
+                        border-top: 0;
+                        z-index: 80;
+                        .scroll-area {
+                            position: relative;
+                            margin: auto;
+                            width: 100%;
+                            max-height: 15rem;
+                        }
+                        li{
+                            direction: rtl;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-align: right;
+                            padding: .4rem;
+                            color: $text2;
+                            font-size: .85rem;
+                            font-weight: 300;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            min-height: auto;
+                            &:hover{
+                                background: $text4;
+                                color: white;
+                            }
+                            &:first-child{
+                                &:hover{
+                                    background: white;
+                                }
+                            }
+                        }
+                    }
+                }
+                input,select{
+                    border: 1px solid #DFE3E7;
+                    padding: 0.3rem .5rem;
+                    color: $text2;
+                    border-radius: .3rem;
+                    font-size: .85rem;
+                    width: 100%;
+                    background: transparent;
+                    height: 2rem;
+                    transition: all .3s ease-in-out;
+                    &:focus {
+                        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
+                        border: 1px solid $blue;
+                    }
+                }
+            }
+        }
+        .titleProducts{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            button{
+                padding: .3rem 1rem;
+                background: $blue;
+                border-radius: 5px;
+                color: white;
+            }
+            .title{
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: $text2;
+            }
+        }
+        .createPayMeta{
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 10px;
+            h2{
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: black;
+            }
+            .allCategoryPanel{
+                position: relative;
+                margin-top: 1rem;
+                .categoryShow{
+                    border: 1.4px solid $border1;
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    padding: .4rem .5rem .4rem 1rem;
+                    border-radius: .3rem;
+                    cursor: pointer;
+                    background: white;
+                    h4{
+                        color: $text2;
+                        font-size: .8rem;
+                        font-weight: 400;
+                    }
+                    i{
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            fill: $text2;
+                        }
+                    }
+                }
+                ul{
+                    position: absolute;
+                    top: 94%;
+                    right: 0;
+                    width: 100%;
+                    background: white;
+                    border-bottom-left-radius: .3rem;
+                    border-bottom-right-radius: .3rem;
+                    max-height: 15rem;
+                    direction: ltr;
+                    overflow: hidden;
+                    border: 1.4px solid $border1;
+                    border-top: 0;
+                    z-index: 80;
+                    .scroll-area {
+                        position: relative;
+                        margin: auto;
+                        width: 100%;
+                        height: 15rem;
+                    }
+                    li{
+                        direction: rtl;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        padding: .4rem;
+                        padding-right: 1rem;
+                        color: $text2;
+                        font-size: .75rem;
+                        font-weight: 300;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+                        height: auto;
+                        min-height: 2rem;
+                        &:hover{
+                            background: $text4;
+                            color: white;
+                        }
+                        &:first-child{
+                            &:hover{
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+            input,select{
+                border: 1px solid #DFE3E7;
+                padding: 0.3rem .5rem;
+                color: $text2;
+                border-radius: .3rem;
+                background: white;
+                font-size: .8rem;
+                width: 100%;
+                height: 2rem;
+                transition: all .3s ease-in-out;
+                &:focus{
+                    box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                    border: 1px solid $blue;
+                }
+            }
+            .createPayItems{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(10rem , 1fr));
+                grid-gap: 1rem;
+                margin-top: 1rem;
+                .createPayItem{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: .5rem;
+                    h4{
+                        color: $text2;
+                        font-weight: 500;
+                        font-size: .9rem;
+                    }
+                }
+            }
+            .btnAdd{
+                padding: .3rem 1rem;
+                background: $blue;
+                border-radius: 5px;
+                color: white;
+                display: grid;
+                margin-top: 1rem;
+            }
+            &:nth-child(even){
+                background: white;
+            }
+        }
+        .send{
+            padding: .3rem 1rem;
+            background: $green;
+            border-radius: 5px;
+            color: white;
+            margin-top: 1rem;
+        }
+    }
+}

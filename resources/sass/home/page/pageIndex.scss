@@ -1,0 +1,117 @@
+.allPages{
+    background: $headerPanel;
+    border-radius: .3rem;
+    margin: auto;
+    margin-top: 9rem;
+    .allPagesTitle{
+        padding: 1rem;
+        border-bottom: 1px solid $border2;
+        h1{
+            font-size: 2rem;
+            font-weight: 500;
+            color: $text3;
+            letter-spacing: 1px;
+        }
+    }
+    .allPagesBody{
+        padding: 1rem;
+        p{
+            font-size: 1rem;
+            letter-spacing: .5px;
+            font-weight: 300;
+            color: $text2;
+        }
+        .forms{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 2rem;
+            grid-gap: 2rem;
+            .form{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+                .items{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit,minmax(15rem , 1fr));
+                    grid-gap: 1rem;
+                    align-items: center;
+                }
+                .item{
+                    display: grid;
+                    grid-gap: .5rem;
+                    h3{
+                        font-size: .95rem;
+                        font-weight: 300;
+                        letter-spacing: .5px;
+                        color: $text2;
+                    }
+                    input,textarea{
+                        padding: .5rem;
+                        border-radius: 5px;
+                        font-size: .9rem;
+                        font-weight: 300;
+                        letter-spacing: .5px;
+                        color: $text2;
+                        background: $backPage2;
+                    }
+                }
+                .buttons{
+                    display: grid;
+                    justify-content: left;
+                    width: 100%;
+                    button{
+                        font-size: .9rem;
+                        font-weight: 300;
+                        color: white;
+                        background: $green;
+                        border-radius: 5px;
+                        padding: .4rem 1.5rem;
+                        display: grid;
+                        .loading{
+                            width: 1.4rem;
+                            height: 1.4rem;
+                            fill: white;
+                            animation: arrow-anim2 .5s ease infinite;
+                            @keyframes arrow-anim2 {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+                                15% {
+                                    transform: rotate(45deg);
+                                }
+                                25% {
+                                    transform: rotate(90deg);
+                                }
+                                50% {
+                                    transform: rotate(180deg);
+                                }
+                                75% {
+                                    transform: rotate(270deg);
+                                }
+                                85% {
+                                    transform: rotate(300deg);
+                                }
+                                100% {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .forms{
+                grid-template-columns: 1fr;
+                .map{
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 920px) {
+    .allPages{
+        margin-top: 1rem;
+    }
+}

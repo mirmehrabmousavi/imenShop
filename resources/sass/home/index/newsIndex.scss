@@ -1,0 +1,210 @@
+.newsIndex{
+    margin: auto;
+    margin-bottom: 3rem;
+    background: $headerPanel;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    .title{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        margin-bottom: 1rem;
+        h3{
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: $text2;
+        }
+        a{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: left;
+            grid-gap: 1rem;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $text2;
+            svg {
+                width: 1rem;
+                height: 1rem;
+                height: auto;
+                cursor: pointer;
+                fill: $redFront;
+                overflow: visible;
+                polygon, path {
+                    transition: all 0.5s ease;
+                }
+            }
+            @keyframes arrow-anim3 {
+                0% {
+                    opacity: 1;
+                    transform: translateX(0);
+                    fill: $redFront;
+                }
+                5% {
+                    transform: translateX(-0.1rem);
+                    fill: black;
+                }
+                100% {
+                    transform: translateX(1rem);
+                    opacity: 0;
+                    fill: $redFront;
+                }
+            }
+            @keyframes arrow-fixed-anim3 {
+                5% {
+                    opacity: 0;
+                    fill: $redFront;
+                }
+                20% {
+                    opacity: 0.4;
+                    fill: black;
+                }
+                100% {
+                    fill: $redFront;
+                    opacity: 1;
+                }
+            }
+            polygon , path{
+                transition: all 1s ease;
+            }
+            .arrow {
+                animation: arrow-anim3 1s ease infinite;
+            }
+            .arrow-fixed {
+                animation: arrow-fixed-anim3 1s ease infinite;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            h3{
+                font-size: 1rem;
+            }
+            a{
+                font-size: .7rem;
+            }
+        }
+    }
+    .newsIndexItems{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-gap: 2px;
+        .right{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2px;
+        }
+        .left{
+            .hooper{
+                display: grid;
+                height: 100%;
+                .hooper-list{
+                    .hooper-navigation{
+                        height: 100%;
+                        .hooper-next{
+                            svg{
+                                box-shadow: 0 3px 1px -2px rgba(0,0,0,.07),0 2px 2px 0 rgba(0,0,0,.04),0 1px 5px 0 rgba(0,0,0,.04);
+                                background: white;
+                                border-radius: 5rem;
+                                fill: black;
+                                font-size: 1.2rem;
+                            }
+                        }
+                        .hooper-prev{
+                            svg{
+                                box-shadow: 0 3px 1px -2px rgba(0,0,0,.07),0 2px 2px 0 rgba(0,0,0,.04),0 1px 5px 0 rgba(0,0,0,.04);
+                                background: white;
+                                border-radius: 5rem;
+                                fill: black;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .newsItem{
+            position: relative;
+            display: grid;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .over{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: rgba(0,0,0,.6);
+                display: grid;
+                align-items: end;
+                padding: 1rem;
+                .detail{
+                    display: grid;
+                    align-items: end;
+                    h3{
+                        font-size: .95rem;
+                        font-weight: 500;
+                        color: white;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
+                    ul{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        align-items: center;
+                        grid-gap: 1rem;
+                        justify-content: right;
+                        margin-top: .5rem;
+                        opacity: 0;
+                        margin-bottom: -5rem;
+                        transition: all .3s ease-in-out;
+                        li{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            align-items: center;
+                            grid-gap: .3rem;
+                            justify-content: right;
+                            font-size: .7rem;
+                            font-weight: 300;
+                            color: white;
+                            svg{
+                                width: .85rem;
+                                height: .85rem;
+                                fill: white;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .detail{
+                        ul{
+                            margin-bottom: 0;
+                            opacity: .8;
+                        }
+                    }
+                }
+            }
+            span{
+                position: absolute;
+                left: 1rem;
+                top: 1rem;
+                background: $redFront;
+                border-radius: 5px;
+                color: white;
+                font-size: .7rem;
+                font-weight: 300;
+                padding: .2rem 1rem;
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .newsIndexItems{
+            grid-template-columns: 1fr;
+        }
+    }
+}

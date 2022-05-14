@@ -1,0 +1,321 @@
+.allShowGallery{
+    background: rgba(0,0,0,.5);
+    z-index: 99000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    .panelImage{
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        background: #F0F3F7;
+        overflow-y: scroll;
+        .showAllImage{
+            .topImage{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                height: 7rem;
+                background: #FFFFFF;
+                border-bottom: 1px solid rgba(107,122,144,0.1);
+                padding: 1rem;
+                position: relative;
+                .titleImage{
+                    height: 2rem;
+                    h3{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: .8rem;
+                        color: $text4;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        i{
+                            svg{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+                    .address{
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+                        justify-content: right;
+                        grid-gap: .3rem;
+                        align-items: center;
+                        margin-right: 1.8rem;
+                        a,span{
+                            color: $text4;
+                            font-weight: 200;
+                        }
+                    }
+                }
+                .buttonsImage{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+                    grid-gap: 1rem;
+                    justify-content: left;
+                    align-items: center;
+                    height: 2.2rem;
+                    button{
+                        background: transparent;
+                        margin-top: .3rem;
+                        svg{
+                            width: 2.2rem;
+                            height: 2.2rem;
+                            padding: .3rem;
+                            font-size: 1rem;
+                            color: $text4;
+                        }
+                    }
+                    input{
+                        width: 15rem;
+                        padding: .2rem .5rem;
+                        background: transparent;
+                        border-radius: 5rem;
+                        font-size: .7rem;
+                        color: $text4;
+                        border: 1px solid $border2;
+                    }
+                    .icon-plus , .icon-002-image-file{
+                        position: absolute;
+                        top: 82%;
+                        right: 85%;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.2rem;
+                        width: 2.7rem;
+                        height: 2.7rem;
+                        border-radius: 5rem;
+                        background: #00AEEF;
+                        color: white;
+                        cursor: pointer;
+                        svg{
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            fill: white;
+                        }
+                    }
+                }
+            }
+            .botNav{
+                .images{
+                    padding: 1rem;
+                    .itemImages{
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit , minmax(1px , auto));
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: 1rem;
+                        .choiceFolder{
+                            position: relative;
+                            h4{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                background: white;
+                                width: 8rem;
+                                border: 1px solid $border2;
+                                padding: .3rem 0;
+                                border-radius: .2rem;
+                                font-weight: 300;
+                                cursor: pointer;
+                            }
+                            .loader{
+                                display: grid;
+                                justify-content: center;
+                                width: 100%;
+                                img{
+                                    border-radius: 0;
+                                    box-shadow: 0 0 0 transparent;
+                                    object-fit: cover;
+                                    width: 3rem;
+                                    height: 3rem;
+                                }
+                            }
+                            .slide-fade-enter-active,.slide-fade-leave-active {
+                                transition: all .3s ease;
+                            }
+                            .slide-fade-enter, .slide-fade-leave-to{
+                                transform: translateY(-10px);
+                            }
+                            ul{
+                                width: 8rem;
+                                z-index: 1000;
+                                position: absolute;
+                                top: 1.7rem;
+                                left: 0;
+                                height: 10rem;
+                                background: white;
+                                border: 1px solid $border2;
+                                border-top: none;
+                                padding: .5rem;
+                                border-radius: .4rem;
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                grid-gap: .5rem;
+                                .scroll-area {
+                                    position: relative;
+                                    margin: auto;
+                                    height: 9.5rem;
+                                    width: 7rem;
+                                    direction: ltr;
+                                    overflow: hidden;
+                                }
+                                .close{
+                                    position: absolute;
+                                    bottom: 90%;
+                                    right: 90%;
+                                    z-index: 200;
+                                    padding: .2rem;
+                                    background: red;
+                                    display: grid;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 1rem;
+                                }
+                                li{
+                                    direction: rtl;
+                                    display: grid;
+                                    grid-template-columns: auto 1fr;
+                                    justify-content: right;
+                                    align-items: center;
+                                    grid-gap: .1rem;
+                                    color: $text2;
+                                    cursor: pointer;
+                                    margin-bottom: .3rem;
+                                    span{
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
+                        select{
+                            width: 8rem;
+                            font-size: .8rem;
+                            font-weight: 200;
+                            border: 1px solid $border2;
+                            background: white;
+                            color: $text2;
+                            cursor: pointer;
+                            padding: .3rem .5rem;
+                            border-radius: .2rem;
+                        }
+
+                    }
+                    .allImages{
+                        margin-top: 1rem;
+                        ul{
+                            display: grid;
+                            grid-template-columns: repeat(auto-fill , minmax(12rem , 1fr));
+                            grid-gap: 1rem;
+                            li{
+                                position: relative;
+                                border-radius: .3rem;
+                                box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.07);
+                                background: white;
+                                padding: 1rem;
+                                cursor: pointer;
+                                .subject{
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    grid-gap: .5rem;
+                                    justify-content: right;
+                                    align-items: center;
+                                    padding: .2rem;
+                                    i{
+                                        svg{
+                                            width: 1rem;
+                                            height: 1rem;
+                                            fill: #42A5F5;
+                                        }
+                                    }
+                                    span{
+                                        font-size: .7rem;
+                                        font-weight: 200;
+                                        padding-top: .3rem;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                    }
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 10rem;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+                .loader{
+                    display: grid;
+                    justify-content: center;
+                    width: 100%;
+                    img{
+                        border-radius: 0;
+                        box-shadow: 0 0 0 transparent;
+                        object-fit: cover;
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+                .createImage{
+                    position: relative;
+                    background: white;
+                    margin: 2rem;
+                    .vue-dropzone{
+                        margin-top: 1rem;
+                        height: 100%;
+                        overflow-y: scroll;
+                        border-radius: .3rem;
+                        color: $text2;
+                        span{
+                            margin-right: .5rem;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            color: $text2;
+                        }
+                        .dropzone-custom-content {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;
+                        }
+
+                        .dropzone-custom-title {
+                            margin-top: 0;
+                            color: #00b782;
+                            font-family: 'irsans';
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 1rem;
+                        }
+
+                        .subtitle {
+                            margin-top: 1rem;
+                            color: $text2;
+                            font-family: 'irsans';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
